@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Compare documented campaign activity and case outcomes while keeping sources, gaps and alternative explanations visible.">
+  <title>Campaign comparison · TrialWatch Philippines</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#candidate-detail">Skip to selected candidate</a>
+  <header class="masthead">
+    <a class="brand" href="/" aria-label="TrialWatch Philippines home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>TRIALWATCH<span class="brand-location">PHILIPPINES / PROTOTYPE</span></span></a>
+    <div class="header-context"><span class="local-dot" aria-hidden="true"></span> Campaign evidence desk</div>
+    <button class="button button-primary intake-open" type="button"><span aria-hidden="true">＋</span> Add a report</button>
+  </header>
+  <section class="page-intro" aria-labelledby="page-title">
+    <div><p class="eyebrow">TRACK 3 / ADVOCACY & IMPACT</p><h1 id="page-title">Campaigns. Outcomes. The evidence between.</h1><p class="intro-copy">Compare campaign activity and documented outcomes. Keep the timeline clear—and causal claims careful.</p></div>
+    <div class="dataset-note"><span class="badge badge-neutral" id="dataset-kind">Historical replay</span><p id="dataset-description">Loading the saved review collection…</p><button type="button" class="text-button" id="about-toggle" aria-expanded="false" aria-controls="about-panel">About this prototype <span aria-hidden="true">↗</span></button></div>
+  </section>
+  <aside class="about-panel" id="about-panel" hidden><strong>A campaign evidence comparison workspace.</strong> Review source passages, classify campaign activity and documented outcomes, then compare analyst-authored dossiers in a cited memo. Social-media observations are not reach metrics. Missing evidence is not evidence that no campaign or outcome existed. Later outcomes do not establish campaign causation. No model calls, live monitoring or outreach run here; historical AI records remain separate.</aside>
+  <div id="global-error" class="global-error" role="alert" hidden></div>
+  <main class="workspace" id="workspace" aria-busy="true">
+    <aside class="queue-panel" aria-label="Campaign dossiers">
+      <div class="queue-heading"><div><p class="eyebrow">PHILIPPINES WORKSPACE</p><h2>Campaign dossiers <span id="queue-count" class="count">—</span></h2></div></div>
+      <button type="button" id="comparison-open" class="comparison-open" aria-current="page"><span aria-hidden="true">▦</span> Compare campaigns <span aria-hidden="true">→</span></button>
+      <div class="queue-controls"><label for="queue-search" class="sr-only">Search candidates</label><div class="search-box"><span aria-hidden="true">⌕</span><input id="queue-search" type="search" placeholder="Search people or proceedings" autocomplete="off"></div><label for="queue-filter" class="sr-only">Filter review status</label><select id="queue-filter"><option value="all">All review states</option><option value="pending">Not yet reviewed</option><option value="include">Included</option><option value="defer">Needs follow-up</option><option value="exclude">Excluded</option><option value="duplicate">Duplicate</option></select></div>
+      <nav id="candidate-list" class="candidate-list" aria-label="Select a candidate"><p class="empty-state">Loading candidates…</p></nav>
+      <div class="queue-footnote"><span class="tiny-rule" aria-hidden="true"></span> Multiple reports may concern one proceeding. Files and reports are not a verified case count.<span class="local-footnote">Local storage · explicit saves · no model calls</span></div>
+    </aside>
+    <section id="candidate-detail" class="candidate-detail" tabindex="-1" aria-label="Selected candidate"><div class="loading-state"><span class="loading-line"></span><p>Preparing the evidence desk…</p></div></section>
+    <aside id="review-panel" class="review-panel" aria-label="Workflow guidance and saved output"></aside>
+  </main>
+  <footer class="site-footer"><span>TrialWatch Philippines · Track 3 prototype</span><span>Campaign observations · documented outcomes · explicit uncertainty</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="intake-dialog" aria-labelledby="intake-title">
+    <form id="intake-form">
+      <div class="dialog-header"><div><p class="eyebrow">MANUAL INTAKE</p><h2 id="intake-title">Bring a report into review.</h2></div><button type="button" id="intake-close" class="icon-button" aria-label="Close add report">×</button></div>
+      <p class="dialog-intro">Paste the text you are permitted to use. Supply one summary and its exact supporting passage. This stays local; no website is fetched and no AI extraction runs.</p>
+      <div class="form-grid"><label>Candidate title <input name="title" required maxlength="240" placeholder="Person · reported proceeding"></label><label>Person or organization <input name="person" required maxlength="200" placeholder="Name as reported"></label><label>Country <input name="country" required value="Philippines" maxlength="100"></label><label>Publisher <input name="publisher" required maxlength="200"></label></div>
+      <label>Article title <input name="source_title" required maxlength="400"></label>
+      <div class="form-grid"><label>Source URL <input name="url" type="url" required placeholder="https://…"></label><label>Publication date <input name="publication_date" type="date"><span class="field-help">Leave blank if the source does not establish it.</span></label></div>
+      <label>Source text <textarea name="source_text" required rows="6" placeholder="Paste the article text for this local review."></textarea></label>
+      <label>Attributed summary <textarea name="summary" required rows="3" placeholder="The publisher reports that…"></textarea><span class="field-help">Describe only what the supporting passage establishes.</span></label>
+      <label>Exact supporting excerpt <textarea name="excerpt" required rows="3" placeholder="Copy a short passage exactly from the source text above."></textarea></label>
+      <label>Passage location <input name="locator" required placeholder="For example: third body paragraph"></label>
+      <div id="intake-error" class="inline-error" role="alert" hidden></div>
+      <div class="dialog-footer"><span>New reports enter as unreviewed manual intake.</span><button type="submit" class="button button-primary" id="intake-submit">Add to queue <span aria-hidden="true">→</span></button></div>
+    </form>
+  </dialog>
+</body>
+</html>

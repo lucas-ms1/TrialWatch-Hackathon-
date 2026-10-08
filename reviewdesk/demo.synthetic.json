@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "id": "campaign_comparison_synthetic_v2",
+    "label": "Campaign comparison practice · synthetic",
+    "kind": "synthetic",
+    "description": "Three fictional campaign dossiers for comparing documented attention, advocacy actions and reported legal/policy developments. No measured reach, causal impact or real cases.",
+    "distribution": "Original synthetic fixtures under MIT."
+  },
+  "candidates": [
+    {
+      "id": "fictional_reporter_complaint",
+      "title": "Reporter A · open-hearing campaign",
+      "person": "Fictional Reporter A",
+      "proceeding": "Fictional reported proceeding; no real person or case",
+      "country": "Philippines",
+      "material_type": "synthetic",
+      "as_of": "2026-09-23",
+      "summary": "Compare documented online and international attention with campaign activity and a later reported dismissal.",
+      "suggested_decision": "include",
+      "review_reasons": [
+        "Selected to practice comparing campaign activity and reported outcomes, not to rank effectiveness.",
+        "All records are fictional; a reviewer chooses evidence and an analyst codes its role."
+      ],
+      "unknowns": [
+        "Complaint filing date and case number are unknown.",
+        "The source sample does not establish social-media reach, independent audience size or complete campaign activity.",
+        "No evidence establishes whether any campaign action influenced the reported dismissal; appeal/current status unverified."
+      ],
+      "sources": [
+        {
+          "id": "fictional_reporter_complaint_source_1",
+          "title": "Fictional record 1: Reporter A · open-hearing campaign",
+          "publisher": "Synthetic Campaign Archive",
+          "url": "https://example.invalid/synthetic/fictional_reporter_complaint/1",
+          "publication_date": "2026-09-11",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        },
+        {
+          "id": "fictional_reporter_complaint_source_2",
+          "title": "Fictional record 2: Reporter A · open-hearing campaign",
+          "publisher": "Synthetic International Bulletin",
+          "url": "https://example.invalid/synthetic/fictional_reporter_complaint/2",
+          "publication_date": "2026-09-14",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        },
+        {
+          "id": "fictional_reporter_complaint_source_3",
+          "title": "Fictional record 3: Reporter A · open-hearing campaign",
+          "publisher": "Synthetic Rights Group Update",
+          "url": "https://example.invalid/synthetic/fictional_reporter_complaint/3",
+          "publication_date": "2026-09-15",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        },
+        {
+          "id": "fictional_reporter_complaint_source_4",
+          "title": "Fictional record 4: Reporter A · open-hearing campaign",
+          "publisher": "Synthetic Legal Bulletin",
+          "url": "https://example.invalid/synthetic/fictional_reporter_complaint/4",
+          "publication_date": "2026-09-19",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        },
+        {
+          "id": "fictional_reporter_complaint_source_5",
+          "title": "Fictional record 5: Reporter A · open-hearing campaign",
+          "publisher": "Synthetic Legal Bulletin",
+          "url": "https://example.invalid/synthetic/fictional_reporter_complaint/5",
+          "publication_date": "2026-09-23",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        },
+        {
+          "id": "fictional_reporter_complaint_source_6",
+          "title": "Fictional record 6: Reporter A · open-hearing campaign",
+          "publisher": "Synthetic Civic Bulletin",
+          "url": "https://example.invalid/synthetic/fictional_reporter_complaint/6",
+          "publication_date": "2026-09-01",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        }
+      ],
+      "claims": [
+        {
+          "id": "fictional_reporter_complaint_claim_1",
+          "text": "A fictional campaign post asks supporters to share an open-hearing petition.",
+          "source_id": "fictional_reporter_complaint_source_1",
+          "excerpt": "On September 10, the campaign posted an open-hearing petition and asked readers to share it.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": "2026-09-10",
+          "date_note": "Posting date only; no audience, reach or engagement count is established.",
+          "attribution": "Synthetic Campaign Archive (fictional source reporting)",
+          "demo_category": "social_media"
+        },
+        {
+          "id": "fictional_reporter_complaint_claim_2",
+          "text": "A fictional international coalition calls for independent observation of the proceeding.",
+          "source_id": "fictional_reporter_complaint_source_2",
+          "excerpt": "On September 13, the International Expression Coalition called for independent observation of Reporter A's proceeding.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": "2026-09-13",
+          "date_note": "Statement date; actor and organization are fictional.",
+          "attribution": "Synthetic International Bulletin (fictional source reporting)",
+          "demo_category": "international_attention"
+        },
+        {
+          "id": "fictional_reporter_complaint_claim_3",
+          "text": "A fictional rights group reports sending a hearing-access request.",
+          "source_id": "fictional_reporter_complaint_source_3",
+          "excerpt": "The rights group said it sent a hearing-access request on September 14.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": "2026-09-14",
+          "date_note": "Reported action; no recipient response or independent completion check.",
+          "attribution": "Synthetic Rights Group Update (fictional source reporting)",
+          "demo_category": "campaign_action"
+        },
+        {
+          "id": "fictional_reporter_complaint_claim_4",
+          "text": "The fictional legal bulletin reports that defense counsel filed a procedural motion.",
+          "source_id": "fictional_reporter_complaint_source_4",
+          "excerpt": "Defense counsel filed a procedural motion on September 18.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": "2026-09-18",
+          "date_note": "Reported filing; document not independently inspected.",
+          "attribution": "Synthetic Legal Bulletin (fictional source reporting)",
+          "demo_category": "context"
+        },
+        {
+          "id": "fictional_reporter_complaint_claim_5",
+          "text": "A fictional bulletin reports dismissal on procedural grounds; no campaign influence is established.",
+          "source_id": "fictional_reporter_complaint_source_5",
+          "excerpt": "The court dismissed the complaint on procedural grounds on September 22.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": "2026-09-22",
+          "date_note": "Reported court disposition, not a court document inspected by the tool. Appeal and current status unknown.",
+          "attribution": "Synthetic Legal Bulletin (fictional source reporting)",
+          "demo_category": "legal_outcome"
+        },
+        {
+          "id": "fictional_reporter_complaint_claim_6",
+          "text": "The fictional bulletin reports a complaint following a council-spending story.",
+          "source_id": "fictional_reporter_complaint_source_6",
+          "excerpt": "A complaint names Reporter A over a story about council spending.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": null,
+          "date_note": "Filing date unknown; publication date must not substitute for it.",
+          "attribution": "Synthetic Civic Bulletin (fictional source reporting)",
+          "demo_category": "context"
+        }
+      ],
+      "related_candidate_ids": [],
+      "notes": [
+        "Synthetic campaign dossier. No real campaign, person, court outcome or policy is represented.",
+        "Default state contains no human review or analyst coding. Demonstration saves do not establish human validation."
+      ],
+      "demo_analysis": {
+        "objective": "Compare documented online and international attention with campaign activity and a later reported dismissal.",
+        "interpretation": "In this fictional record, online and international attention precede a reported dismissal. A procedural motion intervenes. The sequence supports asking about a possible contribution, not attributing the dismissal to campaigning.",
+        "alternative_explanations": "The reported procedural motion or ordinary court procedure could account for dismissal. The sample contains no court reasoning linking the campaign to the decision, no complete campaign history and no comparison case matched on legal merits.",
+        "limitations": "Fictional convenience sample for software demonstration. No complete social-media archive, engagement denominator, verified current status, counterfactual or causal evaluation."
+      }
+    },
+    {
+      "id": "fictional_editor_b",
+      "title": "Editor B · legal-support campaign",
+      "person": "Fictional Editor B",
+      "proceeding": "Fictional reported proceeding; no real person or case",
+      "country": "Philippines",
+      "material_type": "synthetic",
+      "as_of": "2026-09-26",
+      "summary": "Compare local campaign activity with a reported adverse decision while keeping absent attention evidence unknown.",
+      "suggested_decision": "include",
+      "review_reasons": [
+        "Selected to practice comparing campaign activity and reported outcomes, not to rank effectiveness.",
+        "All records are fictional; a reviewer chooses evidence and an analyst codes its role."
+      ],
+      "unknowns": [
+        "No international-attention record is supplied; this does not establish there was no international attention.",
+        "Campaign completeness, reach and resource differences are unknown.",
+        "The later appeal/current status and reasons for the reported decision require verification.",
+        "A different reported outcome does not imply a less effective campaign."
+      ],
+      "sources": [
+        {
+          "id": "fictional_editor_b_source_1",
+          "title": "Fictional record 1: Editor B · legal-support campaign",
+          "publisher": "Synthetic Local Network",
+          "url": "https://example.invalid/synthetic/fictional_editor_b/1",
+          "publication_date": "2026-09-08",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        },
+        {
+          "id": "fictional_editor_b_source_2",
+          "title": "Fictional record 2: Editor B · legal-support campaign",
+          "publisher": "Synthetic Campaign Archive",
+          "url": "https://example.invalid/synthetic/fictional_editor_b/2",
+          "publication_date": "2026-09-12",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        },
+        {
+          "id": "fictional_editor_b_source_3",
+          "title": "Fictional record 3: Editor B · legal-support campaign",
+          "publisher": "Synthetic Legal Bulletin",
+          "url": "https://example.invalid/synthetic/fictional_editor_b/3",
+          "publication_date": "2026-09-21",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        },
+        {
+          "id": "fictional_editor_b_source_4",
+          "title": "Fictional record 4: Editor B · legal-support campaign",
+          "publisher": "Synthetic Legal Bulletin",
+          "url": "https://example.invalid/synthetic/fictional_editor_b/4",
+          "publication_date": "2026-09-26",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        }
+      ],
+      "claims": [
+        {
+          "id": "fictional_editor_b_claim_1",
+          "text": "A fictional local network reports providing a legal-support referral.",
+          "source_id": "fictional_editor_b_source_1",
+          "excerpt": "On September 7, the local network reported referring Editor B to legal-support volunteers.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": "2026-09-07",
+          "date_note": "Reported referral, not proof of representation or influence.",
+          "attribution": "Synthetic Local Network (fictional source reporting)",
+          "demo_category": "campaign_action"
+        },
+        {
+          "id": "fictional_editor_b_claim_2",
+          "text": "An undated fictional post asks readers to follow Editor B's proceeding.",
+          "source_id": "fictional_editor_b_source_2",
+          "excerpt": "Please follow Editor B's proceeding and check the published court updates.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": null,
+          "date_note": "Original posting date and reach unknown; archive publication date is separate.",
+          "attribution": "Synthetic Campaign Archive (fictional source reporting)",
+          "demo_category": "social_media"
+        },
+        {
+          "id": "fictional_editor_b_claim_3",
+          "text": "The fictional legal bulletin reports that the court heard submissions from both parties.",
+          "source_id": "fictional_editor_b_source_3",
+          "excerpt": "The court heard submissions from both parties on September 20.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": "2026-09-20",
+          "date_note": "Source-reported event; no independent fairness finding.",
+          "attribution": "Synthetic Legal Bulletin (fictional source reporting)",
+          "demo_category": "context"
+        },
+        {
+          "id": "fictional_editor_b_claim_4",
+          "text": "A fictional bulletin reports a conviction; later appeal or reversal is not established.",
+          "source_id": "fictional_editor_b_source_4",
+          "excerpt": "The bulletin reports that the court convicted Editor B on September 25.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": "2026-09-25",
+          "date_note": "Reported judgment, not a finding authenticated by the tool. Later status unknown.",
+          "attribution": "Synthetic Legal Bulletin (fictional source reporting)",
+          "demo_category": "legal_outcome"
+        }
+      ],
+      "related_candidate_ids": [],
+      "notes": [
+        "Synthetic campaign dossier. No real campaign, person, court outcome or policy is represented.",
+        "Default state contains no human review or analyst coding. Demonstration saves do not establish human validation."
+      ],
+      "demo_analysis": {
+        "objective": "Compare local campaign activity with a reported adverse decision while keeping absent attention evidence unknown.",
+        "interpretation": "The fictional record combines local support and an undated online post with a reported conviction. International attention is not documented. This is a different recorded sequence, not evidence that this campaign had less reach or was less effective.",
+        "alternative_explanations": "Underlying legal facts and procedural stage may differ from Reporter A. International activity could be missing from the supplied sources; the undated post could precede or follow the reported judgment. Later appeal outcomes are unknown.",
+        "limitations": "Fictional convenience sample for software demonstration. No complete social-media archive, engagement denominator, verified current status, counterfactual or causal evaluation."
+      }
+    },
+    {
+      "id": "fictional_publisher_c",
+      "title": "Publisher C · public-interest reporting campaign",
+      "person": "Fictional Publisher C",
+      "proceeding": "Fictional reported proceeding; no real person or case",
+      "country": "Philippines",
+      "material_type": "synthetic",
+      "as_of": "2026-09-29",
+      "summary": "Compare international attention and a reported policy consultation while keeping the individual case outcome unresolved.",
+      "suggested_decision": "include",
+      "review_reasons": [
+        "Selected to practice comparing campaign activity and reported outcomes, not to rank effectiveness.",
+        "All records are fictional; a reviewer chooses evidence and an analyst codes its role."
+      ],
+      "unknowns": [
+        "No case outcome is documented; missing evidence is not an unchanged outcome.",
+        "Draft consultation is not adopted policy, implementation or national impact.",
+        "No social-media record or reach measure is supplied.",
+        "Case-specific links, alternative drivers of the consultation and current status are unverified."
+      ],
+      "sources": [
+        {
+          "id": "fictional_publisher_c_source_1",
+          "title": "Fictional record 1: Publisher C · public-interest reporting campaign",
+          "publisher": "Synthetic International Bulletin",
+          "url": "https://example.invalid/synthetic/fictional_publisher_c/1",
+          "publication_date": "2026-09-06",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        },
+        {
+          "id": "fictional_publisher_c_source_2",
+          "title": "Fictional record 2: Publisher C · public-interest reporting campaign",
+          "publisher": "Synthetic Coalition Update",
+          "url": "https://example.invalid/synthetic/fictional_publisher_c/2",
+          "publication_date": "2026-09-17",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        },
+        {
+          "id": "fictional_publisher_c_source_3",
+          "title": "Fictional record 3: Publisher C · public-interest reporting campaign",
+          "publisher": "Synthetic Policy Bulletin",
+          "url": "https://example.invalid/synthetic/fictional_publisher_c/3",
+          "publication_date": "2026-09-29",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        },
+        {
+          "id": "fictional_publisher_c_source_4",
+          "title": "Fictional record 4: Publisher C · public-interest reporting campaign",
+          "publisher": "Synthetic Civic Bulletin",
+          "url": "https://example.invalid/synthetic/fictional_publisher_c/4",
+          "publication_date": "2026-09-02",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Original synthetic English; no translation",
+          "access_note": "Wholly invented software fixture. Placeholder URL does not identify a real source. No source was fetched.",
+          "lineage_note": "Fictional records are not independent corroboration or a representative sample."
+        }
+      ],
+      "claims": [
+        {
+          "id": "fictional_publisher_c_claim_1",
+          "text": "A fictional overseas association publishes a statement about public-interest reporting.",
+          "source_id": "fictional_publisher_c_source_1",
+          "excerpt": "On September 5, the overseas association issued a statement supporting public-interest reporting.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": "2026-09-05",
+          "date_note": "Statement concerns a broader issue; case-specific influence is unestablished.",
+          "attribution": "Synthetic International Bulletin (fictional source reporting)",
+          "demo_category": "international_attention"
+        },
+        {
+          "id": "fictional_publisher_c_claim_2",
+          "text": "A fictional coalition says it submitted recommendations to a consultation.",
+          "source_id": "fictional_publisher_c_source_2",
+          "excerpt": "The coalition submitted consultation recommendations on September 16.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": "2026-09-16",
+          "date_note": "Reported submission; receipt and effect not independently verified.",
+          "attribution": "Synthetic Coalition Update (fictional source reporting)",
+          "demo_category": "campaign_action"
+        },
+        {
+          "id": "fictional_publisher_c_claim_3",
+          "text": "A fictional public bulletin announces draft guidance for consultation; adoption is not established.",
+          "source_id": "fictional_publisher_c_source_3",
+          "excerpt": "Draft guidance was opened for consultation on September 28; it has not been adopted.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": "2026-09-28",
+          "date_note": "Consultation announcement only. Do not describe it as enacted reform or campaign success.",
+          "attribution": "Synthetic Policy Bulletin (fictional source reporting)",
+          "demo_category": "policy_outcome"
+        },
+        {
+          "id": "fictional_publisher_c_claim_4",
+          "text": "A fictional bulletin mentions a proceeding involving Publisher C without a case disposition.",
+          "source_id": "fictional_publisher_c_source_4",
+          "excerpt": "A proceeding involving Publisher C was mentioned; no disposition was provided.",
+          "locator": "Synthetic paragraph 1",
+          "event_date": null,
+          "date_note": "Event date and legal outcome unknown.",
+          "attribution": "Synthetic Civic Bulletin (fictional source reporting)",
+          "demo_category": "context"
+        }
+      ],
+      "related_candidate_ids": [],
+      "notes": [
+        "Synthetic campaign dossier. No real campaign, person, court outcome or policy is represented.",
+        "Default state contains no human review or analyst coding. Demonstration saves do not establish human validation."
+      ],
+      "demo_analysis": {
+        "objective": "Compare international attention and a reported policy consultation while keeping the individual case outcome unresolved.",
+        "interpretation": "The fictional coalition submission precedes an announced policy consultation. The proposal has not been adopted, its relationship to the campaign is unverified, and no individual case disposition is documented. This is an intermediate policy development, not demonstrated national impact.",
+        "alternative_explanations": "The consultation may follow a pre-existing institutional timetable or other submissions. The international statement concerns a broad issue and may not concern Publisher C directly. Case-specific influence and implementation remain unknown.",
+        "limitations": "Fictional convenience sample for software demonstration. No complete social-media archive, engagement denominator, verified current status, counterfactual or causal evaluation."
+      }
+    }
+  ]
+}

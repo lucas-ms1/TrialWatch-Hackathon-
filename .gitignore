@@ -1,0 +1,42 @@
+# Local Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Credentials and private event correspondence
+.env
+.env.*
+!.env.example
+private/
+
+# Keep source material and generated case data local by default
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+outputs/*
+!outputs/.gitkeep
+references/orientation-transcript.txt
+references/participant-packet/*
+!references/participant-packet/.gitkeep
+
+# Local research workflow and feedback are not part of the shared prototype
+experiments/philippines_pilot/*
+!experiments/philippines_pilot/config.json
+docs/EXPERIMENT_01_PLAN.md
+docs/SOURCE_REGISTER.md
+scripts/build_reviewdesk_seed.py
+scripts/experiment_01/presentation.py
+scripts/experiment_01/diagnose.py
+scripts/experiment_01/package.py
+scripts/experiment_01/verify_package.py
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.log

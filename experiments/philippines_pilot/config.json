@@ -1,0 +1,76 @@
+{
+  "experiment_id": "philippines_pilot_01",
+  "protocol_version": "1.0",
+  "status": "planned",
+  "country": "PH",
+  "execution": {
+    "mode": "codex_lead_with_subagents",
+    "max_active_specialists": 3,
+    "separate_model_api": false,
+    "create_sidebar_chats": false,
+    "recurring_monitor": false
+  },
+  "corpus": {
+    "target_reports": 20,
+    "max_reports": 24,
+    "min_reports": 14,
+    "target_histories": 3,
+    "min_dated_reports_per_history": 2,
+    "target_relevant_reports": 12,
+    "target_negative_controls": 6,
+    "target_uncertain_or_background_reports": 2,
+    "min_publishers_overall": 2,
+    "freeze_before_predictions": true
+  },
+  "limits": {
+    "research_minutes": 45,
+    "candidate_urls": 40,
+    "retries_per_failed_url": 1,
+    "alternate_histories": 1,
+    "implementation_and_extraction_minutes": 60,
+    "audit_and_repair_minutes": 30,
+    "repair_passes": 1
+  },
+  "baseline": {
+    "method": "case_insensitive_substring_role_AND_proceeding_in_article_body",
+    "role_terms": [
+      "journalist",
+      "reporter",
+      "editor",
+      "media worker"
+    ],
+    "proceeding_terms": [
+      "arrested",
+      "charged",
+      "complaint",
+      "cyberlibel",
+      "cyber libel",
+      "detained",
+      "prosecutor",
+      "terrorism",
+      "terrorist financing"
+    ]
+  },
+  "evaluation": {
+    "reference_type": "ai_generated_provisional",
+    "min_relevant_retention": 0.8,
+    "max_definite_negative_promotions": 1,
+    "min_definite_negatives_for_check": 6,
+    "required_supported_displayed_facts_fraction": 1,
+    "max_critical_errors": 0,
+    "max_human_review_questions": 5,
+    "ai_may_set_human_review": false,
+    "triage_unit": "unique_source_id_on_final_expanded_corpus",
+    "queue_decisions": [
+      "relevant",
+      "uncertain"
+    ],
+    "reference_uncertain": "exclude_from_binary_metrics_report_separately",
+    "sequential_same_context": "unblinded_self_audit_independence_checks_incomplete"
+  },
+  "paths": {
+    "raw": "data/raw/philippines_pilot/{run}/",
+    "processed": "data/processed/philippines_pilot/{run}/",
+    "results": "outputs/philippines_pilot/{run}/"
+  }
+}

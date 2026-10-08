@@ -1,0 +1,10 @@
+[project]
+name = "trialwatch-campaign-evidence-comparison"
+version = "0.2.0"
+description = "Local cited comparison of campaign activity and reported outcomes in the Philippines"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.trialwatch-prep]
+schema = "schemas/cases.schema.json"
+synthetic_examples = "examples/cases.synthetic.json"

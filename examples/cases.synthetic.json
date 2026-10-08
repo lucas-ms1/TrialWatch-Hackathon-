@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "case_id": "synthetic-ph-001",
+      "synthetic": true,
+      "title": "SYNTHETIC: Example Case Alpha",
+      "country_code": "PH",
+      "sources": [
+        {
+          "source_id": "synthetic-alpha-source",
+          "url": "https://example.invalid/fictional/alpha",
+          "publisher": "Synthetic fixture — not a real publisher",
+          "published_date": "2026-10-02",
+          "retrieved_at": "2026-10-06T12:00:00Z",
+          "language": "en"
+        }
+      ],
+      "claims": [
+        {
+          "claim_id": "synthetic-alpha-claim",
+          "kind": "procedural_event",
+          "text": "The fictional source states that a hearing in Example Case Alpha was postponed on 1 October 2026.",
+          "event_date": "2026-10-01",
+          "evidence": [
+            {
+              "source_id": "synthetic-alpha-source",
+              "quote": "FICTIONAL TEST TEXT: A hearing in Example Case Alpha was postponed on 1 October 2026.",
+              "locator": "Synthetic fixture paragraph 1",
+              "translation": null
+            }
+          ]
+        }
+      ],
+      "review": {"status": "pending", "reviewer": null, "reviewed_at": null, "notes": "Synthetic workflow fixture only; no real proceeding or person."}
+    },
+    {
+      "case_id": "synthetic-ph-002",
+      "synthetic": true,
+      "title": "SYNTHETIC: Example Case Beta",
+      "country_code": "PH",
+      "sources": [
+        {
+          "source_id": "synthetic-beta-source",
+          "url": "https://example.invalid/fictional/beta",
+          "publisher": "Synthetic fixture — not a real publisher",
+          "published_date": null,
+          "retrieved_at": "2026-10-06T12:00:00Z",
+          "language": "en"
+        }
+      ],
+      "claims": [
+        {
+          "claim_id": "synthetic-beta-claim",
+          "kind": "prosecution_trigger",
+          "text": "The fictional source reports a charge in Example Case Beta, without a filing date or an identified law.",
+          "event_date": null,
+          "evidence": [
+            {
+              "source_id": "synthetic-beta-source",
+              "quote": "FICTIONAL TEST TEXT: A charge was filed in Example Case Beta. This fixture does not identify its date or legal basis.",
+              "locator": "Synthetic fixture paragraph 1",
+              "translation": null
+            }
+          ]
+        }
+      ],
+      "review": {"status": "needs_sources", "reviewer": null, "reviewed_at": null, "notes": "Synthetic example of unknown dates. A real intake would require verification and additional source review."}
+    },
+    {
+      "case_id": "synthetic-ph-003",
+      "synthetic": true,
+      "title": "SYNTHETIC: Example Case Gamma",
+      "country_code": "PH",
+      "sources": [],
+      "claims": [],
+      "review": {"status": "needs_sources", "reviewer": null, "reviewed_at": null, "notes": "Empty synthetic intake shell: no factual claims may be added without evidence."}
+    }
+  ]
+}
