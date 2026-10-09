@@ -1,5 +1,21 @@
 # Verification record
 
+## October 9 afternoon: team checkpoint and 6 p.m. plan refresh
+
+The user explicitly requested another GitHub update and a plain-language message for groupmates. Eleven reviewed documentation files now reflect public-document intake as the primary route, the bounded v2 batch, the completed limited C02 human review, the open status-label issue, remaining implementation/review work and the proposed 6 p.m. handoff. The team message is prepared for the user to send; no direct message was sent by the assistant.
+
+This is a documentation-only revision: runtime code, importer, tests, synthetic fixtures and interface HTML are unchanged from the previously verified shared version. Public Markdown links were checked against the 61-file allowlist. The package was rebuilt and its inventory, ZIP integrity and file hashes checked. Full software/browser tests were not rerun; the earlier 73-test and 20-interface-check results below remain earlier evidence. Populated research, the human review database, exported real memo, checkpoint snapshot, private files and organizer documents remain excluded. Publishing this documentation does not complete the outstanding code work or constitute final hackathon submission.
+
+## October 9: C02 limited human review and saved walkthrough
+
+Lucas S reports completing a guided human review of O03/O04/O05/O10 and accepting C02 only as a source-reported sequence. Read-only inspection corroborates Include review revision 1 (saved 2:54 p.m. ET), analysis revision 1 (2:57 p.m. ET), the four selected observation IDs and their recorded categories. The local memo exported at 3:02 p.m. ET contains the saved analysis, citations, excerpts, qualifications and limits. The user refreshed the app and confirmed the analysis remained. That refresh is user-reported; this checkpoint separately inspected existing SQLite and the exported file without app writes.
+
+Current v2 state contains one review and one campaign analysis, zero plans and follow-ups. All 22 immutable v2 manifest files match. An ignored checkpoint and byte-identical memo snapshot are saved in `outputs/checkpoints/c02-human-review-20261009T190955Z/`; the checkpoint records the export hash, metadata, source-linked human qualifications and next verification step. No original court order was obtained or independently inspected here. Identity matching, a broader pattern and advocacy contribution remain unestablished. Other observations/proposals are not promoted to reviewed.
+
+The walkthrough verifies this limited save/reopen/export path only. It does not establish overall software reliability, source authenticity, advocacy usefulness, effects or forecasts. No tests were rerun because this update changes documentation only. No source collection, runtime review mutation, publication, push or final submission occurred.
+
+**Open display issue:** static preparation/import text says pending/no saved review alongside the actual saved status. Preserve original provenance and snapshots; render a separate current-status layer scoped to selected observations, reviewer and revisions. C02 acceptance remains in the review reason until a structured candidate-decision workflow is built. See [technical criteria](TECHNICAL_PLAN.md). Earlier zero-review receipts below describe the earlier state.
+
 ## October 9: verified GitHub handoff for teammates
 
 The user authorized updating the existing repository. The reviewed public allowlist contains **61 files**: original code/docs, generic onboarding and research-import protocol, a header-only CSV template, tests, historical planning docs and explicitly fictional demos. No real populated records, source captures, private correspondence, organizer PDFs, notebook bundles or runtime databases are included. All allowlisted Markdown links resolve within that file set; references to excluded local research are plain, explicitly local-only pointers.

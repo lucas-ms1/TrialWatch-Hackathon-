@@ -4,6 +4,8 @@ October 9, 2026. The intended product is an interface connecting public signals,
 
 ## Available, prepared and proposed
 
+The primary input route is a bounded public-document collection that the team structures into attributed observations and checks. There is no TrialWatch database or organizer delivery dependency; a future permitted export is optional. Reuse the current manual CSV bridge for the first batch. In-app PDF/HTML extraction and automatic source collection remain unimplemented; an uploaded document must not be presented as already parsed or verified.
+
 | Component | Available or prepared now | Proposed extension |
 | --- | --- | --- |
 | Evidence intake | Manual text/URL intake; 30-field CSV bridge groups reports under explicit dossier IDs | Permitted public news/social-media/organizational source connections; additional strategy metadata and validated source/event relationships |
@@ -18,7 +20,13 @@ October 9, 2026. The intended product is an interface connecting public signals,
 
 Implementation locations: `reviewdesk/server.py` (`evidence_export`, `campaign`, `campaign_export`, `advocacy`), `reviewdesk/static/app.js` and `scripts/build_research_seed.py`. A dossier is an analyst grouping, not a verified unique case or movement. Event IDs and distinct URLs do not establish deduplicated counts or source independence. The legacy case validator and runtime dossier format are separate structures.
 
-The local notice-of-charges checkpoint contains nine AI-prepared observations across three provisional histories. It remains human-review-pending and is useful for inspecting evidence and testing connections. It is not a comparative-effectiveness dataset or a basis for numerical outcome estimates. The frozen historical triage experiment remains unchanged and supplies no forecasting or advocacy-impact validation.
+The original nine-observation v1 checkpoint remains frozen. The later local v2 batch contains 20 observations across three provisional histories and eight sources. Lucas S completed a limited review of O03/O04/O05/O10, with saved review/analysis revision 1 and narrative acceptance of C02 as a source-reported sequence. The other observations/proposals remain outside that review. Neither batch is a comparative-effectiveness dataset or a basis for numerical outcome estimates. The frozen historical triage experiment remains unchanged and supplies no forecasting or advocacy-impact validation.
+
+## Open builder issue: preparation provenance versus current review status
+
+The importer hardcodes pending/no-saved-review statements in `NOTICE`, dataset/dossier notes and observation attribution. The frontend renders these strings unchanged, while the backend carries them into evidence snapshots and exported memos. Correct saved review/analysis metadata exists separately; the stale prose does not itself show failed persistence.
+
+Preserve original records and snapshots. Label preparation metadata “At preparation/import,” and derive a separate current-status display from saved review/analysis state, including reviewer, revision, time and selected observation IDs. Describe the four included observations under the limited review; do not label all observations authenticated or imply a structured C02 decision exists. Preserve the other sixteen observations and four proposals as outside the completed review. Exports must distinguish snapshot provenance from current review status and retain stale-analysis flags after later revisions. Verify empty state, partial Include without analysis, saved review/analysis, refresh/export and later changed-review states when implementing the fix. No code fix is included in this checkpoint.
 
 The protest-arrest interface illustration uses fictional records to show interactions only. Keep it separate from the notice-of-charges sample and the existing app fixtures/database. Switching a UI view or filtering hand-authored synthetic records does not demonstrate implemented AI discovery, source retrieval, a learned threshold or forecasting.
 

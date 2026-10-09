@@ -13,11 +13,15 @@
 - [x] Permitted starting materials inspected and accepted notice/response question worked into nine AI-prepared observations across three provisional histories.
 - [x] Final product format and direction clarified: an interface integrating signals, review and advocacy strategy.
 - [x] Current teammate handoff prepared and verified: [start page](TEAM_START_HERE.md), standalone fictional interface, current plans, empty CSV importer/template and 61-file public package. The user authorized this GitHub update on October 9.
-- [ ] Final input-data route and field coverage established: an actually received permitted export, or a bounded public-document sample with extraction/review work recorded. A structured Philippine TrialWatch handoff is currently unconfirmed; advocacy actions/outcomes and public signals require separate coverage checks.
+- [x] Primary data route set to permitted public-document intake, structuring and human review; no TrialWatch database request or delivery dependency.
+- [ ] Final bounded source selection and field coverage established, with extraction/review work recorded. Advocacy actions/outcomes and public signals require separate evidence checks; a future permitted export is optional.
 - [ ] Specific practitioner/task, final demo slice, evidence boundaries and implementation owners agreed.
 - [ ] Selected cluster/public-response/strategy flow integrated with the working evidence app, or clearly presented as a documented proof of concept.
 - [ ] Demo narrative and fallback reconciled with the final implemented scope; any AI contribution shown with its actual inputs, outputs and limits.
 - [ ] Bounded evidence batch checked by humans and usefulness feedback recorded, or these gaps explicitly disclosed.
+- [x] First limited human walkthrough completed: four C02 observations selected, review/analysis revision 1 saved, timeline/memo inspected and analysis confirmed after refresh. This does not complete whole-batch review or usefulness evaluation.
+- [ ] Preparation/import labels distinguished from current human-review status in app/export; original provenance preserved.
+- [ ] Structured candidate decisions, other four proposal assessments, C03 review and integrated rehearsal completed or their limits clearly disclosed.
 - [x] GitHub destination selected and code/demo publication authorized by the user on October 8: [team repository](https://github.com/lucas-ms1/TrialWatch-Hackathon-).
 - [ ] Organizer collection channel and final submission details confirmed.
 - [ ] Team timed rehearsal completed within the allocation.
@@ -39,4 +43,4 @@ Observed verification belongs in [VERIFICATION.md](VERIFICATION.md), including b
 
 The product compares documented observations and reported outcomes. It does not estimate social reach, rank campaign effectiveness, infer causation, authenticate court decisions or demonstrate national impact. Missing records remain unknown. The prior 20-report AI-reference triage experiment is separate from this workflow and supplies no advocacy-effectiveness score.
 
-A partner usefulness result, systematic real campaign dataset and causal study have not been recorded. Public-source feasibility work and the October 9 nine-observation mentor sample remain separate from the public package; the sample is pending human review. No live monitoring, outreach, spending or notebook changes occurred in this progress review.
+A partner usefulness result, systematic real campaign dataset and causal study have not been recorded. The frozen v1 sample and later 20-observation v2 remain local and separate from the public package. C02 has a limited four-observation human review and saved analysis; other observations/proposals remain outside that review. The original court order and identity questions remain unresolved. No live monitoring, outreach, spending or notebook changes occurred in this progress review.
