@@ -1,8 +1,18 @@
-# Ten-minute demonstration: campaign and case-outcome comparison
+# Demonstration planning and existing synthetic walkthrough
+
+**October 9:** the final product is an interface integrating collective-action signals and advocacy strategy. The accepted first real evidence drill concerns notice of charges, opportunities to respond and documented responses; the specific practitioner task and final demo slice remain open. The existing script below rehearses the implemented campaign-comparison baseline; its fictional histories do not select the substantive example. See the [current direction](PROJECT_BRIEF.md), [team start page](TEAM_START_HERE.md) and standalone [fictional signals-to-strategy concept](demo/signals-and-strategy.html).
+
+For a broader demonstration, a proposed ten-minute sequence is: state the advocate's question (1 minute); trace selected observations to excerpts, dates and identity/source limits (2 minutes); inspect one candidate pattern in the external worksheet (2 minutes); challenge it with a shared account, contrary evidence or gap (2 minutes); show a correction and explain the app's stale-analysis warning plus the worksheet's manual recheck (1 minute); show the editable result and next investigation step (2 minutes). Adapt after the material/usefulness trial. This is a proposal, not a completed demonstration. If no candidate is supported, show why it was rejected; do not manufacture a finding.
+
+Disclose exactly what runs: the app's review/comparison is deterministic; the prepared worksheet is external; the optional AI prompt has not been executed. No live extraction, discovery, monitoring or forecasting exists. Retain the synthetic fallback while deciding the final example.
+
+## Existing baseline rehearsal, preserved
 
 Target ten minutes of content within the packet's 10–15-minute allocation; Q&A allocation is unstated. This demonstration follows the user's selected Track 3 example: comparing social-media activity, international attention and human-rights campaigns with reported legal or policy outcomes. Every demonstrated dossier is synthetic. The checks in the submission checklist establish software behavior, not human validation or real-world usefulness.
 
 ## Prepare
+
+Lead with an intended decision, such as which claims can responsibly enter a briefing and what evidence to verify next. The broader interface and notice/response evidence drill are settled; the final demo records, period, specific practitioner and operational task remain open. No pair is required. Use the synthetic workflow until separately checked material is ready; do not present feasibility notes as findings. A first batch can use [CSV import](RESEARCH_HANDOFF.md), but importing records is not source verification or synchronized team review.
 
 - Start the local app using the README command and a separate fresh state directory. Keep the frozen Philippines experiment and prior human feedback unchanged.
 - Use the three synthetic campaign dossiers in the default fixture. Use the exact titles currently shown by the application; the third provides a draft policy-consultation report and no selected legal-case outcome evidence.
@@ -24,7 +34,7 @@ Target ten minutes of content within the packet's 10–15-minute allocation; Q&A
 | 7:10–7:50 | Third dossier in the prepared fallback, or live if already saved | Point to incomplete legal-case outcome evidence and the draft consultation. “No selected case-outcome evidence means the case outcome is unknown. The draft consultation is an intermediate policy development, not an adopted policy or a failed campaign.” Disclose when this is the scripted fallback. |
 | 7:50–8:45 | Markdown/JSON comparison export | Inspect a citation, excerpt, category, date role, limitation and alternative explanation. Show saved evidence revision and any changed-review warning. “An analysis retains the evidence snapshot it was saved against; later edits cannot silently rewrite it.” |
 | 8:45–9:20 | Responsible-use limits | “The app does not fetch posts, estimate reach, monitor cases, contact anyone or infer causal impact. The prior historical triage experiment is separate and does not measure advocacy effectiveness.” |
-| 9:20–10:00 | Adoption question and concrete next step | “A partner could choose a defined set of campaigns, review a common coding guide, and check whether this comparison helps identify evidence gaps and useful follow-up questions. That evaluation has not run.” |
+| 9:20–10:00 | Briefing decision and next verification priority | Show one claim safe to carry forward with attribution and one claim still requiring verification. “An advocacy analyst can trace the claim, see which saved analysis a correction affects, and export the revised memo. This is the benefit we need to test against a spreadsheet; practitioner usefulness has not yet been established.” |
 
 Use the full comparison export if live saves take longer than expected, stating exactly which rows were scripted. If the live app is unavailable, show the static fallback as generated output. Do not narrate static controls as live saves or call an unverified step implemented.
 

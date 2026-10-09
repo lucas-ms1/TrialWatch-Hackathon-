@@ -1,5 +1,7 @@
 # Hackathon requirements and logistics
 
+October 9 addendum: the supplied PDFs were rechecked locally. Orientation slide 12 explicitly includes detecting patterns of repression across jurisdictions and countries, alongside cross-case comparison and evidence-based advocacy strategy. The user's broadened direction fits these options. No new organizer ruling, data access or schedule update is claimed.
+
 Updated October 7, 2026 after reading the user-supplied **Participant Guide & Packet** (14 PDF pages) and **TrialWatch_Hackathon_Open_Session** slides (17 PDF pages). Track 3 packet pages 8–9, orientation slides 11–12 and the deliverables/rubric on packet page 13 were also rendered and visually inspected from `drive-download-20261007T181310Z-1-001.zip`. Page references below are PDF pages. Prior connector access failures are historical; the packet has now been read. The [organizer folder](https://drive.google.com/drive/folders/1NUlole-0StLaagsG57IOUfveynvfGJMs) is the original source location.
 
 **Track 3: Advocacy and Impact is the definitive project direction**, superseding earlier Track 1 instructions. Keep the Philippines focus and proceed with the team's own pre-event preparation assumed permitted, as the user instructed. Record preparation dates accurately; no new organizer communication is claimed.
@@ -31,9 +33,15 @@ Orientation slide 11 frames the problem as evidence not automatically telling an
 
 The October 6 roster already lists the team under Track 3. Older public wording used a different Track 3 title; use the supplied packet's title for this submission. Earlier Track 1 experiment records remain historical records and do not define the current product.
 
-## Focus selected for this build
+## Current direction and implemented baseline
 
-The user selected **comparison of campaigns and case outcomes**, specifically the packet p8 example connecting social media, international attention and human-rights campaigns with policy changes or legal-case outcomes. The choice below supersedes the earlier briefing-first recommendation. It remains a product direction, not an organizer requirement or validation result.
+The latest October 9 direction is **one interface connecting collective-action signals with advocacy strategy**, including intended comparison and outcome-estimation capabilities. The notice/response question is accepted as a first evidence drill; nine pending observations and a separate fictional protest-cluster interface concept are prepared. The specific practitioner, final demo slice and owners remain open. See the [current project brief](PROJECT_BRIEF.md) and [sprint plan](SPRINT_PLAN.md). Do not require the earlier pair or default to journalist arrests. The broader concept fits slide 12; no fixed case count, live-model feature or training requirement is specified in the packet's deliverable/rubric sections. These product choices are internal updates, not a new organizer ruling.
+
+The manual comparison app is the implemented baseline. Candidate-pattern worksheets and a proposal prompt are preparation outside the app. AI extraction/discovery, event-change detection and forecasting are not implemented. [Available materials](MATERIALS_AND_DEMO_OPTIONS.md) distinguish local holdings, public-resource leads and the internal India dataset available by request under NDA; unrestricted possession or use is not established.
+
+### Earlier October 7 product choice, retained for context
+
+On October 7 the user selected **comparison of campaigns and case outcomes**, specifically the packet p8 example connecting social media, international attention and human-rights campaigns with policy changes or legal-case outcomes. The table below records that build. It is superseded as a scope constraint by the October 9 direction, and never constituted an organizer requirement or validation result.
 
 | Feasible direction | User task and output | Fit and evidence constraint |
 | --- | --- | --- |
@@ -47,9 +55,9 @@ The selected workflow helps an analyst compare **what campaign and attention evi
 
 | Criterion | Points | Our demonstration goal |
 | --- | --- | --- |
-| Innovation | 25 | Make cross-campaign comparisons inspectable through coded evidence, source excerpts, date roles and alternative explanations |
+| Innovation | 25 | Make possible cross-case connections inspectable through evidence, source relationships, date roles and alternative explanations |
 | Feasibility | 25 | Complete a portable local evidence-to-coding-to-comparison workflow with saved snapshots and editable exports; partner infrastructure fit is still to be tested |
-| Human Rights Impact | 30 | Help advocates identify evidence gaps and compare campaign/outcome histories relevant to fair-trial rights and expression; do not claim measured advocacy effectiveness |
+| Human Rights Impact | 30 | Help advocates assess a possible issue, its supporting and contrary evidence, documented responses and next investigation questions; do not claim measured usefulness or impact |
 | Ethical Rigor & Responsible AI | 20 | Preserve provenance, unknown outcomes and corrections; distinguish reported developments from analyst interpretations; prevent unsupported causal or effectiveness rankings |
 
 The **100-point rubric is explicit in packet p13, §11**, updating the less specific orientation discussion. Its questions concern rethinking monitoring/protection, implementation within TrialWatch's infrastructure, advancing fair-trial rights/expression/advocacy, and addressing harms, bias and responsible AI. The rightmost column contains internal demo goals, not additional organizer scoring rules or evidence of achieved impact.

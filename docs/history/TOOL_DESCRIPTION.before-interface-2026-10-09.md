@@ -1,0 +1,13 @@
+> Historical document: superseded for active scope by the latest entries in [DECISIONS.md](../DECISIONS.md). Original prose retained; relative links adjusted for this archive folder.
+
+# TrialWatch Philippines: advocacy comparison and outcome estimation
+
+The intended product helps advocates find useful analogues across cases and movements, compare advocacy approaches across contexts and jurisdictions, investigate actors and moments associated with reported outcomes, and estimate likely advocacy outcomes when the evidence supports an estimate. A secondary aim is to identify collective action before or during its occurrence. The initial focus is the Philippines; similarities and differences affecting transfer to another jurisdiction must remain visible. The named intended user, final workflow and output format remain open.
+
+Comparisons should connect tactics, objectives, actors, target institutions, timing, context and reported outcomes, with excerpts, contrary evidence, unknowns and alternative explanations. Similar cases are not interchangeable proxies. An outcome estimate must specify the outcome, time window, context, evidence cutoff, assumptions and uncertainty, and can return “insufficient evidence.” Sequence alone does not establish effectiveness or causal impact. Planned action, observed action and a forecast are separate claims.
+
+The accepted first example asks what records say about notice of charges and opportunities to respond in proceedings involving human-rights defenders, and what legal or public responses followed. Its local sample has nine AI-prepared, human-review-pending observations across three provisional histories from four public PDFs. It demonstrates evidence inspection, not effectiveness measurement or validated prediction.
+
+The implemented baseline is a local, manual and deterministic campaign-comparison app. Analysts review attributed observations, preserve corrections, classify evidence, compare timelines and export editable Markdown/JSON. Saved analyses retain evidence snapshots and expose later changes. Automatic matching, effectiveness estimates, forecasting and collective-action detection are not implemented; external worksheets and prompts are preparation only.
+
+Three fictional dossiers demonstrate software behavior. Historical research and runtime state remain separate from the synthetic public package. Practitioner usefulness, forecasting reliability and real-world impact remain unmeasured. No live monitoring, outreach or automated collection runs. Original code/docs and synthetic fixtures are MIT licensed; third-party source rights remain separate.

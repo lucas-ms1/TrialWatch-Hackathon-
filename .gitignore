@@ -30,6 +30,7 @@ experiments/philippines_pilot/*
 !experiments/philippines_pilot/config.json
 docs/EXPERIMENT_01_PLAN.md
 docs/SOURCE_REGISTER.md
+docs/REVIEW_AND_RESEARCH_PLAN.md
 scripts/build_reviewdesk_seed.py
 scripts/experiment_01/presentation.py
 scripts/experiment_01/diagnose.py

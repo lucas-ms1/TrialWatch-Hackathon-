@@ -1,24 +1,49 @@
-# Track 3 comparison build and rehearsal
+# TrialWatch: current progress and remaining sprint
 
-Updated October 7, 2026 for the user's selection: compare campaigns and case outcomes. Finish review → classification → comparison → cited memo. Preserve the Philippines focus and own-prework assumption. These milestones are internal; [EVENT_BRIEF.md](EVENT_BRIEF.md) records official requirements.
+**Checkpoint: Friday, October 9, 2026, afternoon ET. Track 3: Advocacy and Impact; Philippines first.** The [previous plan](history/SPRINT_PLAN.before-progress-review-2026-10-09.md) is preserved. The latest [decisions](DECISIONS.md) govern: collective-action signals and advocacy strategy are now one interface, not a main product plus a secondary component.
 
-## Local delivery
+## Intended product and current position
 
-Use three visibly synthetic contrasting dossiers. Finish evidence correction, manual category coding, interpretation/alternative explanations, timelines and comparison export. Verify actual browser behavior, persistence, stale analysis, invalid input and archive contents. Record observed results in [VERIFICATION.md](VERIFICATION.md). Package allowlisted code/docs and a self-contained synthetic fallback.
+The intended flow is public-source signals → candidate case/event cluster → human review and public/collective-response evidence → comparable approaches, actors and timing → a strategy decision and, when supportable, a conditional outcome estimate. The interface format is settled. The specific practitioner, operational task, final demo slice, owners and forecast outcome/horizon remain open.
 
-## Team next steps
+**We have a working manual foundation and separate evidence/interface demonstrations. We do not yet have this integrated product.** Recent work expanded the evidence, product definition and interface concept; it did not implement collection, automatic discovery or forecasts.
 
-| Area | Task | Completion evidence |
+**Data dependency clarified:** no processed, structured TrialWatch Philippine dataset or delivery commitment is confirmed. The packet's internal 300-row dataset concerns India and requires a request/NDA; format and access are unconfirmed. Public TrialWatch case pages are browse-only, and the social-media idea has no ready-made dataset. Our nine real observations were structured locally from four public UN documents. Confirm an actual input sample and its fields before committing to automated matching; a case export must not be assumed to include advocacy actions, outcomes or public-response signals.
+
+| Workstream | Ready now | Remaining gap |
 | --- | --- | --- |
-| Domain/advocacy | Ask a mentor whether this comparison supports an actual analytical task | Exact feedback and prioritized correction |
-| Evidence/method | Inspect category choices, outcome wording and missingness | Traceable judgments without causal claims |
-| Presenter | Rehearse the full demo in ten minutes | Timed rehearsal including fallback |
-| Integrator/team lead | Confirm names, submission channel and judge-accessible release | Approved materials and external submission authorization |
+| Application | Python/SQLite manual intake/import, excerpts/provenance, reviews/corrections, duplicate links, coding, comparisons, timelines, cited exports and revision warnings | Cluster/public-response/strategy interface not connected to backend; legacy strategy/follow-up endpoints are not exposed in the current frontend |
+| Data supply | Small local public-document sample and a working CSV importer; packet resource pointers | No confirmed TrialWatch structured Philippine handoff; final permitted sources, input sample/schema and advocacy/outcome coverage remain open |
+| Real evidence | Nine AI-prepared observations, three provisional histories, four public PDFs; versioned CSV/seed, contrary evidence, government account and missingness | Human checking, underlying records, independent sourcing and usefulness remain unverified |
+| Interface concept | Clickable fictional protest-arrest scenario: cluster → public response → strategy options and draft preview | Hand-authored presentation only; no collection, automatic detection, saved cluster decisions or forecasts |
+| Mentor materials | Briefs, worked review, strategy comparison, walkthroughs and questions | Incorporate any supplied mentor feedback and align one final script to the connected product |
+| Submission foundation | README, license, intended-use text, synthetic fallback and verified 61-file teammate package | Final implementation freeze and corresponding release checks, team details/channel/link, timed rehearsal and authorized submission |
 
-Assign owners as a team; do not infer names/skills.
+**October 9 team handoff:** the user authorized the current GitHub update. [TEAM_START_HERE](TEAM_START_HERE.md) points groupmates to the app, current docs and standalone [fictional interface](demo/signals-and-strategy.html). The public package now contains 61 explicitly allowed files. Fresh validation, 73 tests, 20 standalone-interface checks and clean-extraction CLI/app checks passed; [verification details](VERIFICATION.md) distinguish these software checks from real evidence or usefulness review. This shares the existing foundation and concept; the integrated product work below remains open.
 
-Friday: read/watch organizer materials. At **1 p.m. mentoring**, show the comparison output and ask how an analyst would use it. At **4 p.m.**, show the revised path and ask which missing evidence would prevent useful conclusions. Follow on-site schedule guidance where packet/email launch times conflict.
+The accepted notice/response question remains the first real evidence drill. The fictional protest cluster is separate and is not a replacement real-dataset decision. At the fresh October 9, 1:56 p.m. ET check, all 21 frozen v1 dependency hashes and the interface concept's saved hash matched. The real v1 database still had zero reviews, campaign analyses, advocacy plans or follow-ups; records remain human-review-pending. Short read-only requests to localhost ports 8767 and 8771 timed out, so current live-app availability is unverified. Start/check the intended server before rehearsal. Static materials remain available.
 
-Saturday: check a clean packaged copy at **10 a.m.**; use **11 a.m. mentoring** for the remaining usefulness question. Our internal freeze/rehearsal target is **2:30 p.m.** Official final deliverables are due **3:30 p.m. ET**, with a **10–15 minute** demo. The team lead submits only after separate authorization. Awards are scheduled for 5 p.m.
+## Next work in priority order
 
-Unit tests and synthetic demonstrations are software evidence, not practitioner validation or measured human-rights impact.
+These are recommendations, not work already started or additional organizer requirements. Names remain unassigned.
+
+1. **Team: resolve the data route and freeze one practitioner task and thin demo flow.** Bring the prepared example to mentorship and ask for an actual TrialWatch sample file, field definitions, country/date coverage, availability and permitted AI/demo use. Confirm whether it includes advocacy actions and outcomes. A sample offered in discussion is not received data. If no suitable export is available, use the bounded document-to-observation route already demonstrated, with explicit extraction and review work. The fictional interface can support integration in parallel. Record the task, a useful-result criterion, owners and what to defer. Outcome estimation remains in the vision without promising unvalidated likelihoods. No organizer message has been sent.
+2. **Builder: connect one end-to-end path to saved evidence.** Reuse claims, citations, snapshots, reviews and exports. Add only the grouping/response/strategy state needed to inspect an explained connection, challenge it, choose an objective and save/export a supported next step. Prepared AI suggestions or rules must remain distinguished from implemented model inference.
+3. **Evidence reviewer, in parallel: check the bounded real sample and required field coverage.** Confirm excerpts, attribution, dates, identity/stage and contrary evidence, or leave rows visibly pending. Inventory which fields support the chosen task and which require further evidence; advocacy actions, outcomes and public signals need their own sources. If a real collective-action example is selected, obtain only the additional permitted evidence needed; multiple defendants or reposts do not establish a movement.
+4. **AI/evaluation lead: choose one bounded AI contribution.** A candidate task is excerpt-backed extraction or explained case/analogue proposals with counterevidence. Fix inputs, outputs and a simple baseline; preserve predictions and failures. A model/provider call requires its own authorized setup. No new external API run or monitoring has started.
+5. **Presenter plus checker: test usefulness and the connected workflow.** A person should trace a connection to a passage, reject a duplicate or bad analogue, distinguish planned/ongoing/predicted action and choose a next step. Verify save/reload, corrections and stale evidence. Then revise the script, fallback, setup instructions and intended-use description to match reality.
+6. **Team lead: finish delivery.** Run README validation and relevant tests after implementation; rebuild the allowlisted synthetic package and verify clean extraction; rehearse 10–15 minutes; confirm team details, final channel and judge-accessible handoff. Publication/submission require instruction.
+
+**Recommended smallest demonstration:** saved evidence → explained candidate connection → contrary/repeated-source evidence → documented public response → human-selected objective → cited strategy draft. The synthetic scenario can demonstrate integrated mechanics; the real nine-row sample separately demonstrates source review. Neither establishes measured detection accuracy or advocacy effectiveness.
+
+## Scope and timing
+
+Keep live news/social connections, automatic matching across jurisdictions, collective-action forecasts and likely advocacy outcomes in the product roadmap. Do not promise all of them for this demo. Prefer one connected reviewed flow; defer calibrated forecasts, causal effectiveness rankings and broad live monitoring unless actually implemented and evaluated. These are proposed sprint cuts, not removal of the user's final-product goals.
+
+**Today:** resolve the input-data route, choose the flow/owners, use mentorship, begin integration and evidence checking in parallel. **Saturday morning:** complete the chosen flow, evaluate it and finish the narrative. The existing **Saturday 2:30 p.m. ET** freeze/rehearsal target is internal. The packet's deadline is **Saturday October 10, 3:30 p.m. ET**, with a **10–15-minute demo**. These work blocks are recommendations, not verified team availability.
+
+The packet accepts a prototype, demo or documented proof of concept. Required assets: repository/equivalent, code/docs/setup README, open-source license and short intended-use description. Final collection channel, lead/details and external delivery remain to be confirmed. See [event requirements](EVENT_BRIEF.md) and [submission checklist](SUBMISSION_CHECKLIST.md).
+
+## What verification establishes
+
+Existing receipts record 73 passing tests including importer/package checks, synthetic-schema validation, 48 automated real-import/state checks and 13 interface-concept interaction/layout checks. These tests were not rerun for this progress report. The fresh checks were limited to artifact hashes, read-only database counts and short server requests. These establish bounded artifact/software state, not human source authenticity, model accuracy, movement detection or advocacy impact. Source inspection confirms the manual backend exists; no integrated detector or predictor was found. Frozen historical predictions and human feedback remain separate and unchanged.

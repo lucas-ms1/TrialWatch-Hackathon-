@@ -4,15 +4,20 @@ No upload, Git operation, source collection or notebook execution occurs.
 """
 from __future__ import annotations
 
+import csv
 import hashlib
 import json
 from pathlib import Path
+import sys
 from zipfile import ZIP_DEFLATED, ZipFile
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from scripts.build_research_seed import FIELDS
+
 FILES = [
-    "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "pyproject.toml", ".gitignore",
+    "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "pyproject.toml", ".gitignore", "AGENTS.md",
     "reviewdesk/__init__.py", "reviewdesk/__main__.py", "reviewdesk/server.py",
     "reviewdesk/demo.synthetic.json", "reviewdesk/static/index.html",
     "reviewdesk/static/app.js", "reviewdesk/static/style.css",
@@ -27,7 +32,30 @@ FILES = [
     "docs/PROJECT_BRIEF.md", "docs/ANALYSIS_METHOD.md", "docs/VERIFICATION.md",
     "docs/demo/fallback.html", "docs/demo/comparison.synthetic.md", "docs/demo/comparison.synthetic.json",
     "experiments/philippines_pilot/config.json",  # static parameters used by legacy synthetic regression tests; no research records
+    "scripts/build_research_seed.py", "tests/test_research_seed.py",
+    "examples/research_records.template.csv", "docs/RESEARCH_HANDOFF.md",  # empty template and generic protocol only
+    "docs/MATERIALS_AND_DEMO_OPTIONS.md", "docs/TECHNICAL_PLAN.md", "docs/TEAM_MESSAGE.md",
+    "docs/PATTERN_REVIEW_WORKSHEET.md", "docs/PATTERN_PROPOSAL_PROMPT.md",  # blank preparation only, no results
+    "docs/history/SPRINT_PLAN.2026-10-08.md", "docs/history/PROJECT_BRIEF.2026-10-08.md",
+    "docs/history/PROJECT_BRIEF.before-interface-2026-10-09.md",
+    "docs/history/PROJECT_BRIEF.before-strategy-2026-10-09.md",
+    "docs/history/SPRINT_PLAN.before-progress-review-2026-10-09.md",
+    "docs/history/TECHNICAL_PLAN.before-interface-2026-10-09.md",
+    "docs/history/TECHNICAL_PLAN.before-strategy-2026-10-09.md",
+    "docs/history/TOOL_DESCRIPTION.before-interface-2026-10-09.md",
+    "docs/history/TOOL_DESCRIPTION.before-strategy-2026-10-09.md",
+    "docs/TEAM_START_HERE.md", "docs/demo/signals-and-strategy.html", "docs/demo/README.md",
 ]
+
+
+def validate_blank_research_template(path):
+    """Fail closed if the public template acquired any research observations."""
+    with Path(path).open("r", encoding="utf-8-sig", newline="") as stream:
+        rows = csv.reader(stream, strict=True)
+        if tuple(next(rows, ())) != FIELDS:
+            raise ValueError("Research template must retain the exact documented header.")
+        if any(any(value.strip() for value in row) for row in rows):
+            raise ValueError("Research template contains data rows. Keep filled records in ignored local storage.")
 
 
 def main() -> None:
@@ -35,6 +63,10 @@ def main() -> None:
     missing = [str(p.relative_to(ROOT)) for p in sources if not p.is_file()]
     if missing:
         raise SystemExit("Package incomplete; missing: " + ", ".join(missing))
+    try:
+        validate_blank_research_template(ROOT / "examples/research_records.template.csv")
+    except (OSError, UnicodeError, csv.Error, ValueError) as exc:
+        raise SystemExit("Public research template must remain header-only: " + str(exc)) from exc
     seed = json.loads((ROOT / "reviewdesk/demo.synthetic.json").read_text(encoding="utf-8"))
     if seed["dataset"]["kind"] != "synthetic" or any(c["material_type"] != "synthetic" for c in seed["candidates"]):
         raise SystemExit("The public starter package must contain synthetic examples only.")
