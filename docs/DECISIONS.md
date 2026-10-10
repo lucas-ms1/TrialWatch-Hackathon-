@@ -1,5 +1,11 @@
 # Current decision: connected rights and intervention support
 
+## October 10 requested redacted case publication
+
+The user explicitly requested updating the existing GitHub repository and static Pages site, then chose to publish the redacted Melayu Raya analysis and quoted passages. This authorizes that selected public projection alongside the reviewed original-code/synthetic update. Original Word documents, full source captures, private redaction maps, local databases and correspondence remain excluded. Named-person substitutions are disclosed on the public excerpts; original source locators, dates, competing accounts, criterion dispositions and pending review status are retained. Publication changes no legal or intervention approval.
+
+The static release appends a separately scoped redacted-case overlay, selected-passage pages and cited exports while preserving the existing five-case snapshot and earlier exports. Editing and saving still require the local app. This exception adds no broader case collection, publication permission for other supplied material, outreach, advocacy execution, monitoring or final submission.
+
 ## October 10 main-app synthetic strategy generation and requested publication
 
 The user explicitly requested integrating the fictional strategy explorer into the main app and updating the existing GitHub repository and Pages site. This narrowly authorizes publishing the reviewed original-code/documentation allowlist and the synthetic generator. It does not authorize adding supplied case documents, runtime databases, private research or new real-case excerpts. The existing published five-case snapshot and cited exports are preserved byte for byte. Earlier local-only publication restrictions continue to govern other work.

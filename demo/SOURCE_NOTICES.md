@@ -66,3 +66,9 @@ LawPhil / Arellano Law Foundation: the collection notice names Attribution-Non C
 	The LawPhil Project - Arellano Law Foundation.
   LawPhil-hosted judgment reproduction. One document/text version, not independent corroboration or an authenticated original court record. Document key 6320973eb8c63d4040dd89f4; text SHA256 bd251a3b268997bf0a2cb512666523f541e5e2f0f315febdd0a3d1c1d2438937.
 
+
+## Melayu Raya supplied-case projection
+
+Public selected excerpts only. [person name redacted] replaces supplied personal names; matching identities and aliases are not inferred. Derived DOCX body locators refer to private originals, not official pages or paragraph numbers. Original Word documents, full text, raw captures, identifiers, addresses and dates of birth are excluded. English was supplied by the user, who reports provision by a TrialWatch member; translator/checker and authentication details are unknown. This is an AI-prepared hackathon case analysis, pending human review.
+
+The user expressly authorized publishing this redacted analysis and its selected quoted passages. This authorization does not publish the supplied Word documents or establish third-party licensing, court authentication or translation certification. MIT applies to original project code and analysis, not third-party excerpts. The two source readers contain 147 selected evidence observations and 11 context passages. 61 evidence excerpts contain marked personal-name replacements. The nine age fragments are already limited to age wording; the roster identity/address/date-of-birth fields are excluded.

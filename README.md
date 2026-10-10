@@ -35,6 +35,8 @@ Open **Mara Vale → Advocacy / intervention → Generate advocacy options**. Th
 
 The same generator works in the [published demo](https://lucas-ms1.github.io/TrialWatch-Hackathon-/demo/rights.html?case=synthetic_mara_vale_20261010&tab=advocacy). Other editing and saving require the local app. Generation uses original route templates and the existing prerequisite rules; no model request is made. Run `node scripts/check_synthetic_strategy.cjs` for the focused strategy and cited-export checks (Node.js is needed only for that optional check).
 
+The [public Melayu Raya example](https://lucas-ms1.github.io/TrialWatch-Hackathon-/demo/rights.html?case=organizer_melayu_raya_20261010&tab=assessment) publishes selected redacted passages and the prepared twenty-criterion analysis. Its source links open the published excerpt edition with original derived locators and disclosed name substitutions. Original supplied documents and full captures remain private; assessment and proposal review remain pending.
+
 ## Connected walkthrough
 
 1. **Evidence intake:** supply UTF-8 source text and exact excerpts, or import structured fictional evidence. **Import judgments** previews a local LawPhil judgment bundle, lets you select quoted passages and saves an unassessed case. Sources retain attribution, locators, date roles, language, translation status and upstream dependence. No URL fetching or binary PDF/OCR parsing is integrated. See [judgment import and source terms](docs/JUDGMENT_IMPORT.md).
@@ -79,4 +81,4 @@ On the clean fictional starter, open **Synthetic A → Pending AI draft → Save
 
 Software tests do not establish legal accuracy, advocate usefulness, effectiveness, probability calibration or national incidence. Published expert conclusions read during preparation are attributed extraction, not independent evaluation labels. Counts describe the selected corpus; reports/cases/defendants/arrest events and candidate clusters remain distinct.
 
-This run prepares local reviewable changes only. No push, publication, outreach, monitoring, purchase, advocacy execution or final submission. The **6 p.m. ET October 9** departure checkpoint is historical. Today's internal ready target is **2:30 p.m.**, official deadline **3:30 p.m. October 10**, demo **10–15 minutes**. Names, legal approvals and delivery channel remain team decisions.
+The user authorized updating the existing repository and Pages site with the reviewed code/demo and selected redacted Melayu Raya analysis. Outreach, monitoring, purchase, advocacy execution and final submission remain outside this update. The **6 p.m. ET October 9** departure checkpoint is historical. Today's internal ready target is **2:30 p.m.**, official deadline **3:30 p.m. October 10**, demo **10–15 minutes**. Names, legal approvals and delivery channel remain team decisions.

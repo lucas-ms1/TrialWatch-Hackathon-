@@ -30,6 +30,8 @@ Keep populated notes/captures and real seeds under ignored local outputs; resear
 
 The later October 10 user request explicitly authorizes integrating the synthetic strategy generator into the main app and updating the existing GitHub repository and Pages site with the reviewed original-code/synthetic allowlist. Preserve the existing published case snapshot/exports without adding real material. This exception applies to that requested update only.
 
-This run explicitly prohibits push, publication, messages, final submission, monitoring, outreach, access bypass and spending. Earlier GitHub update authorization does not authorize those actions in this run. Prepare changes locally for review.
+The subsequent October 10 user request authorizes updating the existing GitHub repository and Pages site and explicitly publishing the redacted Melayu Raya analysis and selected quoted passages. This narrowly extends the public data scope to that redacted case projection; original Word documents, full captures, private redaction maps and runtime state remain excluded. Publication does not approve legal analysis or expand previous human review. Preserve existing published case records/exports and all local originals.
+
+The two specific repository/Pages publication requests above supersede the earlier no-push/no-publication restriction only for their stated scope. Messages, final submission, monitoring, outreach, access bypass and spending remain prohibited. Other work is local preparation for review.
 
 Run README validator and relevant tests after modifying schemas/examples/validator. Avoid dependencies until required. Test missingness, duplicates, contrary evidence, context isolation, citation resolution, corrections/stale and persistence/export scope. Software tests do not establish legal accuracy/usefulness/impact. Published conclusions used in examples are extraction with leakage, not independent validation.

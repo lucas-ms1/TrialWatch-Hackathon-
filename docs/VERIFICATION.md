@@ -1,5 +1,11 @@
 # Verification receipt: connected rights and intervention desk
 
+## October 10 redacted public-case release preparation
+
+The user authorized the repository/Pages update and the selected redacted supplied-case analysis. Release preparation reuses the completed 143-test inventory and three README validators, then checks the new static overlay, read-only requests, collision rejection, citation/reader consistency, asset syntax and exports. The six-case static build preserves the existing five-case snapshot and all thirty previous exports byte for byte. The new case retains all 147 observation IDs, twenty criterion judgments, eleven context claims, two alternatives and pending human-review status; published excerpts disclose personal-name substitutions. Original supplied files, full captures, private redaction maps and runtime databases are excluded.
+
+The publication helper verifies frozen input hashes and the exact remote tree difference, preserves earlier case files and updates main without force. Actual branch/Pages deployment receipts remain in ignored local release outputs. Browser automation was unavailable for the final screenshot; static functional checks and deployed-file verification are recorded separately. Publication is not legal approval or a new source review.
+
 ## October 10 main-app fictional strategy generator
 
 All **143 tests passed across completed suite batches**, and all three README validators passed. The first full run was interrupted after 112 completed tests; the remaining modules were rerun and passed. The exact test inventory has no missing results. The public package check passed for 140 original-code/docs/synthetic allowlisted files.

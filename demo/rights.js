@@ -11,7 +11,7 @@
   const state = {data:null,view:'index',selected:null,tab:'assessment',drafts:new Map(),advDrafts:new Map(),interventions:new Map(),aiDrafts:new Map(),aiInputs:new Map(),preview:null,busy:false,intakeDirty:false,filters:emptyFilters(),rightsSelection:new Map()};
   let toastTimer;
 
-  async function api(path, payload) {return window.StaticDemo.request(path, payload); }
+  async function api(path, payload) {return window.StaticDemo.request(path, payload);}
   const date = value => {
     if (!value) return 'Unknown';
     const parsed = new Date(/^\d{4}-\d{2}-\d{2}$/.test(value) ? value+'T12:00:00Z' : value);
@@ -676,5 +676,5 @@
   const initialTab=new URLSearchParams(location.search).get('tab');if(['assessment','evidence','history','advocacy','ai'].includes(initialTab))state.tab=initialTab;
   if(state.selected)state.view='case';
   setView(state.view);
-  load().then(()=>{if(state.selected && !selected()){state.selected=null;setView('index');error('The requested case is not present in this local collection.');}}).catch(e=>{error(e.message);$('#main').setAttribute('aria-busy','false');$('#case-list').innerHTML='<p class="empty">The rights collection could not be loaded. Start the current local server, then refresh.</p>';});
+  load().then(()=>{if(state.selected && !selected()){state.selected=null;setView('index');error('The requested case is not present in this local collection.');}}).catch(e=>{error(e.message);$('#main').setAttribute('aria-busy','false');$('#case-list').innerHTML='<p class="empty">The saved demo could not be loaded. Refresh this page.</p>';});
 })();
