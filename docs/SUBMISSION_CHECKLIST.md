@@ -1,46 +1,35 @@
-# Local submission checklist
+# Local delivery checklist: connected rights and intervention desk
 
-**Track 3: Advocacy and Impact — one interface connecting collective-action signals and advocacy strategy.** Progress reconciled October 9, 2026. The manual campaign-comparison app is the existing baseline; the integrated interface is a separate synthetic concept. Discovery and forecasts remain proposed. Official deadline: **October 10, 2026, 3:30 p.m. ET**. Demo: **10–15 minutes**. See [EVENT_BRIEF.md](EVENT_BRIEF.md); internal checks below are not official scoring rules.
+October 10, 2026. Track 3 remains selected with Track 2 overlap and no approved change. This prototype is not an official TrialWatch assessment. The [previous checklist](history/SUBMISSION_CHECKLIST.before-connected-intervention-2026-10-09.md) preserves earlier scope/results. Official deadline today **3:30 p.m. ET**, demo **10–15 minutes**; internal ready target **2:30 p.m.** Read [EVENT_BRIEF](EVENT_BRIEF.md).
 
-## Required assets prepared locally
+## Guided-finish integration
 
-- [x] Working comparison prototype, documentation and setup/usage [README](../README.md).
-- [x] [MIT license](../LICENSE) for original code/docs/synthetic examples and [third-party notices](../THIRD_PARTY_NOTICES.md).
-- [x] [Short tool and intended-use description](TOOL_DESCRIPTION.md).
-- [x] [Demo narrative](DEMO_SCRIPT.md) and self-contained [offline fallback](demo/fallback.html).
-- [x] Disclosure of pre-event work, AI assistance, synthetic material and evidence limits.
-- [ ] Team-provided member names, lead and roles confirmed.
-- [x] Permitted starting materials inspected and accepted notice/response question worked into nine AI-prepared observations across three provisional histories.
-- [x] Final product format and direction clarified: an interface integrating signals, review and advocacy strategy.
-- [x] Current teammate handoff prepared and verified: [start page](TEAM_START_HERE.md), standalone fictional interface, current plans, empty CSV importer/template and 61-file public package. The user authorized this GitHub update on October 9.
-- [x] Primary data route set to permitted public-document intake, structuring and human review; no TrialWatch database request or delivery dependency.
-- [ ] Final bounded source selection and field coverage established, with extraction/review work recorded. Advocacy actions/outcomes and public signals require separate evidence checks; a future permitted export is optional.
-- [ ] Specific practitioner/task, final demo slice, evidence boundaries and implementation owners agreed.
-- [ ] Selected cluster/public-response/strategy flow integrated with the working evidence app, or clearly presented as a documented proof of concept.
-- [ ] Demo narrative and fallback reconciled with the final implemented scope; any AI contribution shown with its actual inputs, outputs and limits.
-- [ ] Bounded evidence batch checked by humans and usefulness feedback recorded, or these gaps explicitly disclosed.
-- [x] First limited human walkthrough completed: four C02 observations selected, review/analysis revision 1 saved, timeline/memo inspected and analysis confirmed after refresh. This does not complete whole-batch review or usefulness evaluation.
-- [ ] Preparation/import labels distinguished from current human-review status in app/export; original provenance preserved.
-- [ ] Structured candidate decisions, other four proposal assessments, C03 review and integrated rehearsal completed or their limits clearly disclosed.
-- [x] GitHub destination selected and code/demo publication authorized by the user on October 8: [team repository](https://github.com/lucas-ms1/TrialWatch-Hackathon-).
-- [ ] Organizer collection channel and final submission details confirmed.
-- [ ] Team timed rehearsal completed within the allocation.
-- [ ] Final hackathon submission authorized and performed.
+- [x] Saved Part 2 artifact imported with original raw output hash; reopen and Markdown/JSON export checked in new isolated real state.
+- [x] Pending draft UI, exact source/claim links, provenance, stage questions, unknowns and alternatives; twenty draft mappings remain null.
+- [x] Manual/synthetic fallback and bounded optional CLI route implemented; actual integrated result belongs in [VERIFICATION](VERIFICATION.md).
+- [x] Repeated Abra review checkpoints skipped at the user's direction; original Lucas S scope carried forward unchanged, no expanded approvals.
+- [x] Pending-proposal/browser/stale walkthrough, 114-test clean extraction, startup, three README validators and 120-file package integrity checks; actual receipts recorded.
+- [x] Actual new-app user feedback: proposal/action distinction clear. This is interface feedback only.
+- [ ] Timed live presenter rehearsal. Script's duration budget is not a completed presentation.
 
-The unchecked items require team participation or, for external delivery, authorization. Research/usefulness checks are internal goals, not additional official submission requirements. Repository sharing does not constitute final hackathon submission, organizer endorsement or confirmation of team eligibility. The latest October 9 request explicitly authorizes the current GitHub update for teammates, using original code/docs and synthetic material; final submission, outreach and monitoring remain outside that request.
+## October 9 baseline prepared locally (historical)
 
-## Package boundary
+- [x] Connected interface, standard-library code, setup/usage [README](../README.md), [MIT](../LICENSE), [notices](../THIRD_PARTY_NOTICES.md), [intended use](TOOL_DESCRIPTION.md).
+- [x] Preserved v1 definitions; explicit 20-dimension [rubric](RIGHTS_RUBRIC.md), [contracts](../schemas/README.md), [method](INTERVENTION_METHOD.md) and [API](INTERVENTION_API.md).
+- [x] Synthetic intake → assessment with contrary evidence → scoped review → dated context/two options → proposal → simulated exact acceptance → reopen/export → correction/stale exercised in browser. No actual legal approval.
+- [x] Synthetic rehearsal demonstrates insufficient basis and justified deferral; 99 software tests pass.
+- [x] Frozen research/state and Lucas S's exact sequence scope preserved; no new collection or real recommendation.
+- [x] Explicit 112-file synthetic package, runtime validation/integrity/hash checks. Actual clean-extraction result in [VERIFICATION](VERIFICATION.md).
+- [x] Honest 6 p.m. recoverable checkpoint and local [team explanation](TEAM_MESSAGE.md).
 
-The explicit allowlist in `scripts/package_submission.py` includes code, tests, active submission docs, synthetic demo artifacts and the static configuration needed by legacy synthetic tests. The local research source register, research plans, experiment observations, historical outputs, source captures, emails, credentials, runtime state, organizer PDFs and notebook bundles are excluded. Third-party source material is not relicensed. Git ignore rules do not change Dropbox permissions.
+## Remaining team work
 
-The package script checks synthetic flags, file inventory, archive integrity and every file hash. Clean extraction verification is recorded in [VERIFICATION.md](VERIFICATION.md). Do not use a working research ZIP as the submission package.
+- [ ] Assign actual legal/context reviewer, builder/checker, presenter and lead; confirm member details/delivery channel.
+- [ ] Qualified standard/stage/original-passage review, contrary accounts and exact rights scope. Keep unsupported dimensions unscored.
+- [ ] Inspect authority/routes/timing/capacity, exposure and properly available preferences. Saving a decision never authorizes execution.
+- [ ] Real teammate/advocate walkthrough and usefulness feedback, separate from tests.
+- [ ] Use the narrow pending draft/proposal slice; disclose saved/live/manual/synthetic origin and unresolved legal/current-context judgments. No calibrated forecasts.
+- [ ] Timed 10–15-minute rehearsal, resolve blockers, freeze/rebuild package and reach 2:30 p.m. internal readiness.
+- [ ] Later authorization and final publication/submission. None occurs in this run.
 
-The October 9 teammate update includes a verified 61-file package and standalone fictional interface; clean extraction, all 73 tests, importer/fallback commands and application startup passed. This is the current shared baseline, not a final integrated-product submission. After further implementation changes, rerun relevant checks, rebuild the allowlisted package and verify clean extraction. Ignored mentor research remains excluded; copying the fictional interface into `docs/demo/` does not publish the real evidence pack.
-
-## Acceptance and claims
-
-Observed verification belongs in [VERIFICATION.md](VERIFICATION.md), including browser checks, source validation, persistence, exports, frozen-file hashes and package checks. Do not mark tests as human evidence validation.
-
-The product compares documented observations and reported outcomes. It does not estimate social reach, rank campaign effectiveness, infer causation, authenticate court decisions or demonstrate national impact. Missing records remain unknown. The prior 20-report AI-reference triage experiment is separate from this workflow and supplies no advocacy-effectiveness score.
-
-A partner usefulness result, systematic real campaign dataset and causal study have not been recorded. The frozen v1 sample and later 20-observation v2 remain local and separate from the public package. C02 has a limited four-observation human review and saved analysis; other observations/proposals remain outside that review. The original court order and identity questions remain unresolved. No live monitoring, outreach, spending or notebook changes occurred in this progress review.
+Package excludes raw research, runtime SQLite, organizer PDFs, restricted data and notebook bundles. MIT applies to original material only; Git ignore does not alter Dropbox access. Default demo needs no credentials, internet or paid service. Tests establish mechanics, not legal accuracy, source authenticity, incidence, impact, causation or probability.

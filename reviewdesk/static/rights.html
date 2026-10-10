@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A local rights evidence index connected to sourced advocacy options and scoped human intervention decisions.">
+  <title>TrialWatch · Rights evidence index</title>
+  <link rel="stylesheet" href="/rights.css">
+  <link rel="stylesheet" href="/judgment-import.css">
+  <script src="/judgment-import.js" defer></script>
+  <script src="/ai-wizard.js" defer></script>
+  <script src="/advocacy-reader.js" defer></script>
+  <link rel="stylesheet" href="/synthetic-strategy.css">
+  <script src="/synthetic-strategy-data.js" defer></script>
+  <script src="/synthetic-strategy-core.js" defer></script>
+  <script src="/synthetic-strategy.js" defer></script>
+  <script src="/rights.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to case index</a>
+  <header class="site-header">
+    <a class="brand" href="/rights.html"><span class="brand-mark" aria-hidden="true">TW</span><span>TrialWatch <small>Hackathon prototype</small></span></a>
+    <nav aria-label="Workspace"><button type="button" id="index-open" aria-current="page">Case index</button><button type="button" id="method-open">Rubric & method</button><a href="/index.html">Legacy evidence desk</a><button type="button" id="judgment-import-open">Import judgments</button><button class="button primary" type="button" id="intake-open">Add case material <span aria-hidden="true">+</span></button></nav>
+  </header>
+  <div class="boundary-banner"><strong>Evidence workflow:</strong> inspect passages → review draft → compare options → save proposal.</div>
+  <main id="main" tabindex="-1" aria-busy="true">
+    <div id="global-error" class="error" role="alert" hidden></div>
+    <section id="index-view" aria-labelledby="index-title">
+      <div class="page-heading"><div><p class="eyebrow">EVIDENCE → RIGHTS → CONTEXT → INTERVENTION REVIEW</p><h1 id="index-title">Rights evidence index</h1><p class="lede">Find a case, inspect its evidence and compare next steps.</p></div><div id="collection-kind" class="collection-label">Loading local collection…</div></div>
+      <div id="summary" class="summary-strip" aria-label="Collection summary"></div>
+      <form id="filters" class="filters" aria-label="Filter cases">
+        <label class="search-label">Search cases<input id="search" type="search" placeholder="Case, person, issue or place" autocomplete="off"></label>
+        <label>Country<select id="country"><option value="">All countries</option></select></label>
+        <label>Region / place<select id="region-filter"><option value="">All recorded regions</option></select></label>
+        <label>Review state<select id="review-filter"><option value="">All states</option><option value="unassessed">Not assessed</option><option value="pending">Human review pending</option><option value="partial">Partially approved</option><option value="approved">All assessed dimensions approved</option><option value="changes">Changes requested</option><option value="stale">Evidence changed</option></select></label>
+        <label>Rights dimension<select id="dimension-filter"><option value="">Any dimension</option></select></label>
+        <label>Concern state<select id="score-filter"><option value="">Any state</option><option value="0">0 · None documented</option><option value="1">1 · Limited concern</option><option value="2">2 · Substantial concern</option><option value="3">3 · Serious concern</option><option value="insufficient_evidence">Insufficient evidence</option><option value="not_assessed">Not assessed</option><option value="not_applicable">Not applicable</option></select></label>
+        <label class="date-filter">Event date from<input id="date-from" type="date"></label>
+        <label class="date-filter">Event date through<input id="date-to" type="date"></label>
+        <label class="check-label unknown-filter"><input id="keep-unknown-dates" type="checkbox" checked><span>Keep unknown<br>event dates</span></label>
+        <button type="reset" class="text-button">Reset</button>
+      </form>
+      <p class="filter-help">Filter by event date. Cases match when at least one observation falls within the range; saved profiles retain all their evidence.</p>
+      <div class="section-top"><h2>Collected cases <span id="result-count" class="muted"></span></h2><p>Fair trial · expression</p></div>
+      <div id="case-list" class="case-grid"><p class="empty">Loading cases…</p></div>
+      <section class="context-strip" aria-labelledby="corpus-title"><div><p class="eyebrow">COLLECTION</p><h2 id="corpus-title">Selected records</h2></div><div id="corpus-context"></div></section>
+    </section>
+    <section id="case-view" hidden aria-label="Individual case profile"></section>
+    <section id="method-view" hidden aria-labelledby="method-title"></section>
+  </main>
+  <footer><span>Track 3 · Advocacy and Impact</span><span>Original code and synthetic fixtures · local saved state</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="intake-dialog" aria-labelledby="intake-title">
+    <div class="dialog-heading"><div><p class="eyebrow">CASE INTAKE</p><h2 id="intake-title">Add case material</h2></div><button type="button" class="icon-button" id="intake-close" aria-label="Close intake">×</button></div>
+    <p>Load UTF-8 text and select exact excerpts, or import a structured JSON record. Convert PDFs and images to text first.</p>
+    <div class="tabs" role="tablist" aria-label="Intake route"><button type="button" role="tab" id="manual-tab" data-intake-tab="manual" aria-controls="manual-intake" aria-selected="true">Text document</button><button type="button" role="tab" id="structured-tab" data-intake-tab="structured" aria-controls="structured-intake" aria-selected="false">Structured JSON</button></div>
+    <form id="manual-intake" role="tabpanel" aria-labelledby="manual-tab">
+      <div class="form-grid"><label>Case title<input name="title" required maxlength="300" placeholder="A specific proceeding or case"></label><label>Country<input name="country" required maxlength="120" placeholder="Jurisdiction"></label><label>Person / defendant label<input name="person" required maxlength="300" placeholder="Preserve uncertain identity"></label><label>Proceeding<input name="proceeding" required maxlength="300" placeholder="Charge or proceeding; unknown if missing"></label></div>
+      <label>Case summary<textarea name="summary" required rows="2" maxlength="10000" placeholder="Summarize what the source reports"></textarea></label>
+      <fieldset><legend>Source and passage</legend><div class="form-grid"><label>Source title<input name="source_title" required maxlength="300"></label><label>Publisher<input name="publisher" required maxlength="200"></label><label>Public source URL<input name="url" type="url" required placeholder="https://…"></label><label>Publication date<input name="publication_date" type="date"></label><label>Original language<input name="language" required value="English" maxlength="80"></label><label>Translation status<input name="translation_status" required value="Original language" maxlength="200"></label></div>
+      <label>Load a UTF-8 .txt document<input type="file" id="text-upload" accept=".txt,text/plain"><span class="help">Load the text, then select a passage and save.</span></label>
+      <label>Supplied source text<textarea name="source_text" id="source-text" required rows="5" maxlength="350000" placeholder="Paste the permitted public source text"></textarea></label>
+      <label>Factual proposition<textarea name="claim_text" required rows="2" maxlength="10000" placeholder="The source alleges / the court is reported to have found…"></textarea></label>
+      <label>Exact supporting excerpt<textarea name="excerpt" required rows="3" maxlength="10000" placeholder="Copy an exact passage from the source text above"></textarea></label>
+      <div class="form-grid"><label>Passage location<input name="locator" required maxlength="500" placeholder="Page 4, paragraph 12 or heading + paragraph"></label><label>Event date<input name="event_date" type="date"><span class="help">Leave blank when unknown.</span></label><label>Attribution<input name="attribution" required value="User-entered source allegation; support awaiting human review" maxlength="1000"></label><label>Source relationship / reuse note<input name="lineage_note" maxlength="1000" placeholder="Upstream source, repetition or access limitations"></label></div></fieldset>
+      <label>Unresolved facts<textarea name="unknowns" rows="2" placeholder="One gap per line"></textarea></label>
+      <div class="form-actions"><button type="submit" class="button primary">Import evidence · create unassessed case</button></div>
+    </form>
+    <form id="structured-intake" role="tabpanel" aria-labelledby="structured-tab" hidden>
+      <p class="notice">Import a record with case, source and claim IDs plus matching source text and excerpts.</p>
+      <label>Load structured .json<input type="file" id="json-upload" accept=".json,application/json"></label>
+      <label>Rights intake record<textarea id="intake-json" required rows="14" spellcheck="false" placeholder="Load or paste the documented rights intake JSON"></textarea></label>
+      <div class="form-actions"><button type="button" class="button" id="sample-import">Fill fictional import example</button><button type="submit" class="button primary">Validate & import</button></div>
+    </form>
+    <p id="intake-error" class="error" role="alert" hidden></p>
+  </dialog>
+  <dialog id="judgment-import-dialog" aria-label="Import judgment bundle"><div id="judgment-import-host"></div></dialog>
+</body>
+</html>

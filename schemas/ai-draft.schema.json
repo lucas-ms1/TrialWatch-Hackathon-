@@ -1,0 +1,445 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "part2-pending-draft/1"
+      ]
+    },
+    "dossier_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "human_review_pending"
+      ]
+    },
+    "rubric_version": {
+      "type": "string",
+      "enum": [
+        "rights-rubric/2.0"
+      ]
+    },
+    "summary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "proposition_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          },
+          "passage_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          },
+          "limits": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "proposition_ids",
+          "passage_ids",
+          "limits"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "chronology": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string"
+          },
+          "date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "date_role": {
+            "type": "string"
+          },
+          "proposition_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          },
+          "passage_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          },
+          "limits": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "event",
+          "date",
+          "date_role",
+          "proposition_ids",
+          "passage_ids",
+          "limits"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "passage_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "quote": {
+            "type": "string"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "attribution": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "passage_id",
+          "source_id",
+          "quote",
+          "locator",
+          "attribution"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "stage_questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stage": {
+            "type": "string",
+            "enum": [
+              "preliminary_investigation",
+              "criminal_charge_notice",
+              "arrest_information"
+            ]
+          },
+          "factual_passage_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          },
+          "standard_passage_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "applicability_status": {
+            "type": "string",
+            "enum": [
+              "unresolved"
+            ]
+          },
+          "missing_facts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limits": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "stage",
+          "factual_passage_ids",
+          "standard_passage_ids",
+          "questions",
+          "applicability_status",
+          "missing_facts",
+          "limits"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "passage_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          },
+          "why_it_matters": {
+            "type": "string"
+          },
+          "next_check": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "question",
+          "passage_ids",
+          "why_it_matters",
+          "next_check"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "option_id": {
+            "type": "string",
+            "enum": [
+              "verify_records",
+              "defer_public_route"
+            ]
+          },
+          "proposed_disposition": {
+            "type": "string",
+            "enum": [
+              "prepare_verify",
+              "defer"
+            ]
+          },
+          "objective": {
+            "type": "string"
+          },
+          "beneficiaries": {
+            "type": "string"
+          },
+          "route": {
+            "type": "string"
+          },
+          "actor_authority": {
+            "type": "string"
+          },
+          "support_passage_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          },
+          "contrary_passage_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          },
+          "urgency": {
+            "type": "string"
+          },
+          "opportunity": {
+            "type": "string"
+          },
+          "feasibility": {
+            "type": "string"
+          },
+          "potential_harm": {
+            "type": "string"
+          },
+          "unknowns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "prerequisites": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_step": {
+            "type": "string"
+          },
+          "reconsideration_trigger": {
+            "type": "string"
+          },
+          "execution_status": {
+            "type": "string",
+            "enum": [
+              "proposal_only"
+            ]
+          }
+        },
+        "required": [
+          "option_id",
+          "proposed_disposition",
+          "objective",
+          "beneficiaries",
+          "route",
+          "actor_authority",
+          "support_passage_ids",
+          "contrary_passage_ids",
+          "urgency",
+          "opportunity",
+          "feasibility",
+          "potential_harm",
+          "unknowns",
+          "prerequisites",
+          "next_step",
+          "reconsideration_trigger",
+          "execution_status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "assessment_mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dimension_id": {
+            "type": "string",
+            "enum": [
+              "tribunal_law",
+              "equality_arms",
+              "publicity",
+              "presumption_innocence",
+              "notice_charges",
+              "preparation_facilities",
+              "legal_assistance",
+              "participation",
+              "challenge_evidence",
+              "interpretation",
+              "self_incrimination",
+              "undue_delay",
+              "appeal_review",
+              "juvenile_safeguards",
+              "double_jeopardy",
+              "miscarriage_compensation",
+              "expression_scope",
+              "expression_legal_basis",
+              "expression_legitimate_aim",
+              "expression_necessity"
+            ]
+          },
+          "mapping": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "dimension_id",
+          "mapping"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_checkpoint": {
+      "type": "object",
+      "properties": {
+        "source_review_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          }
+        },
+        "request": {
+          "type": "string"
+        },
+        "legal_review_status": {
+          "type": "string",
+          "enum": [
+            "separate_pending"
+          ]
+        },
+        "approval": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "source_review_ids",
+        "request",
+        "legal_review_status",
+        "approval"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "dossier_id",
+    "review_status",
+    "rubric_version",
+    "summary",
+    "chronology",
+    "citations",
+    "stage_questions",
+    "gaps",
+    "options",
+    "assessment_mappings",
+    "limitations",
+    "human_checkpoint"
+  ],
+  "additionalProperties": false,
+  "title": "Pending evidence-assisted draft; dynamic references constrained by supplied input and runtime validator"
+}

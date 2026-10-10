@@ -1,0 +1,778 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/trialwatch/intervention-decision-v1.schema.json",
+  "title": "Provisional intervention decision v1",
+  "description": "Saved/decorated explicit worksheet specification, separate from rights scoring. Runtime enforces resolving exact supplied excerpts, linked revisions, at least two options including deferral, rule gates and exact human scope. No probability/composite/automatic action. This schema does not establish legal or advocacy correctness.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "candidate_id",
+    "revision",
+    "created_at",
+    "author",
+    "origin",
+    "evidence_cutoff",
+    "dependencies",
+    "dimension_ids",
+    "rights_snapshots",
+    "context_snapshot",
+    "options",
+    "selected_option_id",
+    "requested_disposition",
+    "disposition",
+    "rule_reasons",
+    "rationale",
+    "factors",
+    "legal_concern",
+    "rights_scope_status",
+    "review_scope",
+    "review_status",
+    "disclaimer"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rights_scope_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "disclaimer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "selected_option_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "const": "intervention-decision/1"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "origin": {
+      "enum": [
+        "manual",
+        "ai_prepared",
+        "synthetic_prepared"
+      ]
+    },
+    "evidence_cutoff": {
+      "type": "string",
+      "format": "date"
+    },
+    "dependencies": {
+      "$ref": "#/$defs/dependencies"
+    },
+    "dimension_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 500,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+      }
+    },
+    "rights_snapshots": {
+      "type": "object",
+      "description": "Immutable full rights exports keyed by linked case. Each keeps its original rubric/dimension definitions; unassessed cluster cases explicitly retain null assessment."
+    },
+    "context_snapshot": {
+      "$ref": "#/$defs/context"
+    },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/option"
+      }
+    },
+    "requested_disposition": {
+      "enum": [
+        "intervene_now",
+        "prepare_verify",
+        "refer_coordinate",
+        "defer",
+        "against",
+        "insufficient_basis"
+      ]
+    },
+    "disposition": {
+      "enum": [
+        "intervene_now",
+        "prepare_verify",
+        "refer_coordinate",
+        "defer",
+        "against",
+        "insufficient_basis"
+      ]
+    },
+    "rule_reasons": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000
+      }
+    },
+    "factors": {
+      "$ref": "#/$defs/factors"
+    },
+    "legal_concern": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "review_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dimension_ids",
+        "context_claim_ids"
+      ],
+      "properties": {
+        "dimension_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 500,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+          }
+        },
+        "context_claim_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 500,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+          }
+        }
+      }
+    },
+    "review_status": {
+      "enum": [
+        "pending_human_review",
+        "accept",
+        "revise",
+        "reject",
+        "defer",
+        "stale"
+      ]
+    },
+    "stale": {
+      "type": "boolean"
+    },
+    "stale_reasons": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000
+      }
+    },
+    "current_dependencies": {
+      "$ref": "#/$defs/dependencies"
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/review"
+      }
+    },
+    "followups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/followup"
+      }
+    }
+  },
+  "$defs": {
+    "dependencies": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "context_revision",
+        "cases"
+      ],
+      "properties": {
+        "context_revision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cases": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "assessment_revision",
+              "evidence_revision",
+              "rights_review_revision"
+            ],
+            "properties": {
+              "assessment_revision": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "evidence_revision": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "rights_review_revision": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "factors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "urgency",
+        "opportunity",
+        "feasibility",
+        "harm",
+        "preferences",
+        "reason"
+      ],
+      "properties": {
+        "urgency": {
+          "enum": [
+            "unknown",
+            "routine",
+            "time_sensitive"
+          ]
+        },
+        "opportunity": {
+          "enum": [
+            "unknown",
+            "not_established",
+            "supported"
+          ]
+        },
+        "feasibility": {
+          "enum": [
+            "unknown",
+            "needs_verification",
+            "feasible"
+          ]
+        },
+        "harm": {
+          "enum": [
+            "unknown",
+            "material_risk",
+            "mitigated"
+          ]
+        },
+        "preferences": {
+          "enum": [
+            "unknown",
+            "requested",
+            "opposed"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "actor",
+        "authority",
+        "objective",
+        "beneficiary",
+        "timing_window",
+        "alternative_explanations",
+        "next_step",
+        "reconsideration_trigger",
+        "support_context_ids",
+        "contrary_context_ids",
+        "authority_context_ids",
+        "timing_context_ids",
+        "feasibility_context_ids",
+        "harm_context_ids",
+        "preferences_context_ids",
+        "preconditions",
+        "blocking_unknowns",
+        "benefits",
+        "harms",
+        "route",
+        "factors"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authority": {
+          "type": "string",
+          "minLength": 1
+        },
+        "objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "beneficiary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "timing_window": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alternative_explanations": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_step": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reconsideration_trigger": {
+          "type": "string",
+          "minLength": 1
+        },
+        "support_context_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 500,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+          }
+        },
+        "contrary_context_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 500,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+          }
+        },
+        "authority_context_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 500,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+          }
+        },
+        "timing_context_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 500,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+          }
+        },
+        "feasibility_context_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 500,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+          }
+        },
+        "harm_context_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 500,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+          }
+        },
+        "preferences_context_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 500,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+          }
+        },
+        "preconditions": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8000
+          }
+        },
+        "blocking_unknowns": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8000
+          }
+        },
+        "benefits": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8000
+          }
+        },
+        "harms": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8000
+          }
+        },
+        "route": {
+          "enum": [
+            "legal_support",
+            "partner_coordination",
+            "quiet_engagement",
+            "public_advocacy",
+            "policy_advocacy",
+            "mechanism_referral",
+            "verification",
+            "deferral"
+          ]
+        },
+        "factors": {
+          "$ref": "#/$defs/factors"
+        }
+      }
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "candidate_id",
+        "revision",
+        "author",
+        "origin",
+        "recorded_at",
+        "evidence_cutoff",
+        "sources",
+        "claims",
+        "unknowns",
+        "cluster",
+        "comparables",
+        "review_status",
+        "disclaimer"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "intervention-context/1"
+        },
+        "candidate_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "enum": [
+            "manual",
+            "ai_prepared",
+            "synthetic_prepared"
+          ]
+        },
+        "recorded_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "evidence_cutoff": {
+          "type": "string",
+          "format": "date"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "claims": {
+          "type": "array",
+          "maxItems": 500,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "topic",
+              "text",
+              "source_id",
+              "excerpt",
+              "locator",
+              "date_note",
+              "attribution",
+              "uncertainty",
+              "freshness_note",
+              "relevant_date"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "topic": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "excerpt": {
+                "type": "string",
+                "minLength": 1
+              },
+              "locator": {
+                "type": "string",
+                "minLength": 1
+              },
+              "date_note": {
+                "type": "string",
+                "minLength": 1
+              },
+              "attribution": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uncertainty": {
+                "type": "string",
+                "minLength": 1
+              },
+              "freshness_note": {
+                "type": "string",
+                "minLength": 1
+              },
+              "relevant_date": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              }
+            }
+          }
+        },
+        "unknowns": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8000
+          }
+        },
+        "cluster": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Named scoped membership review, with material differences and uncertainty; not factual approval or movement finding."
+        },
+        "comparables": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "review_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "disclaimer": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "recommendation_id",
+        "recommendation_revision",
+        "revision",
+        "reviewer",
+        "decision",
+        "reason",
+        "reviewed_at",
+        "dimension_ids",
+        "context_claim_ids",
+        "dependencies",
+        "revised_disposition",
+        "revision_note",
+        "stale_at_review",
+        "scope"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "intervention-review/1"
+        },
+        "decision": {
+          "enum": [
+            "accept",
+            "revise",
+            "reject",
+            "defer"
+          ]
+        },
+        "dimension_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 500,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+          }
+        },
+        "context_claim_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 500,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"
+          }
+        },
+        "revised_disposition": {
+          "enum": [
+            "intervene_now",
+            "prepare_verify",
+            "refer_coordinate",
+            "defer",
+            "against",
+            "insufficient_basis",
+            null
+          ]
+        },
+        "dependencies": {
+          "$ref": "#/$defs/dependencies"
+        }
+      }
+    },
+    "followup": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "recommendation_id",
+        "sequence",
+        "author",
+        "kind",
+        "text",
+        "event_date",
+        "recorded_at",
+        "source",
+        "excerpt",
+        "locator",
+        "period",
+        "contribution",
+        "uncertainty",
+        "dependencies",
+        "interpretation"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "intervention-followup/1"
+        },
+        "kind": {
+          "enum": [
+            "observed_action",
+            "observed_outcome",
+            "conditional_scenario",
+            "unknown_outcome"
+          ]
+        },
+        "event_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "source": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "excerpt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "locator": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

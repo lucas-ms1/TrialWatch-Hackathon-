@@ -1,0 +1,20 @@
+{
+  "schema_version": "judgment-import/1",
+  "provider": "synthetic_fixture",
+  "document": {
+    "document_id": "fictional-judgment-example-1",
+    "title": "Fictional Example v. Example — software demonstration",
+    "url": "https://example.invalid/synthetic/judgment-example-1.html",
+    "publisher": "Synthetic judgment fixture",
+    "court": "Fictional Court",
+    "country": "Philippines",
+    "citations": [],
+    "proceeding_id": null,
+    "publication_date": null,
+    "decision_date": "2026-10",
+    "retrieved_at": null,
+    "language": "English",
+    "translation_status": "Original fictional English text; no translation",
+    "html": "<!doctype html><html><head><title>Fictional software fixture</title></head><body><h2>FICTIONAL JUDGMENT EXCERPT</h2><p>Fictional counsel states that a hearing notice arrived after the date printed on it.<a href=\"#fictional-note-1\">1</a></p><p>The fictional respondent disputes that account and asks to inspect the notice and delivery record.</p><p>The fictional court requests those documents. This invented passage supplies no conclusion about a real proceeding or a rights violation.</p><p id=\"fictional-note-1\">1 Entirely invented source note for citation and passage selection demonstrations.</p></body></html>"
+  }
+}

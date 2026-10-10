@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "id": "rights-index-synthetic-v1",
+    "label": "Rights index — entirely fictional demo",
+    "kind": "synthetic",
+    "description": "Three fictional rights dossiers; software fixtures only, not real case research or measured legal accuracy."
+  },
+  "candidates": [
+    {
+      "id": "rights_demo_1",
+      "title": "Synthetic A: contested charge notice",
+      "person": "Fictional person rights_demo_1",
+      "proceeding": "Fictional criminal proceeding; demonstration only",
+      "country": "Philippines",
+      "material_type": "synthetic",
+      "as_of": "2026-09-12",
+      "summary": "Entirely fictional evidence for rights-assessment software mechanics.",
+      "suggested_decision": "uncertain",
+      "review_reasons": [
+        "Preparation-time status: human review pending; this note records fixture provenance and does not describe subsequent saved review."
+      ],
+      "unknowns": [
+        "No real case or legal assessment is represented. All citations in this fictional dossier are fixture locations."
+      ],
+      "notes": [
+        "Synthetic preparation; no fresh AI extraction. Human review pending at preparation; current reviews appear separately."
+      ],
+      "claims": [
+        {
+          "id": "a_notice",
+          "source_id": "a_report",
+          "text": "The fictional defence says the defendant first received the charge details at the hearing, leaving no preparation time.",
+          "excerpt": "The fictional defence says the defendant first received the charge details at the hearing, leaving no preparation time.",
+          "locator": "Fictional fixture paragraph a_notice",
+          "event_date": "2026-09-10",
+          "date_note": "Fictional event date; not a real proceeding",
+          "attribution": "Fictional source allegation; unauthenticated demonstration text",
+          "attribution_kind": "source_allegation"
+        },
+        {
+          "id": "a_repeat",
+          "source_id": "a_repeat_report",
+          "text": "The fictional defence says the defendant first received the charge details at the hearing, leaving no preparation time.",
+          "excerpt": "The fictional defence says the defendant first received the charge details at the hearing, leaving no preparation time.",
+          "locator": "Fictional fixture paragraph a_repeat",
+          "event_date": "2026-09-10",
+          "date_note": "Fictional event date; not a real proceeding",
+          "attribution": "Fictional source allegation; unauthenticated demonstration text",
+          "attribution_kind": "source_allegation"
+        },
+        {
+          "id": "a_reply",
+          "source_id": "a_reply_source",
+          "text": "The fictional prosecution says charge papers were delivered two weeks earlier; no receipt is supplied.",
+          "excerpt": "The fictional prosecution says charge papers were delivered two weeks earlier; no receipt is supplied.",
+          "locator": "Fictional fixture paragraph a_reply",
+          "event_date": "2026-09-10",
+          "date_note": "Fictional event date; not a real proceeding",
+          "attribution": "Fictional government position; unauthenticated demonstration text",
+          "attribution_kind": "government_position"
+        },
+        {
+          "id": "a_minutes",
+          "source_id": "a_minutes_source",
+          "text": "Fictional hearing minutes record a request for adjournment to inspect the charge papers; the decision on that request is absent.",
+          "excerpt": "Fictional hearing minutes record a request for adjournment to inspect the charge papers; the decision on that request is absent.",
+          "locator": "Fictional fixture paragraph a_minutes",
+          "event_date": "2026-09-10",
+          "date_note": "Fictional event date; not a real proceeding",
+          "attribution": "Fictional documented procedure; unauthenticated demonstration text",
+          "attribution_kind": "documented_procedure"
+        }
+      ],
+      "sources": [
+        {
+          "id": "a_report",
+          "title": "Synthetic defence report",
+          "publisher": "Fictional fixture publisher",
+          "url": "https://example.invalid/rights/a_report",
+          "publication_date": "2026-09-12",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Synthetic English text; no translation",
+          "access_note": "Software fixture only. No document was retrieved and URL is intentionally non-resolving.",
+          "lineage_note": "Fictional defence statement; independence unestablished."
+        },
+        {
+          "id": "a_repeat_report",
+          "title": "Synthetic repetition of defence report",
+          "publisher": "Fictional fixture publisher",
+          "url": "https://example.invalid/rights/a_repeat_report",
+          "publication_date": "2026-09-12",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Synthetic English text; no translation",
+          "access_note": "Software fixture only. No document was retrieved and URL is intentionally non-resolving.",
+          "lineage_note": "Repeats a_report verbatim; same upstream allegation, not independent corroboration."
+        },
+        {
+          "id": "a_reply_source",
+          "title": "Synthetic prosecution position",
+          "publisher": "Fictional fixture publisher",
+          "url": "https://example.invalid/rights/a_reply_source",
+          "publication_date": "2026-09-12",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Synthetic English text; no translation",
+          "access_note": "Software fixture only. No document was retrieved and URL is intentionally non-resolving.",
+          "lineage_note": "Contrary position; authenticity not established."
+        },
+        {
+          "id": "a_minutes_source",
+          "title": "Synthetic partial hearing minutes",
+          "publisher": "Fictional fixture publisher",
+          "url": "https://example.invalid/rights/a_minutes_source",
+          "publication_date": "2026-09-12",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Synthetic English text; no translation",
+          "access_note": "Software fixture only. No document was retrieved and URL is intentionally non-resolving.",
+          "lineage_note": "Fictional procedural text; incomplete minutes."
+        }
+      ],
+      "related_candidate_ids": [
+        "rights_demo_2"
+      ],
+      "rights_metadata": {
+        "region": "Fictional demonstration region",
+        "case_unit": "One fictional case, one defendant; arrest-event count not established.",
+        "identity_uncertainty": "Fixture IDs identify fictional dossiers only; no identity matching was performed.",
+        "related_cases": [
+          {
+            "candidate_id": "rights_demo_2",
+            "basis": "Both fictional Philippine criminal proceedings contain charge-notice evidence in September 2026.",
+            "material_differences": "A contains conflicting delivery claims; B contains affirmative notice/counsel records. Shared geography does not establish a movement.",
+            "identity_status": "Separate fictional defendants/cases; no merged identity."
+          }
+        ],
+        "country_context": [],
+        "pattern_hypotheses": [
+          {
+            "hypothesis": "A charge-notice comparison may merit investigation within this selected fictional corpus.",
+            "supporting_candidate_ids": [
+              "rights_demo_1",
+              "rights_demo_2"
+            ],
+            "alternative_explanations": "Different documentation completeness or procedural circumstances may explain the contrast; this is not a recurrence finding.",
+            "further_evidence": "Obtain original delivery receipts and full hearing records; expand a defined sample before estimating frequency."
+          }
+        ],
+        "published_expert_assessments": []
+      }
+    },
+    {
+      "id": "rights_demo_2",
+      "title": "Synthetic B: documented counsel safeguards",
+      "person": "Fictional person rights_demo_2",
+      "proceeding": "Fictional criminal proceeding; demonstration only",
+      "country": "Philippines",
+      "material_type": "synthetic",
+      "as_of": "2026-09-12",
+      "summary": "Entirely fictional evidence for rights-assessment software mechanics.",
+      "suggested_decision": "uncertain",
+      "review_reasons": [
+        "Preparation-time status: human review pending; this note records fixture provenance and does not describe subsequent saved review."
+      ],
+      "unknowns": [
+        "No real case or legal assessment is represented. All citations in this fictional dossier are fixture locations."
+      ],
+      "notes": [
+        "Synthetic preparation; no fresh AI extraction. Human review pending at preparation; current reviews appear separately."
+      ],
+      "claims": [
+        {
+          "id": "b_notice",
+          "source_id": "b_record",
+          "text": "The fictional signed record states the charge was explained in the defendant's language fourteen days before the hearing.",
+          "excerpt": "The fictional signed record states the charge was explained in the defendant's language fourteen days before the hearing.",
+          "locator": "Fictional fixture paragraph b_notice",
+          "event_date": "2026-09-10",
+          "date_note": "Fictional event date; not a real proceeding",
+          "attribution": "Fictional documented procedure; unauthenticated demonstration text",
+          "attribution_kind": "documented_procedure"
+        },
+        {
+          "id": "b_counsel",
+          "source_id": "b_record",
+          "text": "The fictional hearing record states counsel met the defendant privately and obtained a preparation adjournment requested by the defence.",
+          "excerpt": "The fictional hearing record states counsel met the defendant privately and obtained a preparation adjournment requested by the defence.",
+          "locator": "Fictional fixture paragraph b_counsel",
+          "event_date": "2026-09-10",
+          "date_note": "Fictional event date; not a real proceeding",
+          "attribution": "Fictional documented procedure; unauthenticated demonstration text",
+          "attribution_kind": "documented_procedure"
+        },
+        {
+          "id": "b_unknown",
+          "source_id": "b_news",
+          "text": "The fictional news note reports an adverse verdict but supplies no witness-examination record or reasons for judgment.",
+          "excerpt": "The fictional news note reports an adverse verdict but supplies no witness-examination record or reasons for judgment.",
+          "locator": "Fictional fixture paragraph b_unknown",
+          "event_date": "2026-09-10",
+          "date_note": "Fictional event date; not a real proceeding",
+          "attribution": "Fictional source allegation; unauthenticated demonstration text",
+          "attribution_kind": "source_allegation"
+        }
+      ],
+      "sources": [
+        {
+          "id": "b_record",
+          "title": "Synthetic signed procedural record",
+          "publisher": "Fictional fixture publisher",
+          "url": "https://example.invalid/rights/b_record",
+          "publication_date": "2026-09-12",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Synthetic English text; no translation",
+          "access_note": "Software fixture only. No document was retrieved and URL is intentionally non-resolving.",
+          "lineage_note": "One fictional record, not independent verification."
+        },
+        {
+          "id": "b_news",
+          "title": "Synthetic news summary",
+          "publisher": "Fictional fixture publisher",
+          "url": "https://example.invalid/rights/b_news",
+          "publication_date": "2026-09-12",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Synthetic English text; no translation",
+          "access_note": "Software fixture only. No document was retrieved and URL is intentionally non-resolving.",
+          "lineage_note": "Underlying judgment not supplied."
+        }
+      ],
+      "related_candidate_ids": [
+        "rights_demo_1"
+      ],
+      "rights_metadata": {
+        "region": "Fictional demonstration region",
+        "case_unit": "One fictional case, one defendant; arrest-event count not established.",
+        "identity_uncertainty": "Fixture IDs identify fictional dossiers only; no identity matching was performed.",
+        "related_cases": [],
+        "country_context": [],
+        "pattern_hypotheses": [],
+        "published_expert_assessments": []
+      }
+    },
+    {
+      "id": "rights_demo_3",
+      "title": "Synthetic C: expression restriction and disputed justification",
+      "person": "Fictional person rights_demo_3",
+      "proceeding": "Fictional criminal proceeding; demonstration only",
+      "country": "Thailand",
+      "material_type": "synthetic",
+      "as_of": "2026-09-12",
+      "summary": "Entirely fictional evidence for rights-assessment software mechanics.",
+      "suggested_decision": "uncertain",
+      "review_reasons": [
+        "Preparation-time status: human review pending; this note records fixture provenance and does not describe subsequent saved review."
+      ],
+      "unknowns": [
+        "No real case or legal assessment is represented. All citations in this fictional dossier are fixture locations."
+      ],
+      "notes": [
+        "Synthetic preparation; no fresh AI extraction. Human review pending at preparation; current reviews appear separately."
+      ],
+      "claims": [
+        {
+          "id": "c_speech",
+          "source_id": "c_report",
+          "text": "The fictional case report says the defendant was prosecuted after publishing peaceful criticism of a local policy.",
+          "excerpt": "The fictional case report says the defendant was prosecuted after publishing peaceful criticism of a local policy.",
+          "locator": "Fictional fixture paragraph c_speech",
+          "event_date": "2026-09-10",
+          "date_note": "Fictional event date; not a real proceeding",
+          "attribution": "Fictional source allegation; unauthenticated demonstration text",
+          "attribution_kind": "source_allegation"
+        },
+        {
+          "id": "c_penalty",
+          "source_id": "c_report",
+          "text": "The fictional case report states a custodial penalty was sought; no specific harm or less restrictive alternative is described.",
+          "excerpt": "The fictional case report states a custodial penalty was sought; no specific harm or less restrictive alternative is described.",
+          "locator": "Fictional fixture paragraph c_penalty",
+          "event_date": "2026-09-10",
+          "date_note": "Fictional event date; not a real proceeding",
+          "attribution": "Fictional source allegation; unauthenticated demonstration text",
+          "attribution_kind": "source_allegation"
+        },
+        {
+          "id": "c_reply",
+          "source_id": "c_reply_source",
+          "text": "The fictional government response asserts public order as the aim and says a specific threat existed, without explaining the connection to the publication.",
+          "excerpt": "The fictional government response asserts public order as the aim and says a specific threat existed, without explaining the connection to the publication.",
+          "locator": "Fictional fixture paragraph c_reply",
+          "event_date": "2026-09-10",
+          "date_note": "Fictional event date; not a real proceeding",
+          "attribution": "Fictional government position; unauthenticated demonstration text",
+          "attribution_kind": "government_position"
+        },
+        {
+          "id": "c_notice",
+          "source_id": "c_record",
+          "text": "The fictional record states detailed charge notice was provided promptly in a language the defendant understood.",
+          "excerpt": "The fictional record states detailed charge notice was provided promptly in a language the defendant understood.",
+          "locator": "Fictional fixture paragraph c_notice",
+          "event_date": "2026-09-10",
+          "date_note": "Fictional event date; not a real proceeding",
+          "attribution": "Fictional documented procedure; unauthenticated demonstration text",
+          "attribution_kind": "documented_procedure"
+        }
+      ],
+      "sources": [
+        {
+          "id": "c_report",
+          "title": "Synthetic expression case report",
+          "publisher": "Fictional fixture publisher",
+          "url": "https://example.invalid/rights/c_report",
+          "publication_date": "2026-09-12",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Synthetic English text; no translation",
+          "access_note": "Software fixture only. No document was retrieved and URL is intentionally non-resolving.",
+          "lineage_note": "One fictional reporting source; allegations unverified."
+        },
+        {
+          "id": "c_reply_source",
+          "title": "Synthetic government reply",
+          "publisher": "Fictional fixture publisher",
+          "url": "https://example.invalid/rights/c_reply_source",
+          "publication_date": "2026-09-12",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Synthetic English text; no translation",
+          "access_note": "Software fixture only. No document was retrieved and URL is intentionally non-resolving.",
+          "lineage_note": "Attributed contrary position; incomplete justification."
+        },
+        {
+          "id": "c_record",
+          "title": "Synthetic charge-notice record",
+          "publisher": "Fictional fixture publisher",
+          "url": "https://example.invalid/rights/c_record",
+          "publication_date": "2026-09-12",
+          "retrieved_at": null,
+          "language": "en",
+          "translation_status": "Synthetic English text; no translation",
+          "access_note": "Software fixture only. No document was retrieved and URL is intentionally non-resolving.",
+          "lineage_note": "One fictional record, not independently verified."
+        }
+      ],
+      "related_candidate_ids": [],
+      "rights_metadata": {
+        "region": "Fictional demonstration region",
+        "case_unit": "One fictional case, one defendant; arrest-event count not established.",
+        "identity_uncertainty": "Fixture IDs identify fictional dossiers only; no identity matching was performed.",
+        "related_cases": [],
+        "country_context": [],
+        "pattern_hypotheses": [],
+        "published_expert_assessments": []
+      }
+    }
+  ],
+  "rights_prepared_mappings": {
+    "rights_demo_1": [
+      {
+        "dimension_id": "notice_charges",
+        "status": "scored",
+        "concern_level": "substantial",
+        "support_claim_ids": [
+          "a_notice",
+          "a_minutes"
+        ],
+        "contrary_claim_ids": [
+          "a_reply"
+        ],
+        "explanation": "If accurate, notice first at a hearing with no preparation time strongly raises Article 14(3)(a) concern. The prosecution's earlier-delivery account could materially change this assessment; a receipt is missing. Repeated reporting adds no independent support.",
+        "confidence": "low",
+        "completeness": "partial",
+        "missing_facts": [
+          "Delivery receipt, full charge text, language and full hearing decision."
+        ],
+        "next_verification": "Compare original delivery record with the defendant's account and hearing ruling.",
+        "applicability": "Criminal charges; distinguish formal charge notice from arrest reasons under Article 9. Language, detail and timing require case evidence."
+      },
+      {
+        "dimension_id": "counsel_preparation",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [
+          "a_minutes"
+        ],
+        "contrary_claim_ids": [],
+        "explanation": "A request for time is documented, but its disposition and access to counsel are unknown; no numerical concern is inferred.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Counsel access, preparation time and adjournment ruling."
+        ],
+        "next_verification": "Inspect counsel-access and adjournment records.",
+        "applicability": "Criminal charges; adequacy depends on complexity, access, timing and circumstances. Assigned counsel is subject to the treaty's conditions."
+      },
+      {
+        "dimension_id": "challenge_evidence",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Selected fictional documents do not resolve the facts needed for this standard.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Full relevant procedural record and competing accounts."
+        ],
+        "next_verification": "Inspect the original hearing/judgment record; absence from reporting is unknown.",
+        "applicability": "Criminal charges; assess relevant requests, access, refusals and procedural reasons. This does not guarantee unlimited admission of every proposed witness."
+      },
+      {
+        "dimension_id": "independent_impartial",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Selected fictional documents do not resolve the facts needed for this standard.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Full relevant procedural record and competing accounts."
+        ],
+        "next_verification": "Inspect the original hearing/judgment record; absence from reporting is unknown.",
+        "applicability": "Criminal charges and rights/obligations in a suit at law; lawful exceptions to public access require specific assessment. An adverse decision does not establish bias."
+      },
+      {
+        "dimension_id": "presumption_innocence",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Selected fictional documents do not resolve the facts needed for this standard.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Full relevant procedural record and competing accounts."
+        ],
+        "next_verification": "Inspect the original hearing/judgment record; absence from reporting is unknown.",
+        "applicability": "Criminal charges; evaluate burden, presentation and statements by public authorities. Prosecution or conviction alone is not evidence of a departure."
+      },
+      {
+        "dimension_id": "expression_scope",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "These fixture documents do not identify expression or the alleged offence; expression relevance cannot be assumed.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Expression, offence and restriction nexus."
+        ],
+        "next_verification": "Inspect the charge and underlying conduct.",
+        "applicability": "Do not presume expression was involved in every prosecution. Identify conduct and restriction; Article 20 duties and other rights may also require analysis."
+      },
+      {
+        "dimension_id": "expression_legal_basis",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "These fixture documents do not identify expression or the alleged offence; expression relevance cannot be assumed.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Expression, offence and restriction nexus."
+        ],
+        "next_verification": "Inspect the charge and underlying conduct.",
+        "applicability": "First establish expression and restriction. Citation of a statute alone does not settle foreseeability or its application."
+      },
+      {
+        "dimension_id": "expression_legitimate_aim",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "These fixture documents do not identify expression or the alleged offence; expression relevance cannot be assumed.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Expression, offence and restriction nexus."
+        ],
+        "next_verification": "Inspect the charge and underlying conduct.",
+        "applicability": "An asserted aim is a government position, not proof of necessity or legitimacy in the particular application. Missing government reasons remain unknown."
+      },
+      {
+        "dimension_id": "expression_necessity",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "These fixture documents do not identify expression or the alleged offence; expression relevance cannot be assumed.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Expression, offence and restriction nexus."
+        ],
+        "next_verification": "Inspect the charge and underlying conduct.",
+        "applicability": "Assess actual expression, aim, harm, penalty and alternatives. A restriction is not automatically unlawful; a legal basis and aim do not automatically establish necessity."
+      }
+    ],
+    "rights_demo_2": [
+      {
+        "dimension_id": "notice_charges",
+        "status": "scored",
+        "concern_level": "none_documented",
+        "support_claim_ids": [
+          "b_notice"
+        ],
+        "contrary_claim_ids": [],
+        "explanation": "This affirmative fictional procedural record documents the relevant safeguard. Zero applies only to this mapped proposition and dimension; record authenticity and broader compliance remain unchecked.",
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Original record authenticity and the defendant's competing account."
+        ],
+        "next_verification": "Check the original record and invite comparison with the defendant's account.",
+        "applicability": "Criminal charges; distinguish formal charge notice from arrest reasons under Article 9. Language, detail and timing require case evidence."
+      },
+      {
+        "dimension_id": "counsel_preparation",
+        "status": "scored",
+        "concern_level": "none_documented",
+        "support_claim_ids": [
+          "b_counsel"
+        ],
+        "contrary_claim_ids": [],
+        "explanation": "This affirmative fictional procedural record documents the relevant safeguard. Zero applies only to this mapped proposition and dimension; record authenticity and broader compliance remain unchecked.",
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Original record authenticity and the defendant's competing account."
+        ],
+        "next_verification": "Check the original record and invite comparison with the defendant's account.",
+        "applicability": "Criminal charges; adequacy depends on complexity, access, timing and circumstances. Assigned counsel is subject to the treaty's conditions."
+      },
+      {
+        "dimension_id": "challenge_evidence",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Selected fictional documents do not resolve the facts needed for this standard.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Full relevant procedural record and competing accounts."
+        ],
+        "next_verification": "Inspect the original hearing/judgment record; absence from reporting is unknown.",
+        "applicability": "Criminal charges; assess relevant requests, access, refusals and procedural reasons. This does not guarantee unlimited admission of every proposed witness."
+      },
+      {
+        "dimension_id": "independent_impartial",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Selected fictional documents do not resolve the facts needed for this standard.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Full relevant procedural record and competing accounts."
+        ],
+        "next_verification": "Inspect the original hearing/judgment record; absence from reporting is unknown.",
+        "applicability": "Criminal charges and rights/obligations in a suit at law; lawful exceptions to public access require specific assessment. An adverse decision does not establish bias."
+      },
+      {
+        "dimension_id": "presumption_innocence",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Selected fictional documents do not resolve the facts needed for this standard.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Full relevant procedural record and competing accounts."
+        ],
+        "next_verification": "Inspect the original hearing/judgment record; absence from reporting is unknown.",
+        "applicability": "Criminal charges; evaluate burden, presentation and statements by public authorities. Prosecution or conviction alone is not evidence of a departure."
+      },
+      {
+        "dimension_id": "expression_scope",
+        "status": "not_assessed",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Not assessed.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Dimension has not been assessed."
+        ],
+        "next_verification": "Inspect the relevant evidence and applicable standard.",
+        "applicability": "Do not presume expression was involved in every prosecution. Identify conduct and restriction; Article 20 duties and other rights may also require analysis."
+      },
+      {
+        "dimension_id": "expression_legal_basis",
+        "status": "not_assessed",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Not assessed.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Dimension has not been assessed."
+        ],
+        "next_verification": "Inspect the relevant evidence and applicable standard.",
+        "applicability": "First establish expression and restriction. Citation of a statute alone does not settle foreseeability or its application."
+      },
+      {
+        "dimension_id": "expression_legitimate_aim",
+        "status": "not_assessed",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Not assessed.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Dimension has not been assessed."
+        ],
+        "next_verification": "Inspect the relevant evidence and applicable standard.",
+        "applicability": "An asserted aim is a government position, not proof of necessity or legitimacy in the particular application. Missing government reasons remain unknown."
+      },
+      {
+        "dimension_id": "expression_necessity",
+        "status": "not_assessed",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Not assessed.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Dimension has not been assessed."
+        ],
+        "next_verification": "Inspect the relevant evidence and applicable standard.",
+        "applicability": "Assess actual expression, aim, harm, penalty and alternatives. A restriction is not automatically unlawful; a legal basis and aim do not automatically establish necessity."
+      }
+    ],
+    "rights_demo_3": [
+      {
+        "dimension_id": "notice_charges",
+        "status": "scored",
+        "concern_level": "none_documented",
+        "support_claim_ids": [
+          "c_notice"
+        ],
+        "contrary_claim_ids": [],
+        "explanation": "Affirmative fictional notice evidence documents the safeguard on this dimension; a prosecution alone does not indicate notice failure.",
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Original notice and delivery record."
+        ],
+        "next_verification": "Check original notice and delivery record.",
+        "applicability": "Criminal charges; distinguish formal charge notice from arrest reasons under Article 9. Language, detail and timing require case evidence."
+      },
+      {
+        "dimension_id": "counsel_preparation",
+        "status": "not_assessed",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Not assessed.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Dimension has not been assessed."
+        ],
+        "next_verification": "Inspect the relevant evidence and applicable standard.",
+        "applicability": "Criminal charges; adequacy depends on complexity, access, timing and circumstances. Assigned counsel is subject to the treaty's conditions."
+      },
+      {
+        "dimension_id": "challenge_evidence",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Selected fictional documents do not resolve the facts needed for this standard.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Full relevant procedural record and competing accounts."
+        ],
+        "next_verification": "Inspect the original hearing/judgment record; absence from reporting is unknown.",
+        "applicability": "Criminal charges; assess relevant requests, access, refusals and procedural reasons. This does not guarantee unlimited admission of every proposed witness."
+      },
+      {
+        "dimension_id": "independent_impartial",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Selected fictional documents do not resolve the facts needed for this standard.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Full relevant procedural record and competing accounts."
+        ],
+        "next_verification": "Inspect the original hearing/judgment record; absence from reporting is unknown.",
+        "applicability": "Criminal charges and rights/obligations in a suit at law; lawful exceptions to public access require specific assessment. An adverse decision does not establish bias."
+      },
+      {
+        "dimension_id": "presumption_innocence",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [],
+        "contrary_claim_ids": [],
+        "explanation": "Selected fictional documents do not resolve the facts needed for this standard.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Full relevant procedural record and competing accounts."
+        ],
+        "next_verification": "Inspect the original hearing/judgment record; absence from reporting is unknown.",
+        "applicability": "Criminal charges; evaluate burden, presentation and statements by public authorities. Prosecution or conviction alone is not evidence of a departure."
+      },
+      {
+        "dimension_id": "expression_scope",
+        "status": "scored",
+        "concern_level": "limited",
+        "support_claim_ids": [
+          "c_speech"
+        ],
+        "contrary_claim_ids": [
+          "c_reply"
+        ],
+        "explanation": "The report identifies apparently peaceful policy criticism and prosecution. The government alleges a threat. The full expression and charge are needed to resolve the Article 19 nexus and competing account.",
+        "confidence": "low",
+        "completeness": "partial",
+        "missing_facts": [
+          "Full expression, charge, harm evidence and original government reply."
+        ],
+        "next_verification": "Read the publication, charge and government justification together.",
+        "applicability": "Do not presume expression was involved in every prosecution. Identify conduct and restriction; Article 20 duties and other rights may also require analysis."
+      },
+      {
+        "dimension_id": "expression_legal_basis",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [
+          "c_reply"
+        ],
+        "contrary_claim_ids": [],
+        "explanation": "An aim is asserted, but the text and application of the law and particular justification are incomplete. Missing evidence produces no numerical score.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Charge statute, accessibility/precision and particularized justification."
+        ],
+        "next_verification": "Obtain the actual charge provision and reasoned government/court account.",
+        "applicability": "First establish expression and restriction. Citation of a statute alone does not settle foreseeability or its application."
+      },
+      {
+        "dimension_id": "expression_legitimate_aim",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "support_claim_ids": [
+          "c_reply"
+        ],
+        "contrary_claim_ids": [],
+        "explanation": "An aim is asserted, but the text and application of the law and particular justification are incomplete. Missing evidence produces no numerical score.",
+        "confidence": "unknown",
+        "completeness": "unknown",
+        "missing_facts": [
+          "Charge statute, accessibility/precision and particularized justification."
+        ],
+        "next_verification": "Obtain the actual charge provision and reasoned government/court account.",
+        "applicability": "An asserted aim is a government position, not proof of necessity or legitimacy in the particular application. Missing government reasons remain unknown."
+      },
+      {
+        "dimension_id": "expression_necessity",
+        "status": "scored",
+        "concern_level": "substantial",
+        "support_claim_ids": [
+          "c_speech",
+          "c_penalty"
+        ],
+        "contrary_claim_ids": [
+          "c_reply"
+        ],
+        "explanation": "If the report is accurate, seeking custody for peaceful policy criticism without identified harm or alternatives strongly raises necessity/proportionality concern. The government's asserted specific threat may change the assessment and requires scrutiny; absence from this report is not proof no justification exists.",
+        "confidence": "low",
+        "completeness": "partial",
+        "missing_facts": [
+          "Actual threatened harm, full reasons, penalty and less intrusive alternatives."
+        ],
+        "next_verification": "Inspect original reasons and specific harm evidence before a legal conclusion.",
+        "applicability": "Assess actual expression, aim, harm, penalty and alternatives. A restriction is not automatically unlawful; a legal basis and aim do not automatically establish necessity."
+      }
+    ]
+  }
+}

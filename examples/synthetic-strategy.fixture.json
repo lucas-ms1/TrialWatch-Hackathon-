@@ -1,0 +1,837 @@
+{
+  "schema_version": "synthetic-strategy-input/1",
+  "synthetic": true,
+  "candidate": {
+    "id": "synthetic_mara_vale_20261010",
+    "title": "Fictional demo · Mara Vale reporting case",
+    "person": "Mara Vale (entirely fictional)",
+    "proceeding": "Invented criminal trial over critical reporting; no verdict",
+    "country": "Fictional jurisdiction (demo)",
+    "material_type": "synthetic",
+    "as_of": "2026-10-09",
+    "summary": "Wholly fictional worked example: contested charge delivery, restricted defence questioning, an alleged coerced confession and a broad reporting ban. Includes documented safeguards and unresolved questions.",
+    "suggested_decision": "uncertain",
+    "review_reasons": [
+      "Synthetic preparation; source and legal review pending."
+    ],
+    "unknowns": [
+      "No real person, case, court, law or source is represented.",
+      "Illustrative concern scores are provisional rubric demonstrations; legal conclusions and external authority remain unapproved."
+    ],
+    "notes": [
+      "All fixture passages were authored for this demo; no model call or research was made.",
+      "No link, score or proposal in this case is evidence about Abra.",
+      "The original fixture is distinct from any later saved correction."
+    ],
+    "claims": [
+      {
+        "id": "MV01",
+        "source_id": "demo_docket",
+        "text": "The fictional case register identifies Mara Vale, aged 32, as the sole defendant in a first criminal prosecution. She has no earlier final acquittal or conviction on these facts; this case has no verdict, overturned conviction or compensation claim. The next evidentiary hearing is listed for 12 October 2026.",
+        "excerpt": "The fictional case register identifies Mara Vale, aged 32, as the sole defendant in a first criminal prosecution. She has no earlier final acquittal or conviction on these facts; this case has no verdict, overturned conviction or compensation claim. The next evidentiary hearing is listed for 12 October 2026.",
+        "locator": "Invented text document, paragraph MV01",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "MV02",
+        "source_id": "demo_docket",
+        "text": "The fictional charge filed on 24 September names the invented Civic Safety Notice Code, section 8, identifies the three articles, their dates and the allegation of publishing information that unsettles confidence in city administration. The charge sheet itself contains the legal label and alleged general facts.",
+        "excerpt": "The fictional charge filed on 24 September names the invented Civic Safety Notice Code, section 8, identifies the three articles, their dates and the allegation of publishing information that unsettles confidence in city administration. The charge sheet itself contains the legal label and alleged general facts.",
+        "locator": "Invented text document, paragraph MV02",
+        "event_date": "2026-09-24",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "MV03",
+        "source_id": "demo_government",
+        "text": "The fictional prosecution says a charge sheet and access link were delivered to Mara on 25 September, citing a scanned receipt with an unreadable signature; it says the disclosed documents mostly repeat a short summary. It maintains that preparation time and notice were adequate.",
+        "excerpt": "The fictional prosecution says a charge sheet and access link were delivered to Mara on 25 September, citing a scanned receipt with an unreadable signature; it says the disclosed documents mostly repeat a short summary. It maintains that preparation time and notice were adequate.",
+        "locator": "Invented text document, paragraph MV03",
+        "event_date": "2026-09-25",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented prosecution position; not an established fact",
+        "attribution_kind": "government_position"
+      },
+      {
+        "id": "MV04",
+        "source_id": "demo_defence",
+        "text": "Fictional defence counsel says Mara first received the charge details on 5 October, denies that the receipt is hers and describes the earlier message as a case number without factual particulars. The original service receipt and message contents are absent from the supplied packet.",
+        "excerpt": "Fictional defence counsel says Mara first received the charge details on 5 October, denies that the receipt is hers and describes the earlier message as a case number without factual particulars. The original service receipt and message contents are absent from the supplied packet.",
+        "locator": "Invented text document, paragraph MV04",
+        "event_date": "2026-10-05",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented defence allegation; contested and not a court finding",
+        "attribution_kind": "source_allegation"
+      },
+      {
+        "id": "MV05",
+        "source_id": "demo_docket",
+        "text": "The fictional minutes record disclosure of 600 pages on 5 October and refusal of a requested seven-day adjournment on 6 October. Defence counsel identified unread witness statements and said she could not prepare questions in one day; the court proceeded without addressing that specific difficulty.",
+        "excerpt": "The fictional minutes record disclosure of 600 pages on 5 October and refusal of a requested seven-day adjournment on 6 October. Defence counsel identified unread witness statements and said she could not prepare questions in one day; the court proceeded without addressing that specific difficulty.",
+        "locator": "Invented text document, paragraph MV05",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "MV06",
+        "source_id": "demo_docket",
+        "text": "The fictional minutes record that Mara selected counsel, consulted her privately on 30 September and 5 October, and was represented by that counsel throughout the 6 October hearing. No consultation restriction is recorded in those two affirmative entries.",
+        "excerpt": "The fictional minutes record that Mara selected counsel, consulted her privately on 30 September and 5 October, and was represented by that counsel throughout the 6 October hearing. No consultation restriction is recorded in those two affirmative entries.",
+        "locator": "Invented text document, paragraph MV06",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "MV07",
+        "source_id": "demo_docket",
+        "text": "The fictional minutes record Mara present throughout the hearing and allowed to address the court through counsel. Mara expressly confirmed that she understands the English proceedings and documents without an interpreter; no language or hearing impairment is reported in this fixture.",
+        "excerpt": "The fictional minutes record Mara present throughout the hearing and allowed to address the court through counsel. Mara expressly confirmed that she understands the English proceedings and documents without an interpreter; no language or hearing impairment is reported in this fixture.",
+        "locator": "Invented text document, paragraph MV07",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "MV08",
+        "source_id": "demo_docket",
+        "text": "The fictional court closed the entire evidentiary hearing to press and public because one witness statement included a home address. Its recorded explanation identifies witness privacy but does not consider redaction or closing only that testimony; the resulting written order remains available.",
+        "excerpt": "The fictional court closed the entire evidentiary hearing to press and public because one witness statement included a home address. Its recorded explanation identifies witness privacy but does not consider redaction or closing only that testimony; the resulting written order remains available.",
+        "locator": "Invented text document, paragraph MV08",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "MV09",
+        "source_id": "demo_docket",
+        "text": "The fictional minutes permit the prosecution to question its principal witness, then refuse all defence questions about the witness's source and reliability and admit the statement for its truth. The recorded reason is avoiding repetition; no earlier defence questioning or equivalent opportunity is identified.",
+        "excerpt": "The fictional minutes permit the prosecution to question its principal witness, then refuse all defence questions about the witness's source and reliability and admit the statement for its truth. The recorded reason is avoiding repetition; no earlier defence questioning or equivalent opportunity is identified.",
+        "locator": "Invented text document, paragraph MV09",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "MV10",
+        "source_id": "demo_defence",
+        "text": "Fictional defence counsel says a colleague could challenge the principal witness's account but the court refused to hear that defence witness. Counsel says the prosecution witness was not repetitive and that disputed source reliability was central to the case.",
+        "excerpt": "Fictional defence counsel says a colleague could challenge the principal witness's account but the court refused to hear that defence witness. Counsel says the prosecution witness was not repetitive and that disputed source reliability was central to the case.",
+        "locator": "Invented text document, paragraph MV10",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented defence allegation; contested and not a court finding",
+        "attribution_kind": "source_allegation"
+      },
+      {
+        "id": "MV11",
+        "source_id": "demo_defence",
+        "text": "Mara's fictional signed defence account says an officer struck her and threatened her family until she signed a confession on 4 October. Counsel requested an evidentiary inquiry, a medical examination record and access to the interview recording; none is supplied in this packet.",
+        "excerpt": "Mara's fictional signed defence account says an officer struck her and threatened her family until she signed a confession on 4 October. Counsel requested an evidentiary inquiry, a medical examination record and access to the interview recording; none is supplied in this packet.",
+        "locator": "Invented text document, paragraph MV11",
+        "event_date": "2026-10-04",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented defence allegation; contested and not a court finding",
+        "attribution_kind": "source_allegation"
+      },
+      {
+        "id": "MV12",
+        "source_id": "demo_government",
+        "text": "The fictional prosecution denies force or threats, describes the confession as voluntary, and says an interview recording exists. It supplies neither that recording nor a medical report and asks the court to admit the confession.",
+        "excerpt": "The fictional prosecution denies force or threats, describes the confession as voluntary, and says an interview recording exists. It supplies neither that recording nor a medical report and asks the court to admit the confession.",
+        "locator": "Invented text document, paragraph MV12",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented prosecution position; not an established fact",
+        "attribution_kind": "government_position"
+      },
+      {
+        "id": "MV13",
+        "source_id": "demo_docket",
+        "text": "The fictional minutes record the court admitting the disputed confession as principal evidence and refusing any inquiry into the pleaded force or threats. The recorded ruling relies on the signature alone and gives no determination of voluntariness; the trial remains pending.",
+        "excerpt": "The fictional minutes record the court admitting the disputed confession as principal evidence and refusing any inquiry into the pleaded force or threats. The recorded ruling relies on the signature alone and gives no determination of voluntariness; the trial remains pending.",
+        "locator": "Invented text document, paragraph MV13",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "MV14",
+        "source_id": "demo_expression",
+        "text": "The three fictional articles criticise Riverbend procurement, quote public budget entries and ask for an audit. The complete invented texts contain no call to violence or disclosure of witness addresses; the charge identifies these articles as the expression being restricted.",
+        "excerpt": "The three fictional articles criticise Riverbend procurement, quote public budget entries and ask for an audit. The complete invented texts contain no call to violence or disclosure of witness addresses; the charge identifies these articles as the expression being restricted.",
+        "locator": "Invented text document, paragraph MV14",
+        "event_date": "2026-09-20",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "MV15",
+        "source_id": "demo_expression",
+        "text": "The invented Civic Safety Notice Code, section 8, criminalises publishing material that unsettles confidence in city administration, with up to two years' imprisonment. The supplied invented provision defines neither unsettles nor confidence and contains no published limiting interpretation. This provision is not an actual law of any country.",
+        "excerpt": "The invented Civic Safety Notice Code, section 8, criminalises publishing material that unsettles confidence in city administration, with up to two years' imprisonment. The supplied invented provision defines neither unsettles nor confidence and contains no published limiting interpretation. This provision is not an actual law of any country.",
+        "locator": "Invented text document, paragraph MV15",
+        "event_date": "2026-09-24",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "MV16",
+        "source_id": "demo_government",
+        "text": "The fictional prosecution invokes public order, alleging that the articles might cause unrest outside the council office. It identifies no incident, threat, audience behaviour or connection between a particular passage and disorder; it opposes reopening the evidence rulings.",
+        "excerpt": "The fictional prosecution invokes public order, alleging that the articles might cause unrest outside the council office. It identifies no incident, threat, audience behaviour or connection between a particular passage and disorder; it opposes reopening the evidence rulings.",
+        "locator": "Invented text document, paragraph MV16",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented prosecution position; not an established fact",
+        "attribution_kind": "government_position"
+      },
+      {
+        "id": "MV17",
+        "source_id": "demo_expression",
+        "text": "The fictional interim order bars Mara from publishing anything about city administration for six months and carries the charged offence's potential two-year custodial penalty. It records no assessment of narrower measures, actual harm or the effect of prohibiting unrelated future reporting.",
+        "excerpt": "The fictional interim order bars Mara from publishing anything about city administration for six months and carries the charged offence's potential two-year custodial penalty. It records no assessment of narrower measures, actual harm or the effect of prohibiting unrelated future reporting.",
+        "locator": "Invented text document, paragraph MV17",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "MV18",
+        "source_id": "demo_docket",
+        "text": "The fictional packet contains no statute establishing this tribunal, judicial appointment or recusal record, official statements of guilt, complete procedural chronology, or reasoned judgment. The supplied minutes alone do not resolve independence, presumption of innocence or overall delay.",
+        "excerpt": "The fictional packet contains no statute establishing this tribunal, judicial appointment or recusal record, official statements of guilt, complete procedural chronology, or reasoned judgment. The supplied minutes alone do not resolve independence, presumption of innocence or overall delay.",
+        "locator": "Invented text document, paragraph MV18",
+        "event_date": "2026-10-06",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented document entry; no real record or authentication",
+        "attribution_kind": "documented_procedure"
+      }
+    ],
+    "sources": [
+      {
+        "id": "demo_docket",
+        "title": "Fictional fixture: hearing minutes and case register",
+        "publisher": "Riverbend registry (invented)",
+        "url": "https://example.invalid/mara-vale/demo_docket",
+        "publication_date": "2026-10-09",
+        "retrieved_at": null,
+        "language": "en",
+        "translation_status": "Original invented English text; no translation",
+        "access_note": "Wholly fictional software demonstration text. No source was retrieved; URL intentionally does not resolve.",
+        "lineage_note": "Original authored fixture, not independent corroboration or a real document."
+      },
+      {
+        "id": "demo_defence",
+        "title": "Fictional fixture: defence account",
+        "publisher": "Defence counsel (invented)",
+        "url": "https://example.invalid/mara-vale/demo_defence",
+        "publication_date": "2026-10-09",
+        "retrieved_at": null,
+        "language": "en",
+        "translation_status": "Original invented English text; no translation",
+        "access_note": "Wholly fictional software demonstration text. No source was retrieved; URL intentionally does not resolve.",
+        "lineage_note": "Original authored fixture, not independent corroboration or a real document."
+      },
+      {
+        "id": "demo_government",
+        "title": "Fictional fixture: prosecution response",
+        "publisher": "Riverbend prosecution (invented)",
+        "url": "https://example.invalid/mara-vale/demo_government",
+        "publication_date": "2026-10-09",
+        "retrieved_at": null,
+        "language": "en",
+        "translation_status": "Original invented English text; no translation",
+        "access_note": "Wholly fictional software demonstration text. No source was retrieved; URL intentionally does not resolve.",
+        "lineage_note": "Original authored fixture, not independent corroboration or a real document."
+      },
+      {
+        "id": "demo_expression",
+        "title": "Fictional fixture: publication and restriction record",
+        "publisher": "Riverbend reporting archive (invented)",
+        "url": "https://example.invalid/mara-vale/demo_expression",
+        "publication_date": "2026-10-09",
+        "retrieved_at": null,
+        "language": "en",
+        "translation_status": "Original invented English text; no translation",
+        "access_note": "Wholly fictional software demonstration text. No source was retrieved; URL intentionally does not resolve.",
+        "lineage_note": "Original authored fixture, not independent corroboration or a real document."
+      }
+    ],
+    "related_candidate_ids": [],
+    "rights_metadata": {
+      "region": "Invented Riverbend municipality",
+      "case_unit": "One wholly fictional case and defendant; no real arrest-event count.",
+      "identity_uncertainty": "Invented stable fixture identity, no real-person matching.",
+      "related_cases": [],
+      "country_context": [],
+      "pattern_hypotheses": [],
+      "published_expert_assessments": []
+    }
+  },
+  "context": {
+    "schema_version": "intervention-context/1",
+    "candidate_id": "synthetic_mara_vale_20261010",
+    "revision": 1,
+    "author": "Synthetic demonstration preparation; qualified human review pending",
+    "origin": "synthetic_prepared",
+    "recorded_at": "2026-10-10T16:27:00+00:00",
+    "evidence_cutoff": "2026-10-09",
+    "sources": [
+      {
+        "publisher": "Riverbend defence desk (invented)",
+        "language": "en",
+        "translation_status": "Original invented English text; no translation",
+        "access_note": "Wholly fictional software demonstration text. No source was retrieved; URL intentionally does not resolve.",
+        "title": "Fictional fixture: counsel preparation note and procedural route",
+        "lineage_note": "Original authored fixture, not independent corroboration or a real document.",
+        "id": "demo_context",
+        "url": "https://example.invalid/mara-vale/demo_context",
+        "publication_date": "2026-10-09",
+        "retrieved_at": null
+      },
+      {
+        "publisher": "Riverbend prosecution (invented)",
+        "language": "en",
+        "translation_status": "Original invented English text; no translation",
+        "access_note": "Wholly fictional software demonstration text. No source was retrieved; URL intentionally does not resolve.",
+        "title": "Fictional fixture: prosecution response",
+        "lineage_note": "Original authored fixture, not independent corroboration or a real document.",
+        "id": "demo_government",
+        "url": "https://example.invalid/mara-vale/demo_government",
+        "publication_date": "2026-10-09",
+        "retrieved_at": null
+      }
+    ],
+    "claims": [
+      {
+        "text": "The invented clerk notice lists the next evidentiary hearing for 12 October 2026. This is a fictional scheduled date, not a verified current event.",
+        "locator": "Invented context text, paragraph CX01",
+        "excerpt": "The invented clerk notice lists the next evidentiary hearing for 12 October 2026. This is a fictional scheduled date, not a verified current event.",
+        "freshness_note": "Fictional snapshot at 9 October 2026; later changes require new context.",
+        "uncertainty": "Wholly invented scenario; route, access and preferences are not verified outside the fixture.",
+        "date_note": "Invented hearing date",
+        "attribution": "Original fictional preparation note; not a real mandate or consent record",
+        "id": "CX01",
+        "source_id": "demo_context",
+        "topic": "deadline",
+        "relevant_date": "2026-10-12"
+      },
+      {
+        "text": "The invented procedure note permits defence counsel to submit a request to reconsider disclosure, witness questioning or confession admissibility before the next hearing. Availability of this fictional route does not establish that a request will succeed.",
+        "locator": "Invented context text, paragraph CX02",
+        "excerpt": "The invented procedure note permits defence counsel to submit a request to reconsider disclosure, witness questioning or confession admissibility before the next hearing. Availability of this fictional route does not establish that a request will succeed.",
+        "freshness_note": "Fictional snapshot at 9 October 2026; later changes require new context.",
+        "uncertainty": "Wholly invented scenario; route, access and preferences are not verified outside the fixture.",
+        "date_note": "Invented note date; not a real current-status check.",
+        "attribution": "Original fictional preparation note; not a real mandate or consent record",
+        "id": "CX02",
+        "source_id": "demo_context",
+        "topic": "legal_opportunity",
+        "relevant_date": "2026-10-09"
+      },
+      {
+        "text": "The invented procedural note gives the trial judge authority to determine that reconsideration request and identifies defence counsel as the permitted filer. The prototype team has no filing mandate.",
+        "locator": "Invented context text, paragraph CX03",
+        "excerpt": "The invented procedural note gives the trial judge authority to determine that reconsideration request and identifies defence counsel as the permitted filer. The prototype team has no filing mandate.",
+        "freshness_note": "Fictional snapshot at 9 October 2026; later changes require new context.",
+        "uncertainty": "Wholly invented scenario; route, access and preferences are not verified outside the fixture.",
+        "date_note": "Invented note date; not a real current-status check.",
+        "attribution": "Original fictional preparation note; not a real mandate or consent record",
+        "id": "CX03",
+        "source_id": "demo_context",
+        "topic": "institution",
+        "relevant_date": "2026-10-09"
+      },
+      {
+        "text": "The fictional defence desk can compare the supplied packet locally before the hearing but has not obtained the original receipt, full disclosure, interview recording or medical records. External access and counsel availability for filing remain unconfirmed.",
+        "locator": "Invented context text, paragraph CX04",
+        "excerpt": "The fictional defence desk can compare the supplied packet locally before the hearing but has not obtained the original receipt, full disclosure, interview recording or medical records. External access and counsel availability for filing remain unconfirmed.",
+        "freshness_note": "Fictional snapshot at 9 October 2026; later changes require new context.",
+        "uncertainty": "Wholly invented scenario; route, access and preferences are not verified outside the fixture.",
+        "date_note": "Invented note date; not a real current-status check.",
+        "attribution": "Original fictional preparation note; not a real mandate or consent record",
+        "id": "CX04",
+        "source_id": "demo_context",
+        "topic": "capacity",
+        "relevant_date": "2026-10-09"
+      },
+      {
+        "text": "The invented defence preparation note warns that a public campaign could expose family information and draw unwanted attention while a witness is giving evidence. No publicity safety plan has been agreed.",
+        "locator": "Invented context text, paragraph CX05",
+        "excerpt": "The invented defence preparation note warns that a public campaign could expose family information and draw unwanted attention while a witness is giving evidence. No publicity safety plan has been agreed.",
+        "freshness_note": "Fictional snapshot at 9 October 2026; later changes require new context.",
+        "uncertainty": "Wholly invented scenario; route, access and preferences are not verified outside the fixture.",
+        "date_note": "Invented note date; not a real current-status check.",
+        "attribution": "Original fictional preparation note; not a real mandate or consent record",
+        "id": "CX05",
+        "source_id": "demo_context",
+        "topic": "harm",
+        "relevant_date": "2026-10-09"
+      },
+      {
+        "text": "The invented defence preparation note records no instruction from Mara about public advocacy, external referrals or an organisation speaking for her. Her informed preferences and consent are unknown.",
+        "locator": "Invented context text, paragraph CX06",
+        "excerpt": "The invented defence preparation note records no instruction from Mara about public advocacy, external referrals or an organisation speaking for her. Her informed preferences and consent are unknown.",
+        "freshness_note": "Fictional snapshot at 9 October 2026; later changes require new context.",
+        "uncertainty": "Wholly invented scenario; route, access and preferences are not verified outside the fixture.",
+        "date_note": "Invented note date; not a real current-status check.",
+        "attribution": "Original fictional preparation note; not a real mandate or consent record",
+        "id": "CX06",
+        "source_id": "demo_context",
+        "topic": "preferences",
+        "relevant_date": "2026-10-09"
+      },
+      {
+        "text": "The fictional prosecution says a charge sheet and access link were delivered to Mara on 25 September, citing a scanned receipt with an unreadable signature; it says the disclosed documents mostly repeat a short summary. It maintains that preparation time and notice were adequate.",
+        "locator": "Invented text document, paragraph MV03",
+        "excerpt": "The fictional prosecution says a charge sheet and access link were delivered to Mara on 25 September, citing a scanned receipt with an unreadable signature; it says the disclosed documents mostly repeat a short summary. It maintains that preparation time and notice were adequate.",
+        "freshness_note": "Position in the invented 9 October packet; subsequent position unknown.",
+        "uncertainty": "Competing fictional government position, not proven fact.",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented prosecution position; not an established fact",
+        "id": "CX07",
+        "source_id": "demo_government",
+        "topic": "issue_position",
+        "relevant_date": "2026-09-25"
+      },
+      {
+        "text": "The fictional prosecution denies force or threats, describes the confession as voluntary, and says an interview recording exists. It supplies neither that recording nor a medical report and asks the court to admit the confession.",
+        "locator": "Invented text document, paragraph MV12",
+        "excerpt": "The fictional prosecution denies force or threats, describes the confession as voluntary, and says an interview recording exists. It supplies neither that recording nor a medical report and asks the court to admit the confession.",
+        "freshness_note": "Position in the invented 9 October packet; subsequent position unknown.",
+        "uncertainty": "Competing fictional government position, not proven fact.",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented prosecution position; not an established fact",
+        "id": "CX08",
+        "source_id": "demo_government",
+        "topic": "issue_position",
+        "relevant_date": "2026-10-06"
+      },
+      {
+        "text": "The fictional prosecution invokes public order, alleging that the articles might cause unrest outside the council office. It identifies no incident, threat, audience behaviour or connection between a particular passage and disorder; it opposes reopening the evidence rulings.",
+        "locator": "Invented text document, paragraph MV16",
+        "excerpt": "The fictional prosecution invokes public order, alleging that the articles might cause unrest outside the council office. It identifies no incident, threat, audience behaviour or connection between a particular passage and disorder; it opposes reopening the evidence rulings.",
+        "freshness_note": "Position in the invented 9 October packet; subsequent position unknown.",
+        "uncertainty": "Competing fictional government position, not proven fact.",
+        "date_note": "Invented event date; publication date of the fixture packet is separately 9 October 2026.",
+        "attribution": "Invented prosecution position; not an established fact",
+        "id": "CX09",
+        "source_id": "demo_government",
+        "topic": "issue_position",
+        "relevant_date": "2026-10-06"
+      }
+    ],
+    "unknowns": [
+      "Practical access to missing original records.",
+      "Counsel mandate/capacity to file.",
+      "Informed affected-person preferences, public-route authority and protective measures."
+    ],
+    "cluster": null,
+    "comparables": [],
+    "review_status": "context_prepared_not_factual_approval",
+    "disclaimer": "Local provisional decision support for human review, not an official TrialWatch recommendation, legal finding, probability or effectiveness estimate. Saving a proposal or followup executes no advocacy. Pending rights analysis remains pending; missing evidence and preferences remain unknown."
+  },
+  "assessment": {
+    "rubric_version": "rights-rubric/2.0",
+    "revision": 1,
+    "evidence_revision": 0,
+    "preparation": "synthetic_prepared",
+    "dimensions": [
+      {
+        "dimension_id": "tribunal_law",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "score": null,
+        "support_claim_ids": [
+          "MV18"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "low",
+        "completeness": "limited",
+        "missing_facts": [
+          "Constituting law, appointment/jurisdiction and recusal facts."
+        ],
+        "explanation": "Fictional rubric illustration. Naming a court and recording adverse rulings does not establish institutional independence, competence, impartiality or lawful jurisdiction.",
+        "next_verification": "Inspect the missing original record and contrary accounts; retain unknown until resolved.",
+        "applicability": "Determination of a criminal charge or rights/obligations in a suit at law. An adverse ruling alone does not establish bias. Assess special/military proceedings and law establishing jurisdiction; core independence/impartiality cannot be displaced by convenience."
+      },
+      {
+        "dimension_id": "equality_arms",
+        "status": "scored",
+        "concern_level": "substantial",
+        "score": 2,
+        "support_claim_ids": [
+          "MV09",
+          "MV10"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Complete transcript and defence witness proffer; the repetition rationale needs fuller review."
+        ],
+        "explanation": "Fictional rubric illustration. The recorded asymmetry concerns a meaningful defence opportunity: prosecution questioning was allowed while all reliability questions and the proposed rebuttal witness were refused. Avoiding repetition is recorded but no equivalent defence opportunity is shown. This dimension concerns overall opportunity, distinct from the witness safeguard below.",
+        "next_verification": "Compare both parties' opportunities and the complete reasons for refusing rebuttal.",
+        "applicability": "Fictional determination of a criminal charge; assess actual disadvantage and objective justification."
+      },
+      {
+        "dimension_id": "publicity",
+        "status": "scored",
+        "concern_level": "limited",
+        "score": 1,
+        "support_claim_ids": [
+          "MV08"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Nature of the evidence, narrower protective measures and complete closure reasons."
+        ],
+        "explanation": "Fictional rubric illustration. A privacy reason is affirmatively recorded, so closure is not presumed unlawful. Closing the whole hearing without considering narrower protection raises a limited, unresolved concern; publication of the order is a separate positive fact.",
+        "next_verification": "Inspect the scope and necessity of closure and applicable exception.",
+        "applicability": "The fixture specifies an evidentiary criminal hearing; privacy exceptions must be examined."
+      },
+      {
+        "dimension_id": "presumption_innocence",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "score": null,
+        "support_claim_ids": [
+          "MV18"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "low",
+        "completeness": "limited",
+        "missing_facts": [
+          "Official statements, presentation of the accused and proof/burden practice."
+        ],
+        "explanation": "Fictional rubric illustration. A prosecution or admitted confession is not itself an official prejudgment of guilt. Official statements and burden-of-proof practice are unavailable.",
+        "next_verification": "Inspect the missing original record and contrary accounts; retain unknown until resolved.",
+        "applicability": "Criminal charge through adjudication. Prosecution, detention or an adverse verdict alone does not establish failure; distinguish official statements and presentation from a properly reached finding."
+      },
+      {
+        "dimension_id": "notice_charges",
+        "status": "scored",
+        "concern_level": "limited",
+        "score": 1,
+        "support_claim_ids": [
+          "MV02",
+          "MV04"
+        ],
+        "contrary_claim_ids": [
+          "MV03"
+        ],
+        "confidence": "low",
+        "completeness": "partial",
+        "missing_facts": [
+          "Original receipt, earlier message, verified date of formal charge and delivery."
+        ],
+        "explanation": "Fictional rubric illustration. The charge sheet affirmatively sets out law and alleged general facts. Actual delivery is disputed: defence says 5 October while prosecution cites an unreadable 25 September receipt. A limited concern describes unresolved timing; it does not infer lack of charge detail from arrest or preliminary investigation.",
+        "next_verification": "Resolve receipt identity and actual content/timing before any legal conclusion.",
+        "applicability": "Criminal-charge notice; Article 9 arrest information and preliminary-investigation service remain separate."
+      },
+      {
+        "dimension_id": "preparation_facilities",
+        "status": "scored",
+        "concern_level": "substantial",
+        "score": 2,
+        "support_claim_ids": [
+          "MV05"
+        ],
+        "contrary_claim_ids": [
+          "MV03"
+        ],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Full disclosure contents, access logs, defence request and reasoned refusal."
+        ],
+        "explanation": "Fictional rubric illustration. The recorded denied adjournment addresses a specific inability to prepare witness questions after late disclosure, rather than document volume alone. The prosecution's repeat-summary account competes with that difficulty but does not resolve access or time to prepare.",
+        "next_verification": "Check the actual preparation needed and any later effective remedy.",
+        "applicability": "Adequacy for the 6 October evidentiary hearing depends on complexity and actual access."
+      },
+      {
+        "dimension_id": "legal_assistance",
+        "status": "scored",
+        "concern_level": "none_documented",
+        "score": 0,
+        "support_claim_ids": [
+          "MV06"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Counsel's account of any unrecorded interference outside the listed consultations."
+        ],
+        "explanation": "Fictional rubric illustration. Affirmative entries document chosen counsel, two private consultations and continuous representation at this hearing. Zero is limited to those recorded safeguards; it is not whole-case compliance or a deduction from silence. Preparation adequacy is assessed separately.",
+        "next_verification": "Confirm consultation access and representation over the relevant period.",
+        "applicability": "Criminal defence assistance at the identified hearing, distinct from adequate preparation time."
+      },
+      {
+        "dimension_id": "participation",
+        "status": "scored",
+        "concern_level": "none_documented",
+        "score": 0,
+        "support_claim_ids": [
+          "MV07"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Complete transcript and any undisclosed exclusion or participation barrier."
+        ],
+        "explanation": "Fictional rubric illustration. The minutes affirmatively record presence throughout and the opportunity to address the court through counsel. This zero concerns presence/participation in this hearing only; the separate refusal of defence questioning remains scored under other dimensions.",
+        "next_verification": "Check actual attendance and opportunities to communicate and participate.",
+        "applicability": "Trial presence and defence participation; no absentia issue is asserted."
+      },
+      {
+        "dimension_id": "challenge_evidence",
+        "status": "scored",
+        "concern_level": "substantial",
+        "score": 2,
+        "support_claim_ids": [
+          "MV09",
+          "MV10"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Full witness transcript, proffer, prior examination opportunities and reasons."
+        ],
+        "explanation": "Fictional rubric illustration. Admission of the principal witness statement for its truth combined with refusal of all reliability questions and a rebuttal witness indicates a substantial concrete opportunity concern. The stated repetition reason needs scrutiny; no adverse verdict is used as proof.",
+        "next_verification": "Inspect reliability questions, rebuttal relevance and any effective later questioning.",
+        "applicability": "Witness examination and relevant defence evidence in a criminal trial."
+      },
+      {
+        "dimension_id": "interpretation",
+        "status": "not_applicable",
+        "concern_level": null,
+        "score": null,
+        "support_claim_ids": [
+          "MV07"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Applicability could change with new facts or procedural stage."
+        ],
+        "explanation": "Fictional rubric illustration. This fixture affirmatively states that Mara understands the proceedings/documents without interpretation and reports no hearing impairment. The conditional interpreter need is not triggered on these invented facts.",
+        "next_verification": "Reconsider if a language or hearing barrier is identified.",
+        "applicability": "Narrowly inapplicable on the explicit fictional facts as of 9 October 2026; not a permanent whole-case conclusion."
+      },
+      {
+        "dimension_id": "self_incrimination",
+        "status": "scored",
+        "concern_level": "serious",
+        "score": 3,
+        "support_claim_ids": [
+          "MV11",
+          "MV13"
+        ],
+        "contrary_claim_ids": [
+          "MV12"
+        ],
+        "confidence": "low",
+        "completeness": "partial",
+        "missing_facts": [
+          "Interview recording, medical material, full inquiry request and voluntariness ruling."
+        ],
+        "explanation": "Fictional rubric illustration. The allegation of force/threats is disputed and is not treated as a proven event. The documented admission of the confession as principal evidence while refusing any voluntariness inquiry despite the pleaded allegation supplies the serious illustrative concern. The signature alone does not resolve voluntariness; no completed conviction is claimed.",
+        "next_verification": "Prioritise checking the allegation and the required admission safeguards with qualified review.",
+        "applicability": "Criminal proceedings and compelled confession; the charge and arrest questions are separately retained."
+      },
+      {
+        "dimension_id": "undue_delay",
+        "status": "insufficient_evidence",
+        "concern_level": null,
+        "score": null,
+        "support_claim_ids": [
+          "MV18"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "low",
+        "completeness": "limited",
+        "missing_facts": [
+          "Complete chronology, complexity, party conduct and reasons for elapsed periods."
+        ],
+        "explanation": "Fictional rubric illustration. A single hearing and an upcoming date do not establish justified or undue overall delay.",
+        "next_verification": "Inspect the missing original record and contrary accounts; retain unknown until resolved.",
+        "applicability": "Criminal charge through final adjudication/appeal. Assess complexity, accused conduct and administrative/judicial handling. Elapsed time or a procedural deadline alone does not establish undue delay; custody increases need for expedition."
+      },
+      {
+        "dimension_id": "appeal_review",
+        "status": "not_applicable",
+        "concern_level": null,
+        "score": null,
+        "support_claim_ids": [
+          "MV01"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Applicability could change with new facts or procedural stage."
+        ],
+        "explanation": "Fictional rubric illustration. No conviction or sentence exists in the stated pending-trial snapshot. Conviction/sentence review is not yet triggered; interlocutory avenues are a different question.",
+        "next_verification": "Reconsider upon a conviction/sentence or a change in procedural stage.",
+        "applicability": "Narrowly inapplicable on the explicit fictional facts as of 9 October 2026; not a permanent whole-case conclusion."
+      },
+      {
+        "dimension_id": "juvenile_safeguards",
+        "status": "not_applicable",
+        "concern_level": null,
+        "score": null,
+        "support_claim_ids": [
+          "MV01"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Applicability could change with new facts or procedural stage."
+        ],
+        "explanation": "Fictional rubric illustration. Mara is expressly 32 in this fixture. Child-specific procedural safeguards are not triggered.",
+        "next_verification": "Reconsider if age/identity changes; never infer age from a name.",
+        "applicability": "Narrowly inapplicable on the explicit fictional facts as of 9 October 2026; not a permanent whole-case conclusion."
+      },
+      {
+        "dimension_id": "double_jeopardy",
+        "status": "not_applicable",
+        "concern_level": null,
+        "score": null,
+        "support_claim_ids": [
+          "MV01"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Applicability could change with new facts or procedural stage."
+        ],
+        "explanation": "Fictional rubric illustration. The explicit fixture history identifies a first prosecution and no earlier final acquittal/conviction on these facts.",
+        "next_verification": "Reconsider if an earlier final determination on the same offence is documented.",
+        "applicability": "Narrowly inapplicable on the explicit fictional facts as of 9 October 2026; not a permanent whole-case conclusion."
+      },
+      {
+        "dimension_id": "miscarriage_compensation",
+        "status": "not_applicable",
+        "concern_level": null,
+        "score": null,
+        "support_claim_ids": [
+          "MV01"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Applicability could change with new facts or procedural stage."
+        ],
+        "explanation": "Fictional rubric illustration. There is no conviction, qualifying reversal/pardon or compensation claim in the explicit fixture history.",
+        "next_verification": "Reconsider only when the qualifying conviction/reversal and relevant exception facts arise.",
+        "applicability": "Narrowly inapplicable on the explicit fictional facts as of 9 October 2026; not a permanent whole-case conclusion."
+      },
+      {
+        "dimension_id": "expression_scope",
+        "status": "scored",
+        "concern_level": "limited",
+        "score": 1,
+        "support_claim_ids": [
+          "MV14",
+          "MV17"
+        ],
+        "contrary_claim_ids": [
+          "MV16"
+        ],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Qualified legal applicability review of the entire publication and restriction."
+        ],
+        "explanation": "Fictional rubric illustration. The charge and order restrict reporting about public administration. The supplied complete fictional texts show criticism/audit requests without incitement. This establishes a concrete protected-expression question and limited illustrative concern; scope alone does not decide the restriction tests.",
+        "next_verification": "Confirm expression, affected speaker and precise interference before the separate restriction tests.",
+        "applicability": "Article 19 expression and dissemination; no real publication is involved."
+      },
+      {
+        "dimension_id": "expression_legal_basis",
+        "status": "scored",
+        "concern_level": "substantial",
+        "score": 2,
+        "support_claim_ids": [
+          "MV15",
+          "MV02"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Applicable enacted text, accessible limiting interpretations and event-date applicability in a real counterpart."
+        ],
+        "explanation": "Fictional rubric illustration. The invented provision identifies a legal label yet uses undefined unsettles/confidence language and no supplied limiting interpretation. That supports a substantial foreseeability question in the fixture, not a claim that any actual national statute is invalid.",
+        "next_verification": "Seek qualified scrutiny of precision and application; never substitute this invented provision for real law.",
+        "applicability": "A supplied wholly invented law; the existing international rubric is used for demonstration only."
+      },
+      {
+        "dimension_id": "expression_legitimate_aim",
+        "status": "scored",
+        "concern_level": "limited",
+        "score": 1,
+        "support_claim_ids": [
+          "MV16",
+          "MV14"
+        ],
+        "contrary_claim_ids": [],
+        "confidence": "low",
+        "completeness": "partial",
+        "missing_facts": [
+          "Specific public-order grounds and their connection to the particular articles."
+        ],
+        "explanation": "Fictional rubric illustration. Public order is the prosecution's asserted aim. Its general unrest theory lacks a specified incident or passage-to-harm connection, leaving a limited question about the aim in this application. The assertion is preserved as a position; it establishes neither unlawful motive nor necessity.",
+        "next_verification": "Examine the asserted aim and evidence separately from necessity/proportionality.",
+        "applicability": "Separate Article 19 permissible-aim inquiry; institutional embarrassment is not assumed to be the asserted aim."
+      },
+      {
+        "dimension_id": "expression_necessity",
+        "status": "scored",
+        "concern_level": "serious",
+        "score": 3,
+        "support_claim_ids": [
+          "MV14",
+          "MV17"
+        ],
+        "contrary_claim_ids": [
+          "MV16"
+        ],
+        "confidence": "moderate",
+        "completeness": "partial",
+        "missing_facts": [
+          "Complete order, evidence of actual harm, narrower alternatives and qualified review."
+        ],
+        "explanation": "Fictional rubric illustration. The complete fixture describes a six-month ban on all city reporting, including unrelated future work, and a potential custodial penalty with no narrower-measure or harm analysis. That supplies a serious concrete proportionality concern. The prosecution's unrest argument competes with the analysis but is not proof of necessity or safety.",
+        "next_verification": "Compare scope, penalty, demonstrated harm and less restrictive measures.",
+        "applicability": "Assess the actual restriction and alternatives separately from legal basis and asserted aim."
+      }
+    ]
+  },
+  "captured_from": "Original fictional case packet and prepared demonstration; no real source or provider run."
+}

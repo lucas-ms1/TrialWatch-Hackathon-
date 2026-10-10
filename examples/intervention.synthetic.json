@@ -1,0 +1,295 @@
+{
+  "schema_version": "intervention-example/1",
+  "synthetic": true,
+  "context": {
+    "schema_version": "intervention-context/1",
+    "expected_revision": 0,
+    "author": "Synthetic worksheet preparer",
+    "origin": "synthetic_prepared",
+    "evidence_cutoff": "2026-10-09",
+    "sources": [
+      {
+        "id": "context_record",
+        "title": "Fictional procedural and partner note",
+        "publisher": "Synthetic Practice Archive",
+        "url": "https://example.invalid/intervention/context",
+        "publication_date": "2026-10-09",
+        "retrieved_at": null,
+        "language": "English",
+        "translation_status": "Original fictional English",
+        "access_note": "Original synthetic fixture; no real source was retrieved.",
+        "lineage_note": "One invented record; distinct passages are not independent corroboration."
+      }
+    ],
+    "source_texts": {
+      "context_record": "The fictional registry accepts certified-record requests from authorized counsel.\n\nThe fictional registry lists an October 15 preparation hearing.\n\nA fictional legal clinic says it can prepare a research note after counsel provides the notice record.\n\nFictional counsel warns that public naming may expose the defendant before consultation.\n\nThe fictional note does not record the defendant's preferences or consent.\n\nThe fictional prosecution says notice was timely, but supplies no delivery receipt.\n\nIn an unrelated fictional proceeding, counsel requested disclosure records.\n\nThe unrelated fictional court later granted additional preparation time; the reason is not supplied."
+    },
+    "claims": [
+      {
+        "id": "route",
+        "topic": "institution",
+        "text": "The fictional registry accepts certified-record requests from authorized counsel.",
+        "source_id": "context_record",
+        "excerpt": "The fictional registry accepts certified-record requests from authorized counsel.",
+        "locator": "Fictional note paragraph route",
+        "relevant_date": "2026-10-09",
+        "date_note": "Fictional stated procedural date; no real event.",
+        "attribution": "Fictional source-reported procedural/partner account; no authentication.",
+        "uncertainty": "Original records, authority and current capacity are not independently verified.",
+        "freshness_note": "Fictional snapshot as of October 9; reconfirm before relying on it."
+      },
+      {
+        "id": "window",
+        "topic": "deadline",
+        "text": "The fictional registry lists an October 15 preparation hearing.",
+        "source_id": "context_record",
+        "excerpt": "The fictional registry lists an October 15 preparation hearing.",
+        "locator": "Fictional note paragraph window",
+        "relevant_date": "2026-10-15",
+        "date_note": "Fictional stated procedural date; no real event.",
+        "attribution": "Fictional source-reported procedural/partner account; no authentication.",
+        "uncertainty": "Original records, authority and current capacity are not independently verified.",
+        "freshness_note": "Fictional snapshot as of October 9; reconfirm before relying on it."
+      },
+      {
+        "id": "capacity",
+        "topic": "capacity",
+        "text": "A fictional legal clinic says it can prepare a research note after counsel provides the notice record.",
+        "source_id": "context_record",
+        "excerpt": "A fictional legal clinic says it can prepare a research note after counsel provides the notice record.",
+        "locator": "Fictional note paragraph capacity",
+        "relevant_date": "2026-10-09",
+        "date_note": "Fictional stated procedural date; no real event.",
+        "attribution": "Fictional source-reported procedural/partner account; no authentication.",
+        "uncertainty": "Original records, authority and current capacity are not independently verified.",
+        "freshness_note": "Fictional snapshot as of October 9; reconfirm before relying on it."
+      },
+      {
+        "id": "harm",
+        "topic": "harm",
+        "text": "Fictional counsel warns that public naming may expose the defendant before consultation.",
+        "source_id": "context_record",
+        "excerpt": "Fictional counsel warns that public naming may expose the defendant before consultation.",
+        "locator": "Fictional note paragraph harm",
+        "relevant_date": "2026-10-09",
+        "date_note": "Fictional stated procedural date; no real event.",
+        "attribution": "Fictional source-reported procedural/partner account; no authentication.",
+        "uncertainty": "Original records, authority and current capacity are not independently verified.",
+        "freshness_note": "Fictional snapshot as of October 9; reconfirm before relying on it."
+      },
+      {
+        "id": "preferences",
+        "topic": "preferences",
+        "text": "The fictional note does not record the defendant's preferences or consent.",
+        "source_id": "context_record",
+        "excerpt": "The fictional note does not record the defendant's preferences or consent.",
+        "locator": "Fictional note paragraph preferences",
+        "relevant_date": "2026-10-09",
+        "date_note": "Fictional stated procedural date; no real event.",
+        "attribution": "Fictional source-reported procedural/partner account; no authentication.",
+        "uncertainty": "Original records, authority and current capacity are not independently verified.",
+        "freshness_note": "Fictional snapshot as of October 9; reconfirm before relying on it."
+      },
+      {
+        "id": "reply",
+        "topic": "issue_position",
+        "text": "The fictional prosecution says notice was timely, but supplies no delivery receipt.",
+        "source_id": "context_record",
+        "excerpt": "The fictional prosecution says notice was timely, but supplies no delivery receipt.",
+        "locator": "Fictional note paragraph reply",
+        "relevant_date": "2026-10-09",
+        "date_note": "Fictional stated procedural date; no real event.",
+        "attribution": "Fictional source-reported procedural/partner account; no authentication.",
+        "uncertainty": "Original records, authority and current capacity are not independently verified.",
+        "freshness_note": "Fictional snapshot as of October 9; reconfirm before relying on it."
+      },
+      {
+        "id": "prior_action",
+        "topic": "historical_action",
+        "text": "In an unrelated fictional proceeding, counsel requested disclosure records.",
+        "source_id": "context_record",
+        "excerpt": "In an unrelated fictional proceeding, counsel requested disclosure records.",
+        "locator": "Fictional note paragraph prior_action",
+        "relevant_date": "2026-10-09",
+        "date_note": "Fictional stated procedural date; no real event.",
+        "attribution": "Fictional source-reported procedural/partner account; no authentication.",
+        "uncertainty": "Original records, authority and current capacity are not independently verified.",
+        "freshness_note": "Fictional snapshot as of October 9; reconfirm before relying on it."
+      },
+      {
+        "id": "prior_outcome",
+        "topic": "historical_outcome",
+        "text": "The unrelated fictional court later granted additional preparation time; the reason is not supplied.",
+        "source_id": "context_record",
+        "excerpt": "The unrelated fictional court later granted additional preparation time; the reason is not supplied.",
+        "locator": "Fictional note paragraph prior_outcome",
+        "relevant_date": "2026-10-09",
+        "date_note": "Fictional stated procedural date; no real event.",
+        "attribution": "Fictional source-reported procedural/partner account; no authentication.",
+        "uncertainty": "Original records, authority and current capacity are not independently verified.",
+        "freshness_note": "Fictional snapshot as of October 9; reconfirm before relying on it."
+      }
+    ],
+    "unknowns": [
+      "Defendant preferences, authorization, actual receipt and availability remain unknown."
+    ],
+    "cluster": null,
+    "comparables": [
+      {
+        "label": "Unrelated fictional disclosure episode",
+        "basis": "Both fictional criminal proceedings involve obtaining procedural documents.",
+        "material_differences": "Different tribunal, charge, parties and stage; no cross-jurisdiction legal equivalence is assumed.",
+        "action_context_ids": [
+          "prior_action"
+        ],
+        "outcome_context_ids": [
+          "prior_outcome"
+        ],
+        "period": "Fictional earlier episode; exact dates unknown.",
+        "contribution": "Only sequence is documented; the record does not establish that the request caused the adjournment.",
+        "limitations": "One selected fictional account and no contrary comparison; not an effectiveness study."
+      }
+    ]
+  },
+  "proposal": {
+    "expected_revision": 0,
+    "expected_context_revision": 1,
+    "expected_assessment_revision": 1,
+    "author": "Synthetic proposal preparer",
+    "origin": "synthetic_prepared",
+    "dimension_ids": [
+      "notice_charges"
+    ],
+    "selected_option_id": "verify_records",
+    "requested_disposition": "prepare_verify",
+    "options": [
+      {
+        "id": "verify_records",
+        "label": "Targeted record verification and legal preparation",
+        "route": "verification",
+        "actor": "Authorized defence counsel and a fictional legal clinic",
+        "authority": "Registry controls certified-record access; clinic can provide research, not adjudicate the case.",
+        "objective": "Clarify charge-notice chronology and prepare a qualified legal note.",
+        "beneficiary": "Fictional defendant; preferences remain unknown.",
+        "support_context_ids": [
+          "route",
+          "capacity"
+        ],
+        "contrary_context_ids": [
+          "reply",
+          "harm"
+        ],
+        "authority_context_ids": [
+          "route"
+        ],
+        "timing_context_ids": [
+          "window"
+        ],
+        "feasibility_context_ids": [
+          "capacity"
+        ],
+        "harm_context_ids": [
+          "harm"
+        ],
+        "preferences_context_ids": [
+          "preferences"
+        ],
+        "timing_window": "Before the fictional October 15 hearing, conditional on verified notice and authority.",
+        "preconditions": [
+          "Confirm record access and authorization without contacting anyone in this demo."
+        ],
+        "blocking_unknowns": [
+          "Defendant preferences, counsel authorization and the delivery record."
+        ],
+        "benefits": [
+          "A precise record could narrow the legal question."
+        ],
+        "harms": [
+          "Premature publicity or disclosure could expose the fictional defendant."
+        ],
+        "alternative_explanations": "Different documentation completeness or a valid earlier delivery could explain the disputed account.",
+        "next_step": "Prepare a local list of notice/receipt questions for a qualified reviewer; execute no outreach.",
+        "reconsideration_trigger": "Original receipt, defendant preferences and counsel authorization are documented.",
+        "factors": {
+          "urgency": "time_sensitive",
+          "opportunity": "supported",
+          "feasibility": "needs_verification",
+          "harm": "material_risk",
+          "preferences": "unknown",
+          "reason": "Sourced route/timing suggest an inquiry, but capacity, consent and exposure prerequisites are unresolved."
+        }
+      },
+      {
+        "id": "defer_public",
+        "label": "Defer public advocacy until preferences and exposure are checked",
+        "route": "deferral",
+        "actor": "Authorized defence counsel and a fictional legal clinic",
+        "authority": "Registry controls certified-record access; clinic can provide research, not adjudicate the case.",
+        "objective": "Avoid premature exposure while preserving the verification option.",
+        "beneficiary": "Fictional defendant; preferences remain unknown.",
+        "support_context_ids": [
+          "route",
+          "capacity"
+        ],
+        "contrary_context_ids": [
+          "reply",
+          "harm"
+        ],
+        "authority_context_ids": [
+          "route"
+        ],
+        "timing_context_ids": [
+          "window"
+        ],
+        "feasibility_context_ids": [
+          "capacity"
+        ],
+        "harm_context_ids": [
+          "harm"
+        ],
+        "preferences_context_ids": [
+          "preferences"
+        ],
+        "timing_window": "Before the fictional October 15 hearing, conditional on verified notice and authority.",
+        "preconditions": [
+          "Confirm record access and authorization without contacting anyone in this demo."
+        ],
+        "blocking_unknowns": [
+          "Defendant preferences, counsel authorization and the delivery record."
+        ],
+        "benefits": [
+          "A precise record could narrow the legal question."
+        ],
+        "harms": [
+          "Premature publicity or disclosure could expose the fictional defendant."
+        ],
+        "alternative_explanations": "Different documentation completeness or a valid earlier delivery could explain the disputed account.",
+        "next_step": "Retain the deferral condition and prepare the confidential verification worksheet locally.",
+        "reconsideration_trigger": "Original receipt, defendant preferences and counsel authorization are documented.",
+        "factors": {
+          "urgency": "time_sensitive",
+          "opportunity": "supported",
+          "feasibility": "needs_verification",
+          "harm": "material_risk",
+          "preferences": "unknown",
+          "reason": "Sourced route/timing suggest an inquiry, but capacity, consent and exposure prerequisites are unresolved."
+        }
+      }
+    ],
+    "rationale": "The notice concern is provisional and contested. A limited verification/preparation route is more supportable than publicity; deadline alone is not a beneficial strategy."
+  },
+  "followup": {
+    "expected_sequence": 0,
+    "author": "Synthetic scenario preparer",
+    "kind": "conditional_scenario",
+    "text": "If an authorized reviewer obtains the original receipt, the notice explanation may strengthen or weaken; no outcome is predicted.",
+    "event_date": null,
+    "period": "Before the fictional preparation hearing.",
+    "contribution": "Conditional scenario only; no completed action, outcome or causal contribution is asserted.",
+    "source": null,
+    "source_text": null,
+    "excerpt": null,
+    "locator": null,
+    "uncertainty": "No calibrated probability or effectiveness evidence exists."
+  }
+}

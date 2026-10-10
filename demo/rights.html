@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Read-only hackathon demonstration of five saved rights evidence profiles and sourced intervention options.">
   <title>TrialWatch · Rights evidence index</title>
-  <link rel="stylesheet" href="./rights.css?v=20261010T172203Z">
+  <link rel="stylesheet" href="./rights.css?v=20261010-strategy1">
   <link rel="stylesheet" href="./judgment-import.css?v=20261010T172203Z">
   <script src="./judgment-import.js?v=20261010T172203Z" defer></script>
   <script src="./ai-wizard.js?v=20261010T172203Z" defer></script>
   <script src="./advocacy-reader.js?v=20261010T172203Z" defer></script>
-  <script src="./static-demo.js?v=20261010T172203Z" defer></script>
-  <script src="./rights.js?v=20261010T172203Z" defer></script>
+  <link rel="stylesheet" href="./synthetic-strategy.css?v=20261010-strategy1">
+  <script src="./synthetic-strategy-data.js?v=20261010-strategy1" defer></script>
+  <script src="./synthetic-strategy-core.js?v=20261010-strategy1" defer></script>
+  <script src="./synthetic-strategy.js?v=20261010-strategy1" defer></script>
+  <script src="./static-demo.js?v=20261010-strategy1" defer></script>
+  <script src="./rights.js?v=20261010-strategy1" defer></script>
   <link rel="stylesheet" href="./static-demo.css?v=20261010T172203Z">
 </head>
 <body>
@@ -21,7 +25,7 @@
     <nav aria-label="Workspace"><button type="button" id="index-open" aria-current="page">Case index</button><button type="button" id="method-open">Rubric & method</button><button type="button" id="judgment-import-open">Import judgments</button><button class="button primary" type="button" id="intake-open">Add case material <span aria-hidden="true">+</span></button></nav>
   </header>
   <div class="static-demo-banner" role="note">Read-only demo · loading saved cases…</div>
-  <div class="boundary-banner"><strong>Evidence workflow:</strong> inspect passages → explore rights → compare saved options.</div>
+  <div class="boundary-banner"><strong>Evidence workflow:</strong> inspect passages → explore rights → compare options and fictional scenarios.</div>
   <main id="main" tabindex="-1" aria-busy="true">
     <div id="global-error" class="error" role="alert" hidden></div>
     <section id="index-view" aria-labelledby="index-title">

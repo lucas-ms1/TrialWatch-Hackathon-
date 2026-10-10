@@ -1,3 +1,13 @@
+> Latest October 9 continuation: the primary interface connects the rights index to sourced context, advocacy alternatives, deterministic intervention proposals and exact human disposition. See the workspace README and intervention method. Earlier rights-only/campaign examples below retain their original scope.
+
+# Current product addendum — October 9 rights pivot
+
+The supplied packet pages 3–10 and orientation legal-evaluation slide 10 were re-inspected today; page 5 and slide 10 were also visually rendered. Packet p9 limits index topics to fair-trial rights and expression; p10's resource pointers do not establish a promised database, unrestricted course access or an approved numerical rubric. Orientation slide 10 frames legal analysis as support for lawyers' judgment.
+
+The user's primary build is now a rights case index. Keep Track 3 for advocacy prioritization/comparison and explain the overlap with Track 2. No organizer ruling or track change is claimed. Sources and link-label mismatches are audited in DATA_SOURCE_INVENTORY. Official final deadline remains October 10 3:30 p.m. ET, demo 10–15 minutes and deliverables code/docs/setup, license and short intended-use description. Internal sprint cuts are team choices.
+
+The following earlier requirements/logistics record remains valid for official rules; its previous product-direction descriptions are historical and superseded by DECISIONS.
+
 # Hackathon requirements and logistics
 
 October 9 addendum: the supplied PDFs were rechecked locally. Orientation slide 12 explicitly includes detecting patterns of repression across jurisdictions and countries, alongside cross-case comparison and evidence-based advocacy strategy. The user's broadened direction fits these options. No new organizer ruling, data access or schedule update is claimed.

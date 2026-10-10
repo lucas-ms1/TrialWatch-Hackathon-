@@ -1,0 +1,406 @@
+{
+  "schema_version": "rights-intake/2",
+  "candidate": {
+    "id": "rights_intake_demo",
+    "title": "Synthetic intake: notice and counsel records",
+    "person": "Fictional person rights_demo_2",
+    "proceeding": "Fictional criminal proceeding; demonstration only",
+    "country": "Philippines",
+    "material_type": "synthetic",
+    "as_of": "2026-09-12",
+    "summary": "Entirely fictional evidence for rights-assessment software mechanics.",
+    "suggested_decision": "uncertain",
+    "review_reasons": [
+      "Preparation-time status: human review pending; this note records fixture provenance and does not describe subsequent saved review."
+    ],
+    "unknowns": [
+      "No real case or legal assessment is represented. All citations in this fictional dossier are fixture locations."
+    ],
+    "notes": [
+      "Synthetic preparation; no fresh AI extraction. Human review pending at preparation; current reviews appear separately."
+    ],
+    "claims": [
+      {
+        "id": "b_notice",
+        "source_id": "b_record",
+        "text": "The fictional signed record states the charge was explained in the defendant's language fourteen days before the hearing.",
+        "excerpt": "The fictional signed record states the charge was explained in the defendant's language fourteen days before the hearing.",
+        "locator": "Fictional fixture paragraph b_notice",
+        "event_date": "2026-09-10",
+        "date_note": "Fictional event date; not a real proceeding",
+        "attribution": "Fictional documented procedure; unauthenticated demonstration text",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "b_counsel",
+        "source_id": "b_record",
+        "text": "The fictional hearing record states counsel met the defendant privately and obtained a preparation adjournment requested by the defence.",
+        "excerpt": "The fictional hearing record states counsel met the defendant privately and obtained a preparation adjournment requested by the defence.",
+        "locator": "Fictional fixture paragraph b_counsel",
+        "event_date": "2026-09-10",
+        "date_note": "Fictional event date; not a real proceeding",
+        "attribution": "Fictional documented procedure; unauthenticated demonstration text",
+        "attribution_kind": "documented_procedure"
+      },
+      {
+        "id": "b_unknown",
+        "source_id": "b_news",
+        "text": "The fictional news note reports an adverse verdict but supplies no witness-examination record or reasons for judgment.",
+        "excerpt": "The fictional news note reports an adverse verdict but supplies no witness-examination record or reasons for judgment.",
+        "locator": "Fictional fixture paragraph b_unknown",
+        "event_date": "2026-09-10",
+        "date_note": "Fictional event date; not a real proceeding",
+        "attribution": "Fictional source allegation; unauthenticated demonstration text",
+        "attribution_kind": "source_allegation"
+      }
+    ],
+    "sources": [
+      {
+        "id": "b_record",
+        "title": "Synthetic signed procedural record",
+        "publisher": "Fictional fixture publisher",
+        "url": "https://example.invalid/rights/b_record",
+        "publication_date": "2026-09-12",
+        "retrieved_at": null,
+        "language": "en",
+        "translation_status": "Synthetic English text; no translation",
+        "access_note": "Software fixture only. No document was retrieved and URL is intentionally non-resolving.",
+        "lineage_note": "One fictional record, not independent verification."
+      },
+      {
+        "id": "b_news",
+        "title": "Synthetic news summary",
+        "publisher": "Fictional fixture publisher",
+        "url": "https://example.invalid/rights/b_news",
+        "publication_date": "2026-09-12",
+        "retrieved_at": null,
+        "language": "en",
+        "translation_status": "Synthetic English text; no translation",
+        "access_note": "Software fixture only. No document was retrieved and URL is intentionally non-resolving.",
+        "lineage_note": "Underlying judgment not supplied."
+      }
+    ],
+    "related_candidate_ids": [],
+    "rights_metadata": {
+      "region": "Fictional demonstration region",
+      "case_unit": "One fictional case, one defendant; arrest-event count not established.",
+      "identity_uncertainty": "Fixture IDs identify fictional dossiers only; no identity matching was performed.",
+      "related_cases": [],
+      "country_context": [],
+      "pattern_hypotheses": [],
+      "published_expert_assessments": []
+    }
+  },
+  "source_texts": {
+    "b_record": "The fictional signed record states the charge was explained in the defendant's language fourteen days before the hearing.\n\nThe fictional hearing record states counsel met the defendant privately and obtained a preparation adjournment requested by the defence.",
+    "b_news": "The fictional news note reports an adverse verdict but supplies no witness-examination record or reasons for judgment."
+  },
+  "prepared_mappings": [
+    {
+      "dimension_id": "tribunal_law",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "Determination of a criminal charge or rights/obligations in a suit at law. An adverse ruling alone does not establish bias. Assess special/military proceedings and law establishing jurisdiction; core independence/impartiality cannot be displaced by convenience."
+    },
+    {
+      "dimension_id": "equality_arms",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "Court/tribunal access and relevant proceedings, including criminal charges and suits at law. Different treatment is not automatically unlawful; examine objective reasons, actual disadvantage and access barriers. Do not equate equal arms with identical roles."
+    },
+    {
+      "dimension_id": "publicity",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "Hearing and judgment in determination of a criminal charge or suit at law; determine hearing type, as not every pretrial/appeal step requires a public hearing. Press/public may be excluded for morals, public order, national security in a democratic society, private lives, or strictly necessary special circumstances where publicity prejudices justice. Judgment exceptions include juvenile interests or matrimonial/child guardianship disputes."
+    },
+    {
+      "dimension_id": "presumption_innocence",
+      "status": "insufficient_evidence",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Selected fictional documents do not resolve the facts needed for this standard.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Full relevant procedural record and competing accounts."
+      ],
+      "next_verification": "Inspect the original hearing/judgment record; absence from reporting is unknown.",
+      "applicability": "Criminal charge through adjudication. Prosecution, detention or an adverse verdict alone does not establish failure; distinguish official statements and presentation from a properly reached finding."
+    },
+    {
+      "dimension_id": "notice_charges",
+      "status": "scored",
+      "concern_level": "none_documented",
+      "support_claim_ids": [
+        "b_notice"
+      ],
+      "contrary_claim_ids": [],
+      "explanation": "This affirmative fictional procedural record documents the relevant safeguard. Zero applies only to this mapped proposition and dimension; record authenticity and broader compliance remain unchecked.",
+      "confidence": "moderate",
+      "completeness": "partial",
+      "missing_facts": [
+        "Original record authenticity and the defendant's competing account."
+      ],
+      "next_verification": "Check the original record and invite comparison with the defendant's account.",
+      "applicability": "Criminal charge, rather than only preliminary investigation before charges. Arrest reasons under Article 9 are a distinct related guarantee; formal notice must address law and alleged general facts, orally or in writing as appropriate."
+    },
+    {
+      "dimension_id": "preparation_facilities",
+      "status": "scored",
+      "concern_level": "none_documented",
+      "support_claim_ids": [
+        "b_counsel"
+      ],
+      "contrary_claim_ids": [],
+      "explanation": "This affirmative fictional procedural record documents the relevant safeguard. Zero applies only to this mapped proposition and dimension; record authenticity and broader compliance remain unchecked.",
+      "confidence": "moderate",
+      "completeness": "partial",
+      "missing_facts": [
+        "Original record authenticity and the defendant's competing account."
+      ],
+      "next_verification": "Check the original record and invite comparison with the defendant's account.",
+      "applicability": "Preparation for a criminal charge, hearings and relevant defence steps. Adequacy depends on complexity, access and circumstances. Requests for additional time and reasoned rulings matter; document volume alone is not adequacy."
+    },
+    {
+      "dimension_id": "legal_assistance",
+      "status": "scored",
+      "concern_level": "none_documented",
+      "support_claim_ids": [
+        "b_counsel"
+      ],
+      "contrary_claim_ids": [],
+      "explanation": "This affirmative fictional procedural record documents the relevant safeguard. Zero applies only to this mapped proposition and dimension; record authenticity and broader compliance remain unchecked.",
+      "confidence": "moderate",
+      "completeness": "partial",
+      "missing_facts": [
+        "Original record authenticity and the defendant's competing account."
+      ],
+      "next_verification": "Check the original record and invite comparison with the defendant's account.",
+      "applicability": "Criminal defence; distinguish custodial/investigation guarantees under Article 9 and applicable domestic law. Assigned assistance depends on interests of justice and lack of means for free assistance. Self-representation restrictions require objective sufficiently serious reasons; attributed counsel errors require case-specific responsibility analysis."
+    },
+    {
+      "dimension_id": "participation",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "Criminal trial and defence participation. Proceedings in absence can be permissible in specific circumstances after sufficient notice and opportunity; verify steps informing the accused and justification, not absence alone."
+    },
+    {
+      "dimension_id": "challenge_evidence",
+      "status": "insufficient_evidence",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Selected fictional documents do not resolve the facts needed for this standard.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Full relevant procedural record and competing accounts."
+      ],
+      "next_verification": "Inspect the original hearing/judgment record; absence from reporting is unknown.",
+      "applicability": "Criminal trial and material defence evidence requests. This is not an unlimited right to call every witness. Identify relevance, requests, refusals, reasons and disadvantage."
+    },
+    {
+      "dimension_id": "interpretation",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "Criminal proceedings when courtroom language cannot be understood/spoken. Nationality or multilingual setting alone does not prove need or adequacy. This right does not require proceedings in the preferred language where the court language is sufficiently understood."
+    },
+    {
+      "dimension_id": "self_incrimination",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "Obtaining/use of statements in a criminal process, including earlier investigation where relevant to trial. Voluntary admission is not automatically prohibited. Distinguish Article 7 coercion and Article 9 detention guarantees; evaluate burden and exclusion of alleged coerced statements."
+    },
+    {
+      "dimension_id": "undue_delay",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "Criminal charge through final adjudication/appeal. Assess complexity, accused conduct and administrative/judicial handling. Elapsed time or a procedural deadline alone does not establish undue delay; custody increases need for expedition."
+    },
+    {
+      "dimension_id": "appeal_review",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "After criminal conviction/sentence and relevant higher review. Guarantee is substantive, not merely a formal check. Civil review is not automatically within Article 14(5); examine applicable special procedures and access to reasoned judgment/record."
+    },
+    {
+      "dimension_id": "juvenile_safeguards",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "Criminal proceedings involving a juvenile at the relevant event date. Age and domestic juvenile status require verification. Juvenile-specific procedure/rehabilitation and diversion where appropriate are distinct from assuming identical adult procedure."
+    },
+    {
+      "dimension_id": "double_jeopardy",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "Later criminal proceedings following a potentially final conviction/acquittal for the same offence. Verify finality/same offence/same jurisdiction. Higher review and narrowly justified resumption on exceptional grounds are distinct; the Covenant does not automatically prohibit prosecutions in different national jurisdictions."
+    },
+    {
+      "dimension_id": "miscarriage_compensation",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "After qualifying reversal/pardon and punishment following final criminal conviction. Ordinary acquittal, dismissal or reversal alone is insufficient. Examine final conviction, punishment, newly discovered fact, conclusive miscarriage and whether non-disclosure was wholly/partly attributable to the person."
+    },
+    {
+      "dimension_id": "expression_scope",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "Do not presume expression was involved in every prosecution. Identify conduct and restriction; Article 20 duties and other rights may also require analysis."
+    },
+    {
+      "dimension_id": "expression_legal_basis",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "First establish expression and restriction. Citation of a statute alone does not settle foreseeability or its application."
+    },
+    {
+      "dimension_id": "expression_legitimate_aim",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "An asserted aim is a government position, not proof of necessity or legitimacy in the particular application. Missing government reasons remain unknown."
+    },
+    {
+      "dimension_id": "expression_necessity",
+      "status": "not_assessed",
+      "concern_level": null,
+      "support_claim_ids": [],
+      "contrary_claim_ids": [],
+      "explanation": "Not assessed.",
+      "confidence": "unknown",
+      "completeness": "unknown",
+      "missing_facts": [
+        "Dimension has not been assessed."
+      ],
+      "next_verification": "Inspect the relevant evidence and applicable standard.",
+      "applicability": "Assess actual expression, aim, harm, penalty and alternatives. A restriction is not automatically unlawful; a legal basis and aim do not automatically establish necessity."
+    }
+  ]
+}

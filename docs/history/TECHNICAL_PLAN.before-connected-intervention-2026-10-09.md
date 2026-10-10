@@ -1,0 +1,19 @@
+# Implementation: versioned rights assessment
+
+October 9, 2026. The primary interface is now the rights case index. [The earlier plan](history/TECHNICAL_PLAN.before-rights-pivot-2026-10-09.md) remains historical. Python standard-library HTTP/SQLite and a buildless frontend remain the stack; no new application dependencies or paid runtime are required.
+
+The existing ReviewStore retains immutable seed records, manual intake, duplicate links, source attribution, correction/review history and saved evidence snapshots. A separate rights service/contract extends it without reinterpreting legacy fields. Legacy APIs and numerical-score exclusions remain. New rights assessments store individual dimensions, legal citations, proposition references, supporting/contrary evidence, rationale, confidence/completeness, missing facts, next checks, evidence revision, rubric version and scoped review.
+
+The default synthetic rights seed and new state directory are separate from the earlier comparison fixture and real v2 state. Existing real v2 reviews are preserved without converting a source-reported sequence into a legal approval. Preparation labels remain historical provenance; current human status derives from saved reviews and identifies exact observations/dimensions. A partial review never approves the rest of a dossier or batch.
+
+Intake supports supplied UTF-8 text and structured JSON; manual source metadata and excerpt matching make the route concrete. Binary PDF/OCR and fresh AI extraction are not integrated. A permitted document must be converted to text outside the app, then supplied with exact excerpts. A future model adapter should produce schema-bound candidates, cite only supplied passage IDs, preserve original language/attribution and undergo citation/schema validation before deterministic rule application. Untrusted source text cannot supply instructions. No model runtime is configured as part of this build.
+
+Scoring uses explicit anchored rules from [RIGHTS_RUBRIC](RIGHTS_RUBRIC.md), with null-valued insufficient/not-assessed/not-applicable states. Numerical zero needs affirmative cited safeguards. Source counts, country context and repeated reports are not scoring inputs. Confidence/completeness require separate reviewer judgments. Profile comparisons expose missingness; no composite or probability exists.
+
+Rights records are append-only. Saves check expected revisions; correction/review dependencies flag stale snapshots. Exports retain original assessment evidence and current staleness/review scope. Resaving creates a new revision needing review. Citation checks resolve claim/source IDs and supplied excerpts; they establish integrity, not substantive legal support. The legacy correction API remains available.
+
+Related/context panels use deterministic visible metadata and explicit similarity reasons/material differences. Country context is separate, year/methodology/provenance-bearing. Counts apply to collected case candidates, sources and observed records only. Dossiers are provisional analyst groupings, not authenticated identity/arrest-event counts. Hypotheses cannot establish national incidence or systemic misconduct.
+
+Relevant checks include missingness, duplicate independence, contrary evidence, context isolation, citation integrity, stale correction, scoped review and save/reopen/export. The full legacy suite and README validator remain required. End-to-end browser rehearsal uses synthetic data and clearly labelled demonstration reviewers; test success does not establish legal accuracy. Published expert reports in the local pilot are extraction examples, never a held-out evaluation.
+
+For runtime/API details read `reviewdesk/rights.py`, `reviewdesk/server.py` and the new rights UI files. Historical comparison remains at `/index.html`; primary rights flow is `/rights.html`. Local service is loopback-only and not a secure multi-user evidence service.

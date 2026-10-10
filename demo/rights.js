@@ -11,7 +11,7 @@
   const state = {data:null,view:'index',selected:null,tab:'assessment',drafts:new Map(),advDrafts:new Map(),interventions:new Map(),aiDrafts:new Map(),aiInputs:new Map(),preview:null,busy:false,intakeDirty:false,filters:emptyFilters(),rightsSelection:new Map()};
   let toastTimer;
 
-  async function api(path, payload) {return window.StaticDemo.request(path, payload);}
+  async function api(path, payload) {return window.StaticDemo.request(path, payload); }
   const date = value => {
     if (!value) return 'Unknown';
     const parsed = new Date(/^\d{4}-\d{2}-\d{2}$/.test(value) ? value+'T12:00:00Z' : value);
@@ -298,7 +298,10 @@
     $('#case-view').innerHTML=`<button class="back-button" type="button" data-index>← Back to collected cases</button><div class="case-heading"><div><p class="eyebrow">${esc(item.country)}</p><h1>${esc(visibleCaseTitle(item))}</h1>${visibleCaseSummary(item)?`<p class="lede">${esc(visibleCaseSummary(item))}</p>`:''}</div><div class="export-actions">${saved ? `<a class="button" href="/api/rights/export/${encodeURIComponent(item.id)}?format=md" download>Cited Markdown ↓</a><a class="button" href="/api/rights/export/${encodeURIComponent(item.id)}?format=json" download>JSON ↓</a>` : '<span class="button" aria-disabled="true">Save assessment to export</span>'}</div></div><div class="meta-line">${badge(materialLabel(item),item.material_type==='synthetic'?'blue':'')} ${reviewBadge(item.id)}</div><details class="source-record"><summary>Case details</summary><p><strong>Case ID:</strong> ${esc(item.id)}</p>${visibleCaseTitle(item)!==item.title?`<p><strong>Original label:</strong> ${esc(item.title)}</p>`:''}<p><strong>Persons:</strong> ${esc(item.person)}<br><strong>Proceeding:</strong> ${esc(item.proceeding)}<br><strong>Evidence as of:</strong> ${esc(date(item.as_of))}</p></details>${item.material_type==='synthetic'?'<div class="notice">Fictional demonstration case.</div>':''}${saved?'<p class="sidebar-copy">Export the saved assessment and its evidence.</p>':'<p class="sidebar-copy">Save an assessment to export it.</p>'}<div class="tabs" role="tablist" aria-label="Case views">${[['assessment','Rights assessment'],['evidence','Evidence & corrections'],['ai','Pending AI draft'],['history','Revision history'],['advocacy','Advocacy / intervention']].map(([key,title])=>`<button type="button" role="tab" data-case-tab="${key}" aria-selected="${state.tab===key || key==='assessment'&&state.tab==='edit'}">${title}</button>`).join('')}</div><div class="case-layout"><div class="case-main">${visible}</div><aside class="case-sidebar">${state.tab==='advocacy'?renderInterventionSidebar(item):state.tab==='ai'?renderAiSidebar(item):renderReview(item)}${renderContext(item)}</aside></div>`;
     if(state.tab==='advocacy'){const draft=advDraftFor(item);for(const [id,values] of Object.entries(draft.forms || {})){const form=document.getElementById(id);if(!form)continue;for(const [key,value] of Object.entries(values)){if(key==='dimension_ids'){form.querySelectorAll('[name="dimension_ids"]').forEach(input=>input.checked=list(value).includes(input.value));continue;}if(form.elements[key] && typeof value==='string')form.elements[key].value=value;}}}
     if(state.tab==='ai')window.mountAiWizard?.({item,record:aiData(item.id).latest,evidenceHtml:renderEvidence(item),assessed:list(saved?.dimensions).some(d=>d.status!=='not_assessed' || d.score!==null),proposal:recommendation(item.id)});
-    if(state.tab==='advocacy')window.mountAdvocacyReader?.({item,record:recommendation(item.id)});
+    if(state.tab==='advocacy') {
+      window.mountAdvocacyReader?.({item,record:recommendation(item.id)});
+      window.mountSyntheticStrategyPreview?.({item:{...item,claims:currentClaims(item)},assessment:assessment(item.id),context:intervention(item.id).context,stale:stale(item.id),original_proposal_id:recId(recommendation(item.id))});
+    }
   }
   function renderMethod() {
     const r=rubric(), anchors=r.scale || r.anchors || r.concern_scale || r.score_anchors || {};
@@ -673,5 +676,5 @@
   const initialTab=new URLSearchParams(location.search).get('tab');if(['assessment','evidence','history','advocacy','ai'].includes(initialTab))state.tab=initialTab;
   if(state.selected)state.view='case';
   setView(state.view);
-  load().then(()=>{if(state.selected && !selected()){state.selected=null;setView('index');error('The requested case is not present in this local collection.');}}).catch(e=>{error(e.message);$('#main').setAttribute('aria-busy','false');$('#case-list').innerHTML='<p class="empty">The saved demo could not be loaded. Refresh this page.</p>';});
+  load().then(()=>{if(state.selected && !selected()){state.selected=null;setView('index');error('The requested case is not present in this local collection.');}}).catch(e=>{error(e.message);$('#main').setAttribute('aria-busy','false');$('#case-list').innerHTML='<p class="empty">The rights collection could not be loaded. Start the current local server, then refresh.</p>';});
 })();

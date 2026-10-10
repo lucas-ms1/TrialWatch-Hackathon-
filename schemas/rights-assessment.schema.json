@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/trialwatch/rights-assessment-v1.schema.json",
+  "title": "TrialWatch prototype rights assessment v1 (distinct from legacy evidence contract)",
+  "description": "Runtime reference/revision checks in reviewdesk.rights also require every rubric dimension exactly once and resolving support/contrary excerpts. This schema is not a legal-validation method.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "rubric_version", "candidate_id", "revision", "evidence_revision", "assessment_date", "analyst", "preparation", "dimensions", "evidence_snapshot", "review_status", "disclaimer"],
+  "properties": {
+    "schema_version": {"const": "rights-assessment/1"},
+    "rubric_version": {"const": "rights-rubric/1.0"},
+    "candidate_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"},
+    "revision": {"type": "integer", "minimum": 1},
+    "evidence_revision": {"type": "integer", "minimum": 0},
+    "assessment_date": {"type": "string", "format": "date-time"},
+    "analyst": {"type": "string", "minLength": 1, "maxLength": 200},
+    "preparation": {"enum": ["manual", "ai_prepared", "synthetic_prepared"]},
+    "dimensions": {"type": "array", "minItems": 9, "maxItems": 9, "items": {"$ref": "#/$defs/dimension"}},
+    "evidence_snapshot": {"type": "object", "required": ["candidate_id", "claims", "sources", "review", "rights_metadata", "claim_scope"]},
+    "review_status": {"const": "pending_human_review"},
+    "disclaimer": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "claim_ids": {"type": "array", "maxItems": 500, "uniqueItems": true, "items": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,119}$"}},
+    "dimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dimension_id", "status", "concern_level", "score", "support_claim_ids", "contrary_claim_ids", "explanation", "confidence", "completeness", "missing_facts", "next_verification", "applicability"],
+      "properties": {
+        "dimension_id": {"enum": ["notice_charges", "counsel_preparation", "challenge_evidence", "independent_impartial", "presumption_innocence", "expression_scope", "expression_legal_basis", "expression_legitimate_aim", "expression_necessity"]},
+        "status": {"enum": ["scored", "insufficient_evidence", "not_assessed", "not_applicable"]},
+        "concern_level": {"enum": ["none_documented", "limited", "substantial", "serious", null]},
+        "score": {"enum": [0, 1, 2, 3, null]},
+        "support_claim_ids": {"$ref": "#/$defs/claim_ids"},
+        "contrary_claim_ids": {"$ref": "#/$defs/claim_ids"},
+        "explanation": {"type": "string", "minLength": 1, "maxLength": 8000},
+        "confidence": {"enum": ["unknown", "low", "moderate", "high"]},
+        "completeness": {"enum": ["unknown", "limited", "partial", "substantial"]},
+        "missing_facts": {"type": "array", "maxItems": 100, "items": {"type": "string", "minLength": 1, "maxLength": 8000}},
+        "next_verification": {"type": "string", "minLength": 1, "maxLength": 8000},
+        "applicability": {"type": "string", "minLength": 1, "maxLength": 8000}
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"const": "scored"}}}, "then": {"properties": {"concern_level": {"enum": ["none_documented", "limited", "substantial", "serious"]}, "score": {"enum": [0, 1, 2, 3]}, "support_claim_ids": {"minItems": 1}, "confidence": {"enum": ["low", "moderate", "high"]}, "completeness": {"enum": ["limited", "partial", "substantial"]}}}, "else": {"properties": {"concern_level": {"const": null}, "score": {"const": null}}}},
+        {"if": {"properties": {"concern_level": {"const": "none_documented"}}}, "then": {"properties": {"score": {"const": 0}}}},
+        {"if": {"properties": {"concern_level": {"const": "limited"}}}, "then": {"properties": {"score": {"const": 1}}}},
+        {"if": {"properties": {"concern_level": {"const": "substantial"}}}, "then": {"properties": {"score": {"const": 2}}}},
+        {"if": {"properties": {"concern_level": {"const": "serious"}}}, "then": {"properties": {"score": {"const": 3}}}},
+        {"if": {"properties": {"status": {"const": "insufficient_evidence"}}}, "then": {"properties": {"missing_facts": {"minItems": 1}}}}
+      ]
+    }
+  }
+}

@@ -20,7 +20,7 @@
   const writingSelector = '#intake-open,#judgment-import-open,[data-case-tab="edit"],[data-edit-assessment],[data-ai-example],[data-load-intervention],[data-blank-intervention],[data-ai-route],[data-aiRoute]';
   document.addEventListener('submit', event => {
     event.preventDefault();
-    if (event.target.id !== 'filters') event.stopImmediatePropagation();
+    if (!['filters','ssp-generate-form'].includes(event.target.id)) event.stopImmediatePropagation();
   }, true);
   document.addEventListener('click', event => {
     if (event.target.closest(writingSelector)) {event.preventDefault();event.stopImmediatePropagation();}
@@ -29,7 +29,7 @@
   const hide = node => {if (node) node.dataset.readOnlyHidden = 'true';};
   const clean = snapshot => {
     document.querySelectorAll(writingSelector).forEach(hide);
-    document.querySelectorAll('form:not(#filters)').forEach(form => {
+    document.querySelectorAll('form:not(#filters):not(#ssp-generate-form)').forEach(form => {
       hide(form);
       const wrapper = form.closest('details');
       if (wrapper && (form.dataset.correctionForm !== undefined || form.id.startsWith('intervention-') || ['ai-live-form','ai-import-form','ai-worksheet-form'].includes(form.id))) hide(wrapper);
@@ -52,7 +52,7 @@
     }
     const banner = document.querySelector('.static-demo-banner');
     if (banner && !banner.dataset.ready) {
-      banner.textContent = 'Read-only demo · ' + snapshot.case_count + ' saved cases · snapshot ' + snapshot.snapshot_label + '. Browse evidence and options; editing and generation use the local app.';
+      banner.textContent = 'Read-only demo · ' + snapshot.case_count + ' saved cases · snapshot ' + snapshot.snapshot_label + '. Browse evidence and options; fictional strategy generation works here. Editing and saving use the local app.';
       banner.dataset.ready = 'true';
     }
     const collection = document.querySelector('#collection-kind');

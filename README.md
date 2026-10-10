@@ -1,82 +1,82 @@
-# TrialWatch: Advocacy Strategy and Collective Action
+# TrialWatch Rights and Intervention Desk — local prototype
 
-**Groupmates: start with [TEAM_START_HERE](docs/TEAM_START_HERE.md)** for setup, the working app, the clickable concept, current decisions and work to assign.
+Start with [TEAM_START_HERE](docs/TEAM_START_HERE.md). The product connects an evidence-backed fair-trial/expression case index to dated context, alternative advocacy strategies, an inspectable intervention proposal, human disposition and later outcome follow-up. **Track 3: Advocacy and Impact** remains the framing. Legal evaluation overlaps Track 2; this is not an organizer-approved track change or an official TrialWatch assessment.
 
-An intended interface connecting advocacy strategy with evidence of collective action and emerging case clusters. Help advocates find comparable cases and movements, compare approaches across contexts and jurisdictions, investigate actors and moments associated with outcomes, and estimate likely advocacy outcomes with explicit uncertainty. Public news, NGO/civil-society reporting and permitted public social-media material would help surface documented plans, activity underway and signals worth investigating. Initially focused on the Philippines, for **Track 3: Advocacy and Impact**, October 9–10, 2026.
+The latest October 9 clarification connects advocacy/intervention decision support to the index. [The previous rights-only checkpoint](docs/history/README.before-connected-intervention-2026-10-09.md) and earlier planning/research remain preserved.
 
-**Latest product direction:** collective-action signals and advocacy strategy form one connected workflow. For example, several reports of protest-related arrests in a similar area could prompt review of a candidate case cluster, inspection of public reporting and collective-action evidence, comparison with earlier advocacy responses, and selection of a next step that supports case advocacy, issue visibility and community agency. Reports, cases and arrest events must be distinguished; shared geography alone does not establish a coordinated movement. Similarity, observed outcomes, evidence of advocacy contribution and conditional forecasts are separate outputs. The current sample supports an evidence walkthrough; it does not establish which tactic works best, a causal effect or a reliable outcome estimate. See the [updated project brief](docs/PROJECT_BRIEF.md) and [technical scope](docs/TECHNICAL_PLAN.md) for proposed capabilities versus the implemented baseline. No monitoring has been started.
+## Run and preserve the previous state
 
-**October 9 mentorship checkpoint:** the accepted first exploratory question is: **What do the records say about notice of charges and opportunities to respond in proceedings involving human-rights defenders, and what legal or public responses followed?** This tests the broader idea; it does not restrict the product to notice of charges. The final product format is an interface; the three initial histories, specific practitioner, first operational task and forecast outcome/horizon remain provisional. A small AI-prepared real sample and mentor pack are local, ignored research artifacts; the shared default stays synthetic. See [current decisions](docs/DECISIONS.md). The [team plan](docs/SPRINT_PLAN.md), [material inventory](docs/MATERIALS_AND_DEMO_OPTIONS.md) and [project brief](docs/PROJECT_BRIEF.md) retain earlier preparation; statements that no exploratory question is agreed are superseded. Possible-pattern review, change detection and forecasting are different tasks; no forecasting ability is established.
-
-**Implemented baseline:** the local app is still Campaign Evidence Comparison. An analyst reviews evidence, codes observations, compares several campaign timelines and exports a cited editable memo with unknowns and alternative explanations. It is manual and deterministic: no AI extraction, pattern discovery or live monitoring. A [blank pattern worksheet](docs/PATTERN_REVIEW_WORKSHEET.md) and [optional model prompt](docs/PATTERN_PROPOSAL_PROMPT.md) prepare the broader workflow outside the app. See [technical notes](docs/TECHNICAL_PLAN.md) for reuse and gaps.
-
-**Primary data route:** build a small structured evidence collection from permitted public documents. The local v2 batch now has 20 observations across three provisional histories/eight sources. One limited human review covers four observations/C02, with saved review and analysis revision 1; the remaining observations/proposals are outside that review. C02 is accepted as a source-reported sequence, without original-order authentication or an advocacy-effect claim. The team does not depend on a TrialWatch database. Case facts, actions, outcomes and collective-action signals each need supporting evidence. Populated research and exported real memos remain local. See [current checkpoint and remaining work](docs/SPRINT_PLAN.md).
-
-## Run locally
-
-Python 3.11 or newer. No packages, API keys, accounts, internet or model calls are needed for the synthetic demo.
-
-To get the code from GitHub:
+Python 3.11+; standard library and buildless frontend. Synthetic demonstration needs no credentials, packages, paid service, model runtime or internet.
 
 ```powershell
-git clone https://github.com/lucas-ms1/TrialWatch-Hackathon-.git
-cd TrialWatch-Hackathon-
+cd "C:\Users\freew\Dropbox\School\TrialWatch Hackathon"
+python -m reviewdesk --port 8768 --state-dir data/processed/connecteddesk-v2
 ```
 
-Then start the app:
+Open [the connected desk](http://127.0.0.1:8768/rights.html). Keep the terminal running; Ctrl+C stops it. Each machine has separate SQLite state. Use a fresh directory for a different seed. The new default is synthetic; it is separate from real evidence and earlier state. To reopen the previous rights baseline use `--seed reviewdesk/rights.synthetic.json --state-dir data/processed/rightsdesk-v1` with a free port. Historical comparison remains at `/index.html`, or explicitly start its original seed/state pair. Never load a changed seed into an existing state directory.
+
+The completed local walkthrough is available at [fictional corrected notice case](http://127.0.0.1:8768/rights.html?case=connected_browser_intake). Its earlier simulated acceptance is deliberately stale after a fictional correction. Synthetic A also holds separate insufficient-basis and specified-deferral examples, pending human review. These local records are excluded from the package; a fresh clone starts with unsaved fixtures. Run `python scripts/rehearse_intervention.py` to create a fresh isolated completed software rehearsal and cited before/after exports.
+
+To reopen the preserved previous rights state separately:
 
 ```powershell
-python -m reviewdesk --port 8767
+python -m reviewdesk --port 8769 --seed reviewdesk/rights.synthetic.json --state-dir data/processed/rightsdesk-v1
 ```
 
-Open `http://127.0.0.1:8767`. Keep the terminal running; Ctrl+C stops it. Port 8767 avoids earlier rehearsal servers on 8765/8766. State persists in `data/processed/campaigndesk/` using SQLite. Use `--state-dir data/processed/my-rehearsal` for a fresh rehearsal. A changed seed requires a separate state directory.
+## Fictional strategy generator
 
-The default contains **three fictional campaign dossiers and 14 source-attributed observations**: a reported dismissal following documented attention; a reported conviction with incomplete attention evidence; and a draft policy consultation with an unknown individual case outcome. These are software fixtures, not real cases, human validation or measured results.
+To add the illustrative Mara Vale case to a fresh synthetic starter, run this before starting the server with the same state directory:
 
-For a ready-to-read preview, open `docs/demo/fallback.html` directly in a browser. Each teammate's live review state stays on their own computer; GitHub shares the code and synthetic examples, not a shared review database. Inspect usable material before choosing one small pattern question and an advocacy task; no fixed pair is required. The existing fixtures demonstrate software mechanics and do not select the team's first substantive example.
+```powershell
+python scripts/load_synthetic_strategy_case.py --state-dir data/processed/connecteddesk-v2
+```
 
-To explore the intended connected flow, open [docs/demo/signals-and-strategy.html](docs/demo/signals-and-strategy.html) in a local browser after cloning or downloading the repository. It is a self-contained fictional concept: cluster review, public responses and strategy options. It needs no server or account and has no collection, model inference, forecasting or saved review integration. GitHub's file view shows its source; download it to interact.
+Open **Mara Vale → Advocacy / intervention → Generate advocacy options**. The original packet generates preparation and deferred-publicity options. The scenario selector adds clearly marked fictional passages demonstrating a counsel-action proposal, private clinic coordination, or advice against a named public campaign. Exact supporting and competing quotations open in the page; cited Markdown and JSON previews are downloadable. These browser-generated previews do not save a proposal or change review status. Existing saved proposals and tools remain expandable below. The loader refuses to replace an existing Mara case.
 
-## Complete comparison workflow
+The same generator works in the [published demo](https://lucas-ms1.github.io/TrialWatch-Hackathon-/demo/rights.html?case=synthetic_mara_vale_20261010&tab=advocacy). Other editing and saving require the local app. Generation uses original route templates and the existing prerequisite rules; no model request is made. Run `node scripts/check_synthetic_strategy.cjs` for the focused strategy and cited-export checks (Node.js is needed only for that optional check).
 
-1. Open a dossier from **Compare campaigns**. In **Evidence**, inspect passages, source links and event/publication dates. Unknown event dates remain undated. Select statements, optionally save supported corrections, then save an Include review under a demonstration reviewer name. Originals and history remain available.
-2. In **Analysis**, classify each selected observation as social media, international attention, campaign action, legal outcome, policy outcome or context. Enter analyst name, campaign label, objective, interpretation, alternative explanations and limitations. Save the analysis. Fictional example text/coding, when loaded, still requires an explicit save.
-3. Repeat for the other dossiers you want to inspect. Return to **Compare campaigns** to contrast recorded activity, reported outcomes, timelines and gaps. Counts refer to coded observations or cited sources, never audience reach, campaign size, cases in a population or effectiveness. The app is not limited to two dossiers.
-4. Download the comparison as **editable Markdown or JSON**. Saved analyses retain their evidence snapshots. A later evidence correction flags an analysis as stale instead of silently rewriting it. Review and resave the analysis to refresh its evidence.
+## Connected walkthrough
 
-Missing evidence means unknown, not that no attention, action or outcome occurred. A case outcome is distinct from national policy impact; a draft consultation is not enacted reform. The export retains those limits alongside citations and excerpts.
+1. **Evidence intake:** supply UTF-8 source text and exact excerpts, or import structured fictional evidence. **Import judgments** previews a local LawPhil judgment bundle, lets you select quoted passages and saves an unassessed case. Sources retain attribution, locators, date roles, language, translation status and upstream dependence. No URL fetching or binary PDF/OCR parsing is integrated. See [judgment import and source terms](docs/JUDGMENT_IMPORT.md).
+2. **Rights profile:** inspect a compact tile grid for thirteen core fair-trial dimensions, three conditional safeguards and four expression dimensions. Hover or focus for a summary; select a tile for the standard, rationale, support/contrary passages, gaps and next check. Scored tiles fill upward in thirds for ordinal concern 0–3; missing/unassessed/not-applicable states are distinct. Revise assessment opens the existing explicit editor for applicability, concern, explanation and separate confidence/completeness. No due-process umbrella score or combined percentage exists.
+3. **Scoped review:** review the exact dimensions and cited observations with a name and reason. A whole-case approval is unnecessary for a useful verification proposal. Pending/unassessed material remains visible.
+4. **Advocacy / intervention:** supply dated source-backed case or reviewed candidate-cluster context. Compare at least two options and inspect opportunity, authority, timing, feasibility, potential harm and unknown preferences separately. Generate a deterministic worksheet proposal; legal concern alone never selects an action.
+5. **Human disposition:** accept, revise, reject or defer the exact recommendation with reasons and exact reviewed rights/context scope. This saves a decision proposal, never executes advocacy or creates organizational authority.
+6. **Index, export and follow-up:** inspect status/dependencies, reopen state and download cited Markdown/JSON. Corrections, new assessment revisions and material context revisions make dependent recommendations stale while retaining earlier snapshots/decisions. Plans remain in options and next steps. Follow-up supports observed actions, observed outcomes, conditional scenarios and explicitly unknown outcomes; chronology does not prove contribution.
 
-**Add a report** supports manual URL/text intake with an attributed summary and exact excerpt. It does not fetch or extract. Duplicate links retain records separately. Intake still creates a separate dossier. To assemble several reports into one campaign dossier, use the [empty CSV template and batch importer](docs/RESEARCH_HANDOFF.md); no hand-editing of a JSON seed is required. Imported evidence still needs explicit app review and classification. New seed versions need separate state directories; reviews are not synchronized or migrated automatically. The prototype does not harvest social platforms or provide an automated campaign-discovery pipeline.
+Prepared historical examples can populate the complete rights profile through the existing assessment contract. The **AI-prepared assessment** badge identifies that origin; approval is recorded separately. Additional quotations from an existing retained source are append-only, with their own closed revision history. See [retained passages and prepared analysis](docs/JUDGMENT_IMPORT.md#retained-passages-and-prepared-analysis).
 
-## Demo, method and submission
+Supplied document text can use a local source link at `/api/rights/source-text/<case-id>/<source-id>`. It opens the retained text and provenance without fetching a public source or changing review status. DOCX preparation happens outside the app; original layout, comments and page numbers require the supplied document copy. Any omitted personal details or uncertain translation provenance must be recorded with the prepared text.
 
-- [Ten-minute demo script](docs/DEMO_SCRIPT.md)
-- [Offline fallback](docs/demo/fallback.html), [sample comparison Markdown](docs/demo/comparison.synthetic.md), [sample JSON](docs/demo/comparison.synthetic.json)
-- [Analysis method and limits](docs/ANALYSIS_METHOD.md)
-- [Short intended-use description](docs/TOOL_DESCRIPTION.md)
-- [Product choice and rubric](docs/PROJECT_BRIEF.md)
-- [Verification record](docs/VERIFICATION.md), [submission checklist](docs/SUBMISSION_CHECKLIST.md), [packet requirements](docs/EVENT_BRIEF.md)
+The six proposal dispositions distinguish intervene now, preparation/targeted verification, referral/coordination, deferral of a specified route, advice against a specified route, and insufficient basis. Deferral of public advocacy can coexist with useful verification. Unknown information is not a recommendation to do nothing.
 
-Open the self-contained fallback directly in a browser without Python or internet. It is generated through the real backend using scripted synthetic reviews and coding; these are not human validation. Rebuild it with `python scripts/build_demo_fallback.py`.
+**AI drafting:** the Pending AI draft view imports a saved bounded model run with raw hashes, source links, competing evidence, gaps and alternatives. It keeps twenty mappings unassigned and creates no approval. An optional `--allow-live-draft` route uses an existing authenticated local Codex CLI for one bounded attempt; its displayed receipt distinguishes a prior saved run, a successful integrated request, a manual draft and an invented fixture. Default operation needs no model access. See [setup, contracts and boundaries](docs/AI_DRAFTING.md). Recommendations remain pending human-review proposals, with no calibrated probability or weighted opportunity score.
+
+## Method, evidence and delivery
+
+- [Rights rubric and version migration](docs/RIGHTS_RUBRIC.md), [intervention method](docs/INTERVENTION_METHOD.md), [source inventory](docs/DATA_SOURCE_INVENTORY.md)
+- [Contracts](schemas/README.md), [API](docs/INTERVENTION_API.md), [implementation](docs/TECHNICAL_PLAN.md)
+- [Demo](docs/DEMO_SCRIPT.md), [verification actually performed](docs/VERIFICATION.md), [team checkpoint](docs/SPRINT_PLAN.md), [intended use](docs/TOOL_DESCRIPTION.md)
+
+Historical rights assessments retain their original dimension definitions. Old combined counsel/preparation or tribunal assessments are not redistributed into new scores. New dimensions start not assessed. The legacy evidence contract remains score-free.
+
+Real pilot files/captures remain in ignored `outputs/rights_pivot_20261009/research/`; current seed is `rights.pilot.v2.json` with its own resume guide. The earlier source pass is already bounded at twelve additional case-document leads; this continuation reuses it and does not reset collection. Thai dimensions remain insufficient/unassessed pending fuller passage review. New real context/recommendations also belong in ignored local storage. Lucas S reviewed only O03/O04/O05/O10 for C02 as a source-reported sequence; that does not approve any new legal or intervention judgment.
+
+## Verify and package locally
 
 ```powershell
 python scripts/validate_data.py examples/cases.synthetic.json
+python scripts/validate_rights.py reviewdesk/rights.synthetic.json examples/rights-intake.synthetic.json
+python scripts/validate_rights.py reviewdesk/rights.synthetic.v2.json examples/rights-intake.synthetic.v2.json
 python -m unittest discover -s tests -v
+python scripts/rehearse_intervention.py
 python scripts/package_submission.py
 ```
 
-The package script uses an explicit allowlist, validates synthetic data and verifies archive hashes. It writes a ZIP under `outputs/submission/`; it does not publish or submit. Required assets: repository or equivalent link, code/documentation/setup instructions, open-source license and short intended-use description. Final deadline: **October 10, 2026, 3:30 p.m. ET**. Demo: **10–15 minutes**. The team must still provide a judge-accessible link and perform external submission after separate authorization.
+The package uses an explicit file allowlist and synthetic fixtures. It excludes populated research, runtime databases, organizer PDFs, notebooks, correspondence and credentials. [MIT](LICENSE) covers original code/docs/synthetic material only; [third-party notices](THIRD_PARTY_NOTICES.md) preserve other rights. Git ignore does not change Dropbox access.
 
-## Preserved research and AI role
+On the clean fictional starter, open **Synthetic A → Pending AI draft → Save invented pending-draft example** for a provider-free illustration. Saving context and a pending proposal uses the existing deterministic worksheet; it does not record human acceptance or execute an option. Real intake/drafts belong in a new isolated local seed/state and are excluded from the package.
 
-The frozen run and reader edition remain under `outputs/philippines_pilot/20261006T160133Z/` in the original local research workspace. They and the source-specific historical adapters are excluded from this repository and package. The shared code does not require them. Those case histories are not complete campaign datasets; current status and several evidence questions remain unverified.
+Software tests do not establish legal accuracy, advocate usefulness, effectiveness, probability calibration or national incidence. Published expert conclusions read during preparation are attributed extraction, not independent evaluation labels. Counts describe the selected corpus; reports/cases/defendants/arrest events and candidate clusters remain distinct.
 
-The prior experiment covered **20 reports from four publishers around three selected histories**. Against provisional AI references, AI triage retained 13/13 relevant reports and queued 0/6 definite negatives; the keyword baseline retained 11/13 and queued 1/6. AI also queued one uncertain reference item. The first pass failed citation-placement/date checks; one preserved same-corpus repair passed a bounded AI audit. These are not human-ground-truth accuracy or advocacy-effectiveness measurements. Exact human feedback, predictions and metrics remain unchanged.
-
-Current classification and interpretation are manual. AI helped with earlier extraction and implementation; the demo makes no fresh model calls. The earlier briefing/follow-up backend remains compatible but is not the primary campaign-comparison demonstration.
-
-## Data and license
-
-[MIT](LICENSE) covers original code/docs and synthetic fixtures. [Third-party notices](THIRD_PARTY_NOTICES.md) preserve source rights. Full captures, private correspondence, historical outputs, runtime databases, organizer PDFs and the corpus-bearing notebook are excluded. Git ignore rules do not change Dropbox permissions or encrypt files. Do not enter confidential monitoring material.
-
-Own prework is assumed permitted at the user's direction. Track 3 supersedes the earlier Track 1 build. No organizer endorsement, operational adoption, real-world usefulness, causal effect or national impact is claimed. The app is local only and is not a secure multi-user service. No outreach, monitoring or automated collection runs.
+This run prepares local reviewable changes only. No push, publication, outreach, monitoring, purchase, advocacy execution or final submission. The **6 p.m. ET October 9** departure checkpoint is historical. Today's internal ready target is **2:30 p.m.**, official deadline **3:30 p.m. October 10**, demo **10–15 minutes**. Names, legal approvals and delivery channel remain team decisions.

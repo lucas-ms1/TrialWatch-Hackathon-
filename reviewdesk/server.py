@@ -1,7 +1,8 @@
 """Small loopback-only review service with immutable inputs and durable decisions.
 
-This serves saved evidence and human-entered material. It does not fetch sources,
-call a model, verify allegations, or modify the experiment that supplied a seed.
+This serves saved evidence, human-entered material and pending source-assisted
+drafts. An explicit startup flag enables one bounded local Codex request. It does
+not fetch sources, verify allegations or modify the experiment that supplied a seed.
 """
 from __future__ import annotations
 
@@ -148,10 +149,10 @@ def validate_candidate(candidate):
     identifier(candidate.get("id"))
     for key in ("title", "person", "proceeding", "country", "summary"):
         string(candidate.get(key), key)
-    if candidate.get("material_type") not in {"historical", "synthetic", "manual_intake"}:
+    if not isinstance(candidate.get("material_type"), str) or candidate["material_type"] not in {"historical", "synthetic", "manual_intake"}:
         raise APIError("Invalid material_type.")
     iso_date(candidate.get("as_of"), "as_of")
-    if candidate.get("suggested_decision") not in {"include", "exclude", "uncertain"}:
+    if not isinstance(candidate.get("suggested_decision"), str) or candidate["suggested_decision"] not in {"include", "exclude", "uncertain"}:
         raise APIError("Invalid suggested_decision.")
     for key in ("review_reasons", "unknowns", "related_candidate_ids", "notes"):
         if not isinstance(candidate.get(key), list):
@@ -184,7 +185,7 @@ def validate_candidate(candidate):
         if cid in claim_ids:
             raise APIError("Duplicate claim ID.")
         claim_ids.add(cid)
-        if claim.get("source_id") not in source_ids:
+        if not isinstance(claim.get("source_id"), str) or claim["source_id"] not in source_ids:
             raise APIError("Claim references an unknown source.")
         for field in ("text", "excerpt", "locator", "attribution"):
             string(claim.get(field), field)
@@ -208,6 +209,7 @@ class ReviewStore:
                 or not isinstance(document.get("candidates"), list)):
             raise APIError("Unsupported seed format.")
         self.dataset = document["dataset"]
+        self.has_rights_seed = "rights_prepared_mappings" in document
         for key in ("id", "label", "kind", "description"):
             string(self.dataset.get(key), "dataset." + key)
         self.originals = {}
@@ -229,6 +231,9 @@ class ReviewStore:
                 CREATE TABLE IF NOT EXISTS reviews (
                     candidate_id TEXT NOT NULL, revision INTEGER NOT NULL, record TEXT NOT NULL,
                     PRIMARY KEY(candidate_id, revision));
+                CREATE TABLE IF NOT EXISTS evidence_additions (
+                    candidate_id TEXT NOT NULL, revision INTEGER NOT NULL, record TEXT NOT NULL,
+                    PRIMARY KEY(candidate_id, revision));
                 CREATE TABLE IF NOT EXISTS advocacy_plans (
                     candidate_id TEXT NOT NULL, revision INTEGER NOT NULL, record TEXT NOT NULL,
                     PRIMARY KEY(candidate_id, revision));
@@ -246,6 +251,14 @@ class ReviewStore:
                 raise APIError("This state directory belongs to a different seed. Use a new state directory.", 409, "seed_changed")
             if not existing:
                 connection.execute("INSERT INTO metadata VALUES ('seed_sha256', ?)", (digest,))
+        # Explicit new contract; legacy candidate/review/analysis fields retain
+        # their original meanings and all historical state remains untouched.
+        from .rights import RightsService
+        self.rights = RightsService(self, document)
+        from .intervention import InterventionService
+        self.interventions = InterventionService(self)
+        from .ai_drafts import DraftService
+        self.ai_drafts = DraftService(self)
 
     @contextmanager
     def connection(self):
@@ -260,7 +273,18 @@ class ReviewStore:
     def candidates(self, connection):
         candidates = dict(self.originals)
         candidates.update({row[0]: json.loads(row[1]) for row in connection.execute("SELECT id,candidate FROM intakes ORDER BY rowid")})
+        for cid, record in connection.execute("SELECT candidate_id,record FROM evidence_additions ORDER BY candidate_id,revision"):
+            addition = json.loads(record)
+            original = candidates[cid]
+            candidates[cid] = {**original, "claims": original["claims"] + addition["claims"]}
         return candidates
+
+    @staticmethod
+    def evidence_revision(connection, cid):
+        """Dependency revision includes additions; human review revisions stay separate."""
+        review = connection.execute("SELECT MAX(revision) FROM reviews WHERE candidate_id=?", (cid,)).fetchone()[0] or 0
+        addition = connection.execute("SELECT MAX(revision) FROM evidence_additions WHERE candidate_id=?", (cid,)).fetchone()[0] or 0
+        return review + addition
 
     @staticmethod
     def histories(connection):
@@ -363,6 +387,9 @@ class ReviewStore:
                 capture = connection.execute("SELECT source_text FROM intakes WHERE id=?", (cid,)).fetchone()
                 if capture and correction["excerpt"] not in capture[0]:
                     raise APIError("Correction excerpt is not present in the saved intake text.")
+                source_capture = connection.execute("SELECT source_text FROM rights_source_texts WHERE candidate_id=? AND source_id=?", (cid, source_id)).fetchone()
+                if source_capture and correction["excerpt"] not in source_capture[0]:
+                    raise APIError("Correction excerpt is not present in this source's saved structured-intake text.")
                 corrected_ids.add(claim_id)
                 corrections.append(correction)
             review = {"candidate_id": cid, "revision": revision + 1, "reviewer": reviewer,
@@ -427,6 +454,10 @@ class ReviewStore:
                 displayed.update({key: value for key, value in correction.items() if key != "claim_id"})
                 displayed["verification"] = "Human correction; not independently verified."
                 displayed["original"] = original
+                # The legacy correction contract does not ask the reviewer to
+                # classify the changed statement. Do not inherit the original
+                # source's allegation/finding/position type after a source edit.
+                displayed["attribution_kind"] = "analyst_proposition"
                 displayed["attribution"] = "Human reviewer correction attributed to " + source_index[correction["source_id"]]["publisher"] + "; support not independently verified."
                 displayed["date_note"] = "Human correction; date and source support not independently verified. Original date note retained below."
             else:
@@ -436,6 +467,12 @@ class ReviewStore:
                 "title": candidate["title"], "person": candidate["person"], "proceeding": candidate["proceeding"],
                 "country": candidate["country"], "material_type": candidate["material_type"], "as_of": candidate["as_of"],
                 "brief_status": "human_triage_recorded" if review else "pending_draft",
+                "current_review_status": {"status": "human_triage_recorded" if review else "pending",
+                                          "revision": review["revision"] if review else 0,
+                                          "reviewer": review["reviewer"] if review else None,
+                                          "included_claim_ids": review["included_claim_ids"] if review else [],
+                                          "scope": review["scope"] if review else "No observations have a saved human triage decision."},
+                "preparation_status_note": "Review reasons and notes retain preparation-time provenance. Current saved review status and exact selected observations are shown separately; pending-at-preparation text does not override later scoped decisions.",
                 "review": review, "claims": claims,
                 "sources": [source for source in candidate["sources"] if source["id"] in {claim["source_id"] for claim in claims} | {claim["original"]["source_id"] for claim in claims if "original" in claim}],
                 "review_reasons": candidate["review_reasons"], "unknowns": candidate["unknowns"],
@@ -689,7 +726,8 @@ def render_markdown(brief):
     if review:
         rows += ["## Human triage", "", "Decision: " + m(review["decision"]), "",
                  "Reviewer: " + m(review["reviewer"]) + " · " + m(review["reviewed_at"]) + " · Revision " + str(review["revision"]),
-                 "", "Reason: " + m(review["reason"]), ""]
+                 "", "Reason: " + m(review["reason"]), "",
+                 "Exact selected observation IDs: " + m(", ".join(review["included_claim_ids"]) or "none"), "", m(review["scope"]), ""]
         if review["duplicate_of"]:
             rows += ["Duplicate of: " + m(review["duplicate_of"]) + ". Linked only; no claims merged.", ""]
     else:
@@ -698,7 +736,8 @@ def render_markdown(brief):
     rows += evidence_markdown_rows(brief["claims"], brief["sources"])
     if not brief["claims"]:
         rows += ["No claims selected for this brief.", ""]
-    for title, items in (("Why it entered review", brief["review_reasons"]), ("Still unknown", brief["unknowns"]), ("Notes", brief["notes"])):
+    rows += [brief.get("preparation_status_note", "Preparation-time notes and current scoped human decisions are separate."), ""]
+    for title, items in (("Preparation-time review reasons", brief["review_reasons"]), ("Still unknown", brief["unknowns"]), ("Preparation provenance and notes", brief["notes"])):
         rows += ["## " + title, ""] + ["- " + m(item) for item in items] + [""]
     rows += [brief["correction_policy"], ""]
     return "\n".join(rows)
@@ -889,6 +928,65 @@ class ReviewHandler(BaseHTTPRequestHandler):
                 return self.json_response(200, {"status": "ok", "mode": "local_saved_evidence_and_manual_review"})
             if path == "/api/state":
                 return self.json_response(200, self.server.store.state())
+            if path == "/api/rights/rubric":
+                from .rights import RUBRIC_VERSION, rubric_for
+                version = parse_qs(parsed.query).get("version", [RUBRIC_VERSION])[0]
+                return self.json_response(200, rubric_for(version))
+            if path == "/api/rights/state":
+                return self.json_response(200, {**self.server.store.state(), "rights": self.server.store.rights.state()})
+            if path.startswith("/api/rights/source-text/"):
+                parts = path.removeprefix("/api/rights/source-text/").split("/")
+                if len(parts) != 2:
+                    raise APIError("Source route requires a case and source ID.", 404, "not_found")
+                document = self.server.store.rights.retained_source(*parts)
+                source = document["source"]
+                e = html.escape
+                body = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
+                        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+                        '<title>' + e(source["title"]) + ' · Retained source</title>'
+                        '<link rel="stylesheet" href="/rights.css"></head><body>'
+                        '<main class="retained-source-page"><a href="/rights.html?case=' + quote(parts[0], safe="") + '&amp;tab=evidence">Back to case evidence</a>'
+                        '<p class="eyebrow">RETAINED SUPPLIED TEXT</p><h1>' + e(source["title"]) + '</h1>'
+                        '<p class="retained-source-metadata">' + e(source["publisher"]) + '<br>'
+                        + e(source["language"]) + ' · ' + e(source["translation_status"]) + '</p>'
+                        '<details><summary>Source provenance</summary><p>' + e(source["access_note"]) + '</p><p>'
+                        + e(source["lineage_note"]) + '</p></details>'
+                        '<p>Search this text with your browser’s Find command. Check the supplied document copy for layout, comments, signatures and original page numbering.</p>'
+                        '<pre aria-label="Retained source text">' + e(document["text"]) + '</pre></main></body></html>')
+                return self.respond(200, body, "text/html; charset=utf-8")
+            if path.startswith("/api/ai-drafts/state/"):
+                return self.json_response(200, self.server.store.ai_drafts.state(path.removeprefix("/api/ai-drafts/state/")))
+            if path.startswith("/api/ai-drafts/export/"):
+                from .ai_drafts import render_draft_markdown
+                did = path.removeprefix("/api/ai-drafts/export/")
+                format_name = parse_qs(parsed.query).get("format", ["md"])[0]
+                if format_name not in {"md", "json"}:
+                    raise APIError("Export format must be md or json.")
+                document = self.server.store.ai_drafts.export(did)
+                body = render_draft_markdown(document) if format_name == "md" else json.dumps(document, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
+                return self.respond(200, body, "text/markdown; charset=utf-8" if format_name == "md" else "application/json; charset=utf-8", f"{did}.pending-draft.{format_name}")
+            if path.startswith("/api/interventions/state/"):
+                return self.json_response(200, self.server.store.interventions.state(path.removeprefix("/api/interventions/state/")))
+            if path.startswith("/api/interventions/export/"):
+                from .intervention import render_intervention_markdown
+                rid = path.removeprefix("/api/interventions/export/")
+                format_name = parse_qs(parsed.query).get("format", ["md"])[0]
+                if format_name not in {"md", "json"}:
+                    raise APIError("Export format must be md or json.")
+                document = self.server.store.interventions.export(rid)
+                body = render_intervention_markdown(document) if format_name == "md" else json.dumps(document, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
+                content_type = "text/markdown; charset=utf-8" if format_name == "md" else "application/json; charset=utf-8"
+                return self.respond(200, body, content_type, f"{rid}.intervention.{format_name}")
+            if path.startswith("/api/rights/export/"):
+                from .rights import render_rights_markdown
+                cid = path.removeprefix("/api/rights/export/")
+                format_name = parse_qs(parsed.query).get("format", ["md"])[0]
+                if format_name not in {"md", "json"}:
+                    raise APIError("Export format must be md or json.")
+                profile = self.server.store.rights.export(cid)
+                body = render_rights_markdown(profile) if format_name == "md" else json.dumps(profile, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
+                content_type = "text/markdown; charset=utf-8" if format_name == "md" else "application/json; charset=utf-8"
+                return self.respond(200, body, content_type, f"{cid}.rights.{format_name}")
             if path == "/api/campaign-export":
                 format_name = parse_qs(parsed.query).get("format", ["md"])[0]
                 if format_name not in {"md", "json"}:
@@ -917,7 +1015,7 @@ class ReviewHandler(BaseHTTPRequestHandler):
                 return self.respond(200, body, content_type, f"{cid}.brief.{format_name}")
             if path.startswith("/api/"):
                 raise APIError("Route not found.", 404, "not_found")
-            relative = "index.html" if path == "/" else path.lstrip("/")
+            relative = ("rights.html" if self.server.store.has_rights_seed else "index.html") if path == "/" else path.lstrip("/")
             if "\\" in path or "\x00" in path or ".." in Path(relative).parts:
                 raise APIError("Invalid static path.", 404, "not_found")
             target = (self.server.static_dir / relative).resolve()
@@ -954,6 +1052,40 @@ class ReviewHandler(BaseHTTPRequestHandler):
             path = unquote(urlsplit(self.path).path)
             if path == "/api/intake":
                 return self.json_response(201, self.server.store.intake(payload))
+            if path == "/api/rights/intake":
+                return self.json_response(201, self.server.store.rights.intake(payload))
+            if path in {"/api/judgments/inspect", "/api/judgments/preview"}:
+                from .judgment_import import inspect_judgment, preview_judgment
+                with self.server.store.connection() as connection:
+                    existing = list(self.server.store.candidates(connection).values())
+                prepare = inspect_judgment if path.endswith("/inspect") else preview_judgment
+                return self.json_response(200, prepare(payload, existing))
+            if path.startswith("/api/ai-drafts/import/"):
+                return self.json_response(201, self.server.store.ai_drafts.import_draft(path.removeprefix("/api/ai-drafts/import/"), payload))
+            if path.startswith("/api/ai-drafts/live/"):
+                return self.json_response(201, self.server.store.ai_drafts.live(path.removeprefix("/api/ai-drafts/live/"), payload))
+            if path.startswith("/api/ai-drafts/addenda/"):
+                return self.json_response(201, self.server.store.ai_drafts.addendum(path.removeprefix("/api/ai-drafts/addenda/"), payload))
+            if path.startswith("/api/ai-drafts/source-reviews/"):
+                return self.json_response(201, self.server.store.ai_drafts.source_review(path.removeprefix("/api/ai-drafts/source-reviews/"), payload))
+            if path.startswith("/api/ai-drafts/worksheet/"):
+                return self.json_response(201, self.server.store.ai_drafts.worksheet(path.removeprefix("/api/ai-drafts/worksheet/"), payload))
+            if path.startswith("/api/interventions/contexts/"):
+                return self.json_response(201, self.server.store.interventions.context(path.removeprefix("/api/interventions/contexts/"), payload))
+            if path.startswith("/api/interventions/proposals/"):
+                return self.json_response(201, self.server.store.interventions.propose(path.removeprefix("/api/interventions/proposals/"), payload))
+            if path.startswith("/api/interventions/reviews/"):
+                return self.json_response(201, self.server.store.interventions.review(path.removeprefix("/api/interventions/reviews/"), payload))
+            if path.startswith("/api/interventions/followups/"):
+                return self.json_response(201, self.server.store.interventions.followup(path.removeprefix("/api/interventions/followups/"), payload))
+            if path.startswith("/api/rights/draft/"):
+                return self.json_response(200, self.server.store.rights.draft(path.removeprefix("/api/rights/draft/"), payload))
+            if path.startswith("/api/rights/evidence-additions/"):
+                return self.json_response(201, self.server.store.rights.add_evidence(path.removeprefix("/api/rights/evidence-additions/"), payload))
+            if path.startswith("/api/rights/assessments/"):
+                return self.json_response(201, self.server.store.rights.save(path.removeprefix("/api/rights/assessments/"), payload))
+            if path.startswith("/api/rights/reviews/"):
+                return self.json_response(201, self.server.store.rights.review(path.removeprefix("/api/rights/reviews/"), payload))
             if path.startswith("/api/reviews/"):
                 return self.json_response(201, self.server.store.review(path.removeprefix("/api/reviews/"), payload))
             if path.startswith("/api/campaigns/"):
@@ -975,20 +1107,22 @@ class ReviewHandler(BaseHTTPRequestHandler):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--seed", type=Path, default=Path(__file__).parent / "demo.synthetic.json")
-    parser.add_argument("--state-dir", type=Path, default=Path("data/processed/campaigndesk"))
+    parser.add_argument("--seed", type=Path, default=Path(__file__).parent / "rights.synthetic.v2.json")
+    parser.add_argument("--state-dir", type=Path, default=Path("data/processed/rightsdesk-v2"))
     parser.add_argument("--port", type=int, default=8765)
+    parser.add_argument("--allow-live-draft", action="store_true", help="Enable at most one bounded local Codex request in this isolated state; default off.")
     args = parser.parse_args(argv)
     if not 0 <= args.port <= 65535:
         parser.error("port must be 0–65535")
     try:
         store = ReviewStore(args.seed, args.state_dir)
+        store.ai_drafts.allow_live = args.allow_live_draft
         server = ReviewServer(store, args.port)
     except (APIError, OSError, sqlite3.Error) as exc:
         parser.error(str(exc))
     print(f"Review desk: http://127.0.0.1:{server.server_port}/", flush=True)
     print(f"Local review storage: {store.path}", flush=True)
-    print("Saved evidence and manual intake only; no source collection, model calls, or monitoring.", flush=True)
+    print("Saved evidence/manual intake; bounded live draft " + ("enabled for one attempt" if args.allow_live_draft else "disabled") + "; no source collection or monitoring.", flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

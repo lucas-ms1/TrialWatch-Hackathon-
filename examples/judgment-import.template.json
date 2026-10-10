@@ -1,0 +1,20 @@
+{
+  "schema_version": "judgment-import/1",
+  "provider": "lawphil",
+  "document": {
+    "document_id": "",
+    "title": "",
+    "url": "",
+    "publisher": "LawPhil / Arellano Law Foundation",
+    "court": "Supreme Court of the Philippines",
+    "country": "Philippines",
+    "citations": [],
+    "proceeding_id": null,
+    "publication_date": null,
+    "decision_date": null,
+    "retrieved_at": null,
+    "language": "English",
+    "translation_status": "",
+    "html": ""
+  }
+}

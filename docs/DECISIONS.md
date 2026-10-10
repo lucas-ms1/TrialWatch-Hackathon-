@@ -1,3 +1,101 @@
+# Current decision: connected rights and intervention support
+
+## October 10 main-app synthetic strategy generation and requested publication
+
+The user explicitly requested integrating the fictional strategy explorer into the main app and updating the existing GitHub repository and Pages site. This narrowly authorizes publishing the reviewed original-code/documentation allowlist and the synthetic generator. It does not authorize adding supplied case documents, runtime databases, private research or new real-case excerpts. The existing published five-case snapshot and cited exports are preserved byte for byte. Earlier local-only publication restrictions continue to govern other work.
+
+Mara Vale’s Advocacy tab now assembles evidence-linked preparation, counsel-remedy, private-coordination and public-advocacy alternatives. Separate prerequisite rules determine the proposed disposition. Four selectable fictional scenarios expose exactly which added mandate, capacity, safeguards or preference passages change a route. The templates require the original fictional evidence/context/assessment versions; changed records require adaptation. This is deterministic illustrative generation, with no fresh model inference or general strategy-generation claim.
+
+Generated previews remain unsaved, with pending human review. They neither approve legal analysis nor execute advocacy. The original saved proposal, dispositions, citations, review forms and history remain available under an expandable section. A fresh-starter loader reproduces the fictional packet and refuses to overwrite an existing case. Publication does not extend yesterday’s review or resolve pending legal matters.
+
+## October 10 organizer-supplied case preparation
+
+The user supplied an indictment and trial-monitoring notes and explicitly requested local intake and analysis of that case. This authorizes processing those supplied documents without resetting public case collection. Source language is established from content rather than filenames; supplier provenance and user trust are recorded separately from translation review or document authentication. Prosecution allegations, witness testimony, defence questioning and observer coverage retain their attribution. Conflicting dates and incomplete notes remain explicit.
+
+The case uses the existing twenty-dimension pending assessment, sourced context, compared verification/deferral options and cited exports. A read-only case/source route opens retained supplied text without a public URL or external fetch. Original files are retained locally; personal registration numbers and street addresses are omitted from the app copy with that processing step recorded. Populated documents, records, analysis and screenshots remain outside the public synthetic package. No human legal approval, external action, outreach, publication or further model request is inferred.
+
+## October 10 readable intervention proposals
+
+The user requested a straightforward recommendation view with supporting/competing evidence explained by source title rather than code chips. A presentation layer leads with the saved proposed step, rationale, timing, actor, separate plain-language factor judgments and blocking unknowns. The compared options remain visible; sources, exact passages, rules, identifiers, authoring forms, review and history are expandable. Source-title links open exact passages within their evidence cards. The original fictional worked-case context revision has authored per-passage relevance explanations; other records use declared-role explanations and their supplied attributed account. These are prepared reading aids, not human verification or new stored findings.
+
+Original forms, source/rights scopes, citations, exports and saved records remain intact. Stale proposals lead with an update warning and retain the existing prohibition on acceptance/revision. No proposal, human review, source correction, score or model run is created by this presentation change. The new frontend file is included in the local package allowlist; no publication is implied.
+
+## October 10 prepared historical-judgment examples
+
+After the three-document import pilot, the user requested full analysis so the judgments can serve as examples. This authorizes source-backed preparation across all twenty rights dimensions, historical context, compared options and cited local exports. Preparation may assign supported ordinal concern or an explicit insufficient-evidence/not-applicable state. Every new legal assessment and proposal remains pending human review; the earlier source-review scope remains unchanged.
+
+Additional quotations come only from the already retained full judgment texts. Append-only evidence additions preserve the original intake and source bytes, record preparation provenance and stale dependent assessments/proposals. They do not create human evidence reviews. Event-time treaty/domestic provisions are distinguished from later interpretive guidance. Reading the judgment's outcome is retrospective attributed analysis, not an independent prediction or legal-accuracy validation.
+
+The analysis is prepared in this chat and supplied to the deterministic app contracts; no additional authenticated CLI/model request, case-document collection or research-ceiling reset is authorized or represented. Populated analyses and real examples remain local and outside the synthetic public package. No current opportunity, affected-person preferences, organizational mandate or intervention impact is inferred from historical judgments.
+
+## October 10 bounded judgment import pilot
+
+The user explicitly authorized the proposed permission-checked document importer and small real sample after asking about WorldLII. This adds exactly three Philippine LawPhil judgment documents for a noncommercial local pilot, separate from the earlier frozen source pass; it does not reset the wider research ceiling. WorldLII-specific permission remains unverified. LawPhil's inspected collection notice names Attribution-Non Commercial 4.0 Philippine; the captured pages retain older Attribution-NonCommercial 3.0 notices. Both are preserved, with source attribution and processing changes.
+
+Local inspect/preview operations parse supplied HTML/text deterministically and show source metadata, derived paragraph locators and selectable exact quotations. Saving uses the existing rights-intake/2 contract with null mappings and no human reviews. No finding classification, factual summary, score, present-status claim or advocacy proposal is inferred. Real files/state remain local and excluded from the public package; a separate original fictional fixture supports offline demonstration. No external-fetch route, broad crawler, source bypass, model request, monitoring, outreach, publication or submission is added.
+
+## October 10 sequential pending-draft interface
+
+The user requested a sequence of shorter screens entirely within Pending AI draft. Four phases cover opening/preparing, the attributed summary, evidence/gaps and bounded alternatives. Navigation preserves the chosen screen on refresh and never records human inspection or approval. Citations open a read-only detail window within the tab; detailed chronology/questions/gaps/options and historical revisions remain available on demand. Successful imports advance to the summary; proposal saving stays on the alternatives screen with pending/stale status and exports. Already-assessed cases retain the existing requirement to use the explicit intervention worksheet rather than the all-unassigned draft shortcut. Original records, model mappings, scope, rubric and backend contracts remain unchanged.
+
+## October 10 compact evidence observations
+
+The evidence view labels records sequentially, for example `Observation 1 (AC01)`, while retaining their stored IDs and citation anchors. Each claim, attribution, excerpt and document link remains visible. Passage locators, dates, source metadata, dimension links and correction controls are available under a closed `Show details` disclosure; earlier assessment snapshots use the same layout. Following an observation citation opens the matching details, leaving its correction form closed. This changes presentation only.
+
+## October 10 website copy cleanup
+
+The user requested removing repeated cautionary/interpretation prose from ordinary app screens. The rights and legacy interfaces now use short headings and functional instructions. Status/origin labels, scoring definitions, source passages and record-specific dates/uncertainties remain; import notes, historical addenda, qualifications, preparation rationale and technical dependencies are available in closed detail sections. Only the exact known Abra preparation title/summary receives a display-only simplification; original saved records and exports remain unchanged. No method, score, review scope, source, contract or save behavior changed.
+
+## October 10 compact rights assessment interface
+
+At the user's request, the rights assessment read view uses square criterion tiles with bottom-up ordinal thirds for saved scores 0–3, separate nonnumeric states, hover/focus summaries and one selected detail inspector. Exact definition names, saved-version definitions, sources, review scope and editing remain available. Short visual labels change no contract or assessment. Selecting/hovering records no review and infers no score; the real pending case stays unassessed. Case index is unchanged. Active case tabs survive refresh. This is a presentation change, not a percentage/probability or method revision.
+
+## October 10 guided finish — supersedes the absent-runtime sprint boundary
+
+The user explicitly authorized reversible local integration of the completed bounded CLI draft into the app, tests/rehearsal, isolated new state and an allowlisted local package. The pending-draft view retains exact supplied passages/claim links, raw hashes, provenance, unknowns and alternatives. Optional authenticated CLI drafting is bounded to one additional verification request in this run, without tools, new case research, API-key setup or purchase. Actual successful runtime verification belongs in VERIFICATION; a saved run must never be described as fresh inference.
+
+The user subsequently directed skipping repeated Abra/source-review checkpoints because the files were already checked. Carry forward Lucas S's original O03/O04/O05/O10 sequence scope unchanged; create no new timestamp or expanded approval from that general statement. Legal dimensions remain pending/unassigned. Ask only about genuinely new decisions, changed-output problems or the new app walkthrough. Local retained-file preparation is authorized; unknown external mandate/preferences do not block that local work. The specified public route remains hypothetical and unverified.
+
+Earlier absent-runtime language below records its historical implementation stage. No new case collection, current-status lookup, source retry, monitoring, outreach, publication, push, advocacy execution, spending or final submission is authorized. Original research, databases and completed audit/draft artifacts remain intact. Intentional code/docs changes are accounted for separately from protected bytes.
+
+## October 9 continuation — governs active work
+
+The user's latest request connects the working fair-trial/expression evidence index to dated case or reviewed candidate-cluster context, comparable advocacy histories, alternative strategies, a reasoned whether/how/when intervention proposal, human accept/revise/reject/defer and later outcome follow-up. No reconfirmation is needed. Track 3 remains selected; legal evaluation overlaps Track 2 without an approved change or official TrialWatch assessment.
+
+Expand to thirteen core fair-trial dimensions, three conditional safeguards and four preserved expression dimensions under rubric/contract v2. Retain original v1 definitions, assessments and human scope; new/split dimensions start not assessed. No due-process umbrella score, overlap average, opportunity score, combined percentage or probability is introduced. Related Article 9 detention guarantees remain separately identifiable.
+
+Context is source-backed, dated and freshness-qualified. Institutional opportunities require issue-specific authority/routes/timing; party labels or deadlines alone cannot justify a strategy. Concern, urgency, opportunity, feasibility, harm and uncertainty remain separate. Proposals support intervene now, preparation/verification, referral/coordination, deferral, against a specified route, or insufficient basis. A whole-case approval is unnecessary for useful verification; pending analysis keeps that status. Compare options and retain contrary evidence, prerequisites, benefits/harms and reconsideration triggers.
+
+Exact rights/context dependencies are snapshotted. Later corrections, reassessment or material context revisions stale recommendations and require fresh relevant review, preserving old decisions. Conditional scenarios and observed outcomes remain distinct; chronology is not evidence of contribution. No model runtime is integrated, so manual/structured inputs plus deterministic worksheets provide the implemented route.
+
+The existing bounded research ceiling is unchanged and already consumed conservatively. Reuse ignored real evidence; do not collect anew or invent consent/current positions. Preserve frozen v1/v2, historical experiment and Lucas S's narrow O03/O04/O05/O10 source-sequence review. No new legal or intervention approval is inferred from it.
+
+This run authorizes local reviewable implementation/verification only: no push, publication, outreach, execution of advocacy, purchase, monitoring or submission. Departure checkpoint remains 6 p.m. ET; internal ready target tomorrow 2:30 p.m., official deadline 3:30 p.m. ET. The resume time was 5:51 p.m.; completion must be recorded honestly after actual checks.
+
+## Earlier rights-only decision and historical records (preserved)
+
+Earlier dated scope below is superseded only where inconsistent with the connected clarification above.
+
+# Current decision: evidence-backed rights index
+
+## October 9 explicit pivot — governs active work
+
+The user's pasted implementation request supersedes the earlier primary product: an evidence-backed case index exclusively for fair-trial rights and freedom of expression, with explainable per-right ordinal concern, independent confidence/completeness, exact supporting/contrary passages, correction and scoped human approval, searchable profiles and cited exports. Related cases/precedents, public-source context and investigative pattern hypotheses are supporting features. Advocacy strategy, movement detection and advocacy-outcome forecasting are no longer the main build. No reconfirmation is needed.
+
+Track 3 remains the team framing for advocacy prioritization/comparison. Legal evaluation overlaps Track 2; no organizer-approved track change or official TrialWatch scoring methodology is asserted. New versioned rights contract/rubric and fresh state extend, rather than silently reinterpret, the legacy score-free contract. No composite percentage or calibrated probability is introduced.
+
+This request authorizes a bounded public research pass of up to 12 additional case documents, plus existing/methodology sources, with logs and real material kept ignored. It does not authorize monitoring, access bypass, outreach, purchase, push, publication, messages or submission. This run's explicit no-push instruction supersedes earlier repository-update authorization for this run.
+
+Preserve v1/v2, the frozen experiment and Lucas S's limited C02 review of O03/O04/O05/O10 as a source-reported sequence only. It is not a rights assessment, original-order authentication or advocacy-effect claim. Display historical preparation provenance separately from current scope. A new pivot sample/state is independent and pending rights review.
+
+Starting rubric: five fair-trial dimensions and four expression dimensions, anchored 0–3/null states, verified primary ICCPR/GC32/GC34 and jurisdiction layer. Deterministic manual/structured intake is the runnable path; no fresh AI extraction runtime is integrated. Detailed implementation and actual validation are recorded in TECHNICAL_PLAN and VERIFICATION. Independent legal review/calibration remains future work.
+
+The team departure target is 6 p.m. ET October 9; internal ready target tomorrow 2:30 p.m.; official deadline October 10 3:30 p.m. ET. Assign actual owners and final delivery details without inventing names.
+
+## Historical decisions below
+
+Earlier entries retain their original scope and are superseded wherever inconsistent with the explicit pivot above.
+
 # Current project decisions
 
 ## October 9 latest checkpoint: first limited human review completed
