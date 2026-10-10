@@ -1,0 +1,4 @@
+[data-read-only-hidden="true"] {display:none !important;}
+.static-demo-banner {margin:0;padding:12px 24px;background:#e8f2ee;border-bottom:1px solid #b8d1c7;color:#164e3d;font-size:13px;line-height:1.6;text-align:center;}
+.ai-start-choices:has([data-read-only-hidden="true"]) {grid-template-columns:1fr;}
+.static-source-note {max-width:1100px;margin:0 auto;padding:16px 24px;font-size:12px;line-height:1.6;color:#53615b;}

@@ -1,0 +1,166 @@
+# Pending evidence-assisted draft
+
+Pending evidence\-assisted preparation, not human source approval, a legal finding, current\-status verification or an executed intervention\. Twenty rights mappings remain unassigned\. A saved model receipt reports a prior run; only a successful integrated request establishes this local live path\.
+
+Case: saturday\_abra\_notice\_20261010 · Draft revision: 2 · Origin: saved\_model
+Review: human source/qualified legal review remain separately pending.
+Stale: False 
+
+## Attributed summary
+
+- S1 alleges no opportunity to answer before court filing and Jennifer’s first information at arrest\. Government broadly asserts due process was observed\. (AC01, AC02, AC04; [AP01](#passage-AP01), [AP02](#passage-AP02), [AP08](#passage-AP08)). Jennifer’s account is individual\. AP08 supplies no detailed service account; that omission does not disprove Government\.
+- S1 reports counsel submitted the seven\-person exclusion and warrant\-quashing motion on 2 February 2023\. (AC03; [AP02](#passage-AP02)). Reported submission establishes no representation\-quality finding\.
+- S1’s earlier writing\-time snapshot reports an unaddressed motion and no scheduled hearing\. (AC07; [AP04](#passage-AP04)). Communication dated 8 May; precise writing date unknown\.
+- UN Question 3 sought clarification about prefiling response and notice allegations\. (AC08; [AP05](#passage-AP05)). The collective question establishes no additional individual notice histories\.
+- S2 relays DOJ’s report of a 11 May motion grant and separately undated dismissal for listed persons\. (AC05, AC06; [AP06](#passage-AP06), [AP07](#passage-AP07), [AP09](#passage-AP09)). AP07 neither contradicts AP04 nor disproves AP01/AP02 or establishes cure\. AP09 establishes no case\-specific grounds, finality or refiling\. Other defendants’ dispositions remain unknown\.
+
+## Chronology
+
+- 2023\-01\-03: Reported prosecutor resolution · reported\_resolution\_event · Not a filing date\.
+- 2023\-01\-24: Reported seven\-person warrant · reported\_warrant\_issuance\_event · Original warrant absent\.
+- 2023\-01\-30: Jennifer’s reported arrest and first information · reported\_individual\_event · Jennifer only\.
+- 2023\-02\-02: Reported counsel motion submission · reported\_submission\_event · Submission, not decision\.
+- 2023\-05\-08: UN communication and clarification request · communication\_document\_date · AP04’s precise writing\-time date is unknown\.
+- 2023\-05\-11: Reported motion grant · reported\_grant\_event\_only · Does not date dismissal\.
+- 2023\-09\-18: Government cover/transmission · cover\_transmission\_document\_date\_only · Enclosure undated\.
+- Unknown date: Complaint/information filing · unknown\_filing\_event\_dates · Prosecutor complaint and court filing dates unknown\.
+- Unknown date: Subpoena/notice service · unknown\_service\_event\_dates · Issuance, service and receipt details unknown\.
+- Unknown date: Reported listed\-person dismissal · unknown\_dismissal\_event\_date · No separate date supplied\.
+- Unknown date: Government enclosure · unknown\_enclosure\_document\_date · Cover date cannot substitute\.
+
+## Unresolved stage questions
+
+### preliminary\_investigation
+Was preliminary investigation required by the offence penalty/threshold in STD\-PH\-112\-1, under which event\-date domestic amendments and interpretation?; Under STD\-PH\-112\-3b, STD\-PH\-112\-3c and STD\-PH\-112\-4, what issuance/service/receipt, attachments, evidence access, response opportunity and certification are documented?; Do STD\-PH\-112\-3d, STD\-PH\-112\-3e or STD\-PH\-112\-7 apply: unsuccessful service/nonresponse, optional hearing limits, lawful warrantless arrest/inquest, waiver or requests?
+Standards: STD\-PH\-112\-1, STD\-PH\-112\-3b, STD\-PH\-112\-3c, STD\-PH\-112\-3d, STD\-PH\-112\-3e, STD\-PH\-112\-4, STD\-PH\-112\-7
+Missing: Penalty/version; filing/service/receipt records; response, certification and exception facts\.
+Absence of a counter\-affidavit or hearing alone resolves no compliance question\.
+
+### criminal\_charge\_notice
+When did each person become formally charged or publicly named as charged under STD\-GC32\-31, distinct from preceding investigation?; What nature/cause, timing, understood language and oral/written confirmation are documented under STD\-ICCPR\-14\-3a and STD\-PH\-CONST\-III\-14?; If defence preparation arose, what time, access, complexity, counsel conditions and adjournment decisions bear on the listed preparation STD IDs?
+Standards: STD\-ICCPR\-14\-3a, STD\-GC32\-31, STD\-PH\-CONST\-III\-14, STD\-ICCPR\-14\-3b, STD\-GC32\-32a, STD\-GC32\-32b, STD\-GC32\-33
+Missing: Individual charging/notice records; language comprehension; preparation/disclosure records; constitutional stage interpretation\.
+Neither first information at arrest nor later dismissal alone establishes compliance or violation\.
+
+### arrest\_information
+For Jennifer alone, what reasons were communicated at arrest, and when and what charges were supplied under STD\-ICCPR\-9\-2?
+Standards: STD\-ICCPR\-9\-2
+Missing: Arrest/warrant\-execution records; exact information, timing and language\.
+Separate from group preliminary response and Article 14 charge notice\.
+
+## Gaps and bounded alternatives
+
+- Which records establish filing, service/receipt and notice content? Needed to compare allegations with Government’s competing assertion\. Next check: Inspect retained items only; missing complaint/information, subpoena/returns and certification originals require separate authorized future access\.
+- Are roster/reference variants resolved? Prevents silent identity merging and scope expansion\. Next check: Compare retained names, case reference and motion descriptions; preserve unresolved variants\.
+- What dismissal date, grounds, finality or refiling are documented? Grant, generic language and cover date cannot establish these\. Next check: Check retained references only; absent orders/finality records remain separately authorized future\-access needs\.
+
+### verify\_records · prepare\_verify
+Compare retained accounts and identify procedural gaps\.
+Route/authority: Local targeted comparison of retained S1/S2 records and AC/AP links\.; Current reviewer mandate and preferences unestablished\.
+Urgency: No present deadline/urgency established\.
+Opportunity: No present intervention opportunity or additional access established\.
+Feasibility: Supplied excerpts support comparison; underlying records remain absent\.
+Potential harm: Identity conflation, disclosure or false certainty; missing harm evidence does not establish safety\.
+Unknowns: Authority/preferences; originals/service facts; underlying source independence\.
+Prerequisites: Actual reviewer mandate and retained\-only scope\.
+Next step: Proposed retained AC/AP comparison only\. Without underlying service records, verification does not settle AP08\.
+Reconsideration: Retained evidence or qualified review clarifies contested facts\.
+Contrary passages: AP08
+Execution: proposal_only
+
+### defer\_public\_route · defer
+Hold a new public advocacy proposal pending verification\.
+Route/authority: New public UN Special Procedures notice/due\-process advocacy submission referencing AL PHL 1/2023\.; No current sender authority or affected\-person authorization established\.
+Urgency: No present deadline/urgency established\.
+Opportunity: Present relevance and route availability unknown\.
+Feasibility: Current facts, preferences, authority and qualified review missing\.
+Potential harm: Unwanted publicity or inaccurate allegations; safety unestablished\.
+Unknowns: Current facts/preferences; mandate; route suitability; harms\.
+Prerequisites: Verified facts, actual authority/preferences and separate qualified review\.
+Next step: Inspect retained material for prerequisites only; keep public route deferred\.
+Reconsideration: Documented prerequisites support separate reconsideration; AP07 changes historical context without negating earlier allegations\.
+Contrary passages: AP07, AP08
+Execution: proposal_only
+
+## Exact citations and AC/AP bridge
+
+<a id="passage-AP01"></a>
+### AP01 · AC01
+[AL PHL 1/2023 \(communication dated 8 May 2023\)](https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=28052) · \{"pdf\_page":3,"printed\_page":3,"paragraph\_or\_heading":"First paragraph after “According to the information received”, beginning On 3 January 2023"\}
+Attribution: UN relayed allegation\.
+> they were not given the opportunity to answer the complaint before it was filed in court\.
+
+<a id="passage-AP02"></a>
+### AP02 · AC02, AC03
+[AL PHL 1/2023 \(communication dated 8 May 2023\)](https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=28052) · \{"pdf\_page":3,"printed\_page":3,"paragraph\_or\_heading":"Paragraph beginning On 30 January 2023; includes counsel motion in final sentence"\}
+Attribution: UN relayed individual account\.
+> Only then was she informed of the ongoing case against her and the six other human rights defenders\.
+
+<a id="passage-AP03"></a>
+### AP03 · AC09
+[AL PHL 1/2023 \(communication dated 8 May 2023\)](https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=28052) · \{"pdf\_page":3,"printed\_page":3,"paragraph\_or\_heading":"Complete paragraph beginning On 24 January 2023"\}
+Attribution: UN relayed account\.
+> On 24 January 2023, a warrant of arrest for the seven human rights defenders was issued by a judge of the Regional Trial Court in Bangued\.
+
+<a id="passage-AP04"></a>
+### AP04 · AC07
+[AL PHL 1/2023 \(communication dated 8 May 2023\)](https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=28052) · \{"pdf\_page":4,"printed\_page":4,"paragraph\_or\_heading":"Paragraph beginning At the time of writing"\}
+Attribution: UN writing\-time snapshot\.
+> has not been addressed by a judge\. No hearing in the criminal case against them has been scheduled\.
+
+<a id="passage-AP05"></a>
+### AP05 · AC08
+[AL PHL 1/2023 \(communication dated 8 May 2023\)](https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=28052) · \{"pdf\_page":5,"printed\_page":5,"paragraph\_or\_heading":"Question 3 of requests to Government"\}
+Attribution: UN clarification request\.
+> in particular why they were not given the opportunity to answer the complaint before it was filed in court
+
+<a id="passage-AP06"></a>
+### AP06 · 
+[Philippine government response to AL PHL 1/2023 \(cover dated 18 September 2023\)](https://spcommreports.ohchr.org/TMResultsBase/DownLoadFile?gId=37722) · \{"pdf\_page":2,"printed\_page":null,"paragraph\_or\_heading":"Enumerated subject\-person list under response introduction"\}
+Attribution: Government roster excerpt\.
+> 1\) Mr\. Florence Kang
+> 2\) Mr\. Niño Joseph Oconer
+> 3\) Ms\. Lucia Lourdes Gimenes
+> 4\) Ms\. Jennifer Awingan\-Taggaoa
+
+<a id="passage-AP07"></a>
+### AP07 · AC05, AC06
+[Philippine government response to AL PHL 1/2023 \(cover dated 18 September 2023\)](https://spcommreports.ohchr.org/TMResultsBase/DownLoadFile?gId=37722) · \{"pdf\_page":2,"printed\_page":null,"paragraph\_or\_heading":"Complete sole paragraph under Additional Information and/or Comments on the Criminal Case"\}
+Attribution: Government, relaying DOJ\.
+> granted on 11 May 2023 the Urgent Motion to Quash filed by subject persons seeking their exclusion from the Information charging them with rebellion
+
+<a id="passage-AP08"></a>
+### AP08 · AC04
+[Philippine government response to AL PHL 1/2023 \(cover dated 18 September 2023\)](https://spcommreports.ohchr.org/TMResultsBase/DownLoadFile?gId=37722) · \{"pdf\_page":3,"printed\_page":null,"paragraph\_or\_heading":"Complete first paragraph under On the allegation of deprivation of due process"\}
+Attribution: Government competing assertion\.
+> due process was observed and that the action by the prosecution office was based on the totality of evidence submitted during the course of the investigation\.
+
+<a id="passage-AP09"></a>
+### AP09 · 
+[Philippine government response to AL PHL 1/2023 \(cover dated 18 September 2023\)](https://spcommreports.ohchr.org/TMResultsBase/DownLoadFile?gId=37722) · \{"pdf\_page":2,"printed\_page":null,"paragraph\_or\_heading":"Second full paragraph under Observance of Due Process"\}
+Attribution: Government general statement\.
+> While some cases are invariably dismissed due to lack of evidence without prejudice to refiling of cases once additional evidence is obtained
+
+<a id="passage-AP10"></a>
+### AP10 · 
+[Philippine government response to AL PHL 1/2023 \(cover dated 18 September 2023\)](https://spcommreports.ohchr.org/TMResultsBase/DownLoadFile?gId=37722) · \{"pdf\_page":1,"printed\_page":null,"paragraph\_or\_heading":"Cover date line"\}
+Attribution: Government cover\.
+> Geneva, 18 September 2023
+
+## Separately scoped source-summary records
+
+
+## Attributed addenda
+
+- Machine provenance note — carried historical scope, no new human review · 2026\-10\-10T15:22:01\+00:00: Historical reference carried without creating a new review: Lucas S evidence review r1 at 2026\-10\-09T18:54:23\+00:00, ABRA/C02, include O03/O04/O05/O10 only\. Scope: Human triage only; no whole\-card factual approval or current\-status verification\. His unchanged original record accepts a source\-reported sequence of submitted motion, reported disposition and subsequent public reaction; May 11 dates the motion grant, dismissal is separately undated, the due\-process assertion lacks specific notice/delivery records in the reviewed paragraph, the original court order is unchecked, broader patterns are anecdotal and advocacy contribution is unestablished\. Original analysis r1 at 2026\-10\-09T18:57:37\+00:00 remains unchanged\. Exact strings/snapshot remain in the original database and Part1 preservation\-audit\.json; no fresh AP/AC, rights or advocacy approval is claimed\.
+
+Current user steering: reuse completed Part2 artifacts and skip repeated source checkpoints\. This authorizes local preparation, testing and demo/package work\. Unknown mandate/preferences in the raw draft's intervention options concern external or public action; they do not negate this local authorization\. All unresolved legal/stage matters and twenty mappings remain pending\. The 2026\-10\-10 integrated model attempt completed but was rejected by draft\-integrity validation; no new draft was saved, no retry was made and live success is not established\. Original Part2 raw output and hashes remain unchanged\.
+
+## Provenance, raw hashes and limitations
+
+- draft\_sha256: fd18a4b45f9fb5cc447478630135ef584957468c1c729b657863a7010a1868ac
+- input\_sha256: 58752843d26eaad1926126ea268f8c264fe4ab62b7ca3bd1c8cded6713d87e70
+- schema\_sha256: 60313836b8c39aa3ec74d3c87eda36c20ff28e8ea599543bde3e231b00ca8726
+S1 relays information received from unspecified informants/records\. S2 is Government reporting, DOJ\-mediated for court developments, rather than original court records\. Independent underlying corroboration is unestablished\.; ABRA/C02–Criminal Case No\.2023\-004 matching remains provisional\. Preserve Nino/Niño Joseph Oconer, Lucia Lourdes Gimenez/Gimenes, Stephen Tauli/Taulin, and Sarah Abellon Alikes / Abellon / Abellon Likes\.; Named\-human S2 transcription review and separate qualified legal/dimension review remain pending; domestic capture timestamps, event\-date amendments and controlling interpretations are unverified\.; No historical scores migrate; no expression involvement, current status, consent or approval is inferred\. Two other alleged NPA members remain outside individualized inference\.; No comparable\-history or contribution evidence supports efficacy, causal or forecast claims\. S5/O10 is provenance only; no news reaction is inferred\.; Evidence\-assisted drafting is not independent evaluation/calibration\. Software citation/schema integrity establishes neither legal accuracy nor source authenticity\.
+
+All twenty rights mappings: null; no legal scoring or approval.
